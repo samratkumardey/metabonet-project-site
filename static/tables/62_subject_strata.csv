@@ -1,0 +1,2077 @@
+split,id,source_file,cgm_device,insulin_delivery_device,insulin_delivery_modality,insulin_delivery_algorithm,n_rows,n_cgm
+train,544,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,15840,13339
+train,591,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,15840,13607
+train,78,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52621,49162
+train,6,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,62658,48299
+train,IOBP2-105,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27720,26099
+train,IOBP2-245,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26854,24990
+train,IOBP2-17,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,15876,12875
+train,IOBP2-293,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28185,24214
+train,IOBP2-178,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26171,23462
+train,IOBP2-482,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26526,23424
+train,IOBP2-288,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26222,22801
+train,63,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,136850,134225
+train,1004,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,144924,139608
+train,470,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152372,127986
+train,1063,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120131,95178
+train,1126,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,72546,40171
+train,15,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,51940,11676
+train,266,ReplaceBG,,,,,29868,25381
+train,46,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,32680,15028
+train,IOBP2-580,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,9805,7886
+train,104,Loop,,,AID,LoopAlgorithm,151990,134440
+train,160,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79777,71586
+train,934,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,104903,102219
+train,792,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103432,66939
+train,638,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,116045,73607
+train,505,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121004,64192
+train,598,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93583,58334
+train,267,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,152062,132250
+train,270,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126489,116160
+train,1139,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,104090,84234
+train,1155,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,69744,66891
+train,1175,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,82494,76048
+train,135,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,94001,73303
+train,254,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,41709,30682
+train,258,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,255590,69092
+train,2302,T1D-UOM,,Multiple Daily Injections,MDI,MDI,115839,13412
+train,2309,T1D-UOM,,MiniMed 780G,SAP,Basal-Bolus,26096,20665
+train,10,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,57158,51864
+train,102,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,59770,52684
+train,105,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,50661,47103
+train,133,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,57463,52286
+train,134,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54529,53656
+train,52,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58177,49065
+train,46,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58155,54445
+train,IOBP2-97,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28202,25513
+train,IOBP2-276,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26178,24919
+train,IOBP2-236,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,30053,17200
+train,IOBP2-377,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14126,13649
+train,IOBP2-400,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28217,26532
+train,IOBP2-496,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26198,24723
+train,IOBP2-177,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27083,23940
+train,IOBP2-581,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26460,25600
+train,221,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114928,111050
+train,1061,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,135770,126264
+train,801,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114671,98120
+train,452,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124733,116643
+train,504,Loop,,,AID,LoopAlgorithm,147258,95374
+train,532,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,56647,48765
+train,116,Loop,,,AID,LoopAlgorithm,136324,131583
+train,247,Loop,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,124086,116484
+train,1029,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,65153,44478
+train,1094,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,80397,68258
+train,974,Loop,,,AID,LoopAlgorithm,103419,101527
+train,1042,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88819,77121
+train,1052,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,133695,128187
+train,484,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,139737,109516
+train,574,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,102875,101284
+train,307,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,104313,89227
+train,324,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,90458,83340
+train,31,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,51405,47618
+train,163,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,92987,64171
+train,166,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,80059,72545
+train,292,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,160047,60958
+train,P19,BrisT1D,Dexcom G6,t:slim X2,,,58666,57856
+train,8,CTR3,Dexcom G4,Roche Accu-Check,AID,,103722,54259
+train,11,CTR3,Dexcom G4,Roche Accu-Check,AID,,104822,66775
+train,32,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58539,55108
+train,108,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,60436,57929
+train,96,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,32213,27671
+train,IOBP2-324,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27305,24305
+train,IOBP2-111,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26238,23086
+train,IOBP2-38,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28015,26359
+train,IOBP2-92,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27854,26610
+train,IOBP2-593,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27329,25950
+train,11,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,145152,142524
+train,999,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,124198,119926
+train,570,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152596,146590
+train,596,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,88472,77877
+train,167,Loop,,,AID,LoopAlgorithm,146365,133360
+train,1075,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100000,95097
+train,1202,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,122162,117860
+train,944,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,150686,143121
+train,911,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118951,116502
+train,932,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,152409,149945
+train,590,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,136856,132798
+train,639,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124416,115194
+train,680,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,112188,106956
+train,407,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152982,125775
+train,171,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,85537,60778
+train,173,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,107680,66950
+train,18,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,101455,68065
+train,30,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,115549,63341
+train,33,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,96770,70871
+train,12,CTR3,Dexcom G4,Roche Accu-Check,AID,,36234,14593
+train,14,CTR3,Dexcom G4,Roche Accu-Check,AID,,107923,76906
+train,17,CTR3,Dexcom G4,Roche Accu-Check,AID,,110336,62322
+train,6,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,64531,63016
+train,96,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,60460,56973
+train,52,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,62464,42707
+train,IOBP2-255,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13506,12369
+train,IOBP2-234,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27904,24568
+train,IOBP2-366,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27356,25037
+train,IOBP2-389,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28209,26085
+train,IOBP2-222,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,10984,10245
+train,IOBP2-54,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27983,22416
+train,IOBP2-331,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27996,26356
+train,274,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59456,10329
+train,326,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105139,101218
+train,682,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101695,92681
+train,784,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123894,121799
+train,455,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106890,100983
+train,23,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,88071,86894
+train,186,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,185289,42607
+train,19,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,95160,58351
+train,145,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54527,53360
+train,155,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52819,51108
+train,115,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,66562,54373
+train,31,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,60543,51321
+train,IOBP2-167,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,68771,22312
+train,IOBP2-577,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,48849,25732
+train,169,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,57045,43147
+train,970,Loop,,,AID,LoopAlgorithm,152386,106251
+train,1071,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,125324,121412
+train,459,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,89641,77106
+train,471,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113533,104702
+train,387,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101155,98426
+train,416,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114642,109819
+train,202,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,63044,60058
+train,1195,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,116976,113992
+train,1212,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,70848,55472
+train,12,Loop,,,AID,LoopAlgorithm,144634,121737
+train,52,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,65370,64495
+train,57,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,104410,63992
+train,69,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,71644,50741
+train,2,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,11232,11120
+train,9,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,11233,10668
+train,31,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56197,55215
+train,3,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,3770,3770
+train,24,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,2902,2902
+train,25,HUPA-UCM,FreeStyle Libre 2,Roche Pump,SAP,,4006,4006
+train,IOBP2-371,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26199,21189
+train,IOBP2-509,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27679,25600
+train,IOBP2-466,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26480,24626
+train,IOBP2-188,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26750,21570
+train,IOBP2-273,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,29417,26879
+train,IOBP2-322,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,31723,24270
+train,683,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,134684,101070
+train,716,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61208,41862
+train,399,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,142888,130809
+train,74,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,66792,63785
+train,1181,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,151501,104483
+train,1043,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,125589,116317
+train,1066,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,62243,57997
+train,889,Loop,,,AID,LoopAlgorithm,110932,66122
+train,1031,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91305,84690
+train,571,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126786,122408
+train,686,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,108645,95214
+train,46,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,68534,65892
+train,101,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,90423,75592
+train,103,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,84810,66745
+train,235,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,104375,62255
+train,90,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,88749,63557
+train,1012,ShanghaiT1DM,,,MDI,,4015,1339
+train,2405,T1D-UOM,,Multiple Daily Injections,MDI,MDI,29308,11155
+train,IOBP2-312,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28787,23551
+train,IOBP2-250,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26177,25099
+train,IOBP2-290,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27695,26597
+train,364,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123848,119284
+train,237,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124759,77396
+train,897,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114653,97560
+train,723,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,77180,54983
+train,67,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152397,148765
+train,1200,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,70996,67305
+train,1205,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79669,49068
+train,158,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,121839,93735
+train,862,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,55901,46112
+train,957,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152694,149607
+train,121,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,101949,61065
+train,204,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,123863,59043
+train,21,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,34659,18174
+train,79,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,145167,68614
+test,74,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54327,51165
+test,89,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53046,43880
+test,13,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,68269,58110
+test,51,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58707,54970
+test,IOBP2-42,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14089,13478
+test,IOBP2-214,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13089,11425
+test,382,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,57046,55666
+test,617,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,76320,73793
+test,806,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,102915,99530
+test,524,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,153216,150230
+test,853,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,81000,77635
+test,404,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,47707,45102
+test,530,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106605,72340
+test,64,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,97595,93212
+test,14,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,181411,70378
+test,211,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,90246,64972
+test,IOBP2-168,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13083,11943
+test,138,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122986,117487
+test,273,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112070,110212
+test,425,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,148097,139127
+test,13,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,51903,51022
+test,106,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,85376,69608
+test,172,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,35246,33406
+test,68,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,117543,79737
+test,46,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,25512,23068
+test,105,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62446,54722
+test,693,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,152949,147089
+test,262,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,125624,110098
+test,826,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,148370,137738
+test,297,Loop,,,AID,LoopAlgorithm,123445,116228
+test,131,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,55166,52902
+test,587,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,75204,72852
+test,109,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,42760,41483
+test,IOBP2-116,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13807,12867
+test,IOBP2-452,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13093,12013
+test,IOBP2-27,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26537,25126
+test,208,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,86179,83737
+test,442,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96121,90080
+test,754,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101010,84546
+test,1066,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,62243,60761
+test,57,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27300,26552
+test,IOBP2-205,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,12836,11291
+test,IOBP2-539,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27911,24023
+test,96,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,36181,34568
+test,IOBP2-534,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27382,25150
+test,IOBP2-314,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,10695,9272
+test,729,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,20563,18606
+train,584,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,16243,14815
+train,8,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,49323,47337
+train,IOBP2-432,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26183,24726
+train,IOBP2-100,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26867,25197
+train,IOBP2-468,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13077,11840
+train,IOBP2-266,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26204,23305
+train,IOBP2-589,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27366,19576
+train,IOBP2-474,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27876,25926
+train,IOBP2-242,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28238,23769
+train,IOBP2-240,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26157,24586
+train,IOBP2-493,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,29913,25017
+train,366,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,66554,44736
+train,498,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122996,114362
+train,511,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152383,150442
+train,1201,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118402,111172
+train,124,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,32831,32004
+train,145,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126749,123367
+train,772,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119566,113882
+train,765,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,81997,66104
+train,867,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152930,144712
+train,389,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,118078,111939
+train,130,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152983,137485
+train,155,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,102656,47321
+train,1055,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117263,89246
+train,1122,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,113280,58947
+train,977,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152411,149357
+train,992,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,152387,129370
+train,1060,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,51577,48435
+train,271,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,114373,79478
+train,280,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,86484,59544
+train,37,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54757,53514
+train,56,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,58149,48531
+train,63,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52501,51313
+train,67,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51596,43419
+train,97,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,62504,55778
+train,99,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,68535,48739
+train,IOBP2-404,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26198,25069
+train,IOBP2-304,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26763,21413
+train,IOBP2-168,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13082,12026
+train,IOBP2-423,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27916,26615
+train,IOBP2-502,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27058,25512
+train,IOBP2-457,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27936,26348
+train,IOBP2-543,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26542,24825
+train,IOBP2-344,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26172,24718
+train,92,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,132547,120391
+train,102,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152934,141730
+train,1177,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115822,108407
+train,1207,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93987,88804
+train,908,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,152401,122678
+train,712,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,86739,82491
+train,133,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119914,105667
+train,269,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112922,108527
+train,214,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118706,115973
+train,1147,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,152077,146456
+train,26,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,72821,68090
+train,2305,T1D-UOM,,Multiple Daily Injections,MDI,MDI,108347,6665
+train,116,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52661,48591
+train,24,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,62410,58647
+train,59,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58425,57553
+train,IOBP2-113,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26178,24893
+train,IOBP2-69,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28529,26139
+train,201,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,136548,127235
+train,242,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,152944,141700
+train,1059,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,124461,107888
+train,1089,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121316,91724
+train,1099,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,130996,100439
+train,859,Loop,,,AID,LoopAlgorithm,151816,145338
+train,536,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123311,119100
+train,107,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124747,113838
+train,216,Loop,,,AID,LoopAlgorithm,148335,107894
+train,1041,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,51765,51042
+train,842,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,138840,134609
+train,577,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,93556,91013
+train,296,Loop,,,AID,LoopAlgorithm,152982,147690
+train,59,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,27115,23045
+train,44,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,55376,54538
+train,285,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,61353,3527
+train,P22,BrisT1D,Dexcom G6,t:slim X2,,,61211,49631
+train,2,CTR3,Dexcom G4,Roche Accu-Check,AID,,121660,66553
+train,9,CTR3,Dexcom G4,Roche Accu-Check,AID,,31068,0
+train,10,CTR3,Dexcom G4,Roche Accu-Check,AID,,42403,0
+train,39,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,57876,54778
+train,25,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,62476,60350
+train,84,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58446,56333
+train,3,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,60176,51353
+train,25,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,60739,52123
+train,117,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,61307,53338
+train,IOBP2-143,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,31931,23881
+train,IOBP2-67,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26410,18925
+train,10,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113176,102963
+train,963,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,146624,141108
+train,190,Loop,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,64224,62070
+train,224,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152981,149263
+train,1114,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,125627,118502
+train,1137,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,141759,133243
+train,920,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152984,150254
+train,971,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98570,94976
+train,907,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,136701,128378
+train,936,Loop,Dexcom G4,MiniMed 522/722,AID,LoopAlgorithm,152984,147096
+train,546,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100577,97387
+train,588,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,49271,48097
+train,609,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,66308,60399
+train,699,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,148194,141971
+train,394,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,124745,107068
+train,24,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,106605,94543
+train,84,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,100764,87341
+train,35,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,144430,61799
+train,60,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58462,56680
+train,3,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58478,55799
+train,93,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,102481,59256
+train,97,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58420,54199
+train,60,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,54434,41853
+train,44,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,61981,41723
+train,71,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,28364,23954
+train,IOBP2-567,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28187,25224
+train,IOBP2-131,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27961,24804
+train,IOBP2-360,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,25950,24890
+train,IOBP2-328,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26214,23758
+train,IOBP2-387,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28168,26368
+train,1210,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,126968,106229
+train,78,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93159,60902
+train,34,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,144927,138560
+train,821,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,125606,93341
+train,510,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,136892,98943
+train,95,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,93586,91404
+train,88,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,95966,94475
+train,60,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,90367,88579
+train,189,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,94108,69687
+train,41,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,36539,27121
+train,49,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,87146,63093
+train,5,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,101871,53733
+train,14,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,55119,49690
+train,158,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,50518,47695
+train,160,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56461,44843
+train,93,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,68550,56100
+train,84,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58506,49301
+train,IOBP2-223,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,65813,25945
+train,119,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91013,80861
+train,713,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,78324,58097
+train,431,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119442,103162
+train,433,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88515,85744
+train,443,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119578,109898
+train,467,Loop,Dexcom G4,MiniMed 523/723,AID,LoopAlgorithm,76491,75041
+train,473,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,78998,73640
+train,361,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152975,137668
+train,365,Loop,,,AID,LoopAlgorithm,126741,123915
+train,203,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,83582,81035
+train,766,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152124,148892
+train,99,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,85798,75619
+train,3,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,38555,37512
+train,228,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,119539,81653
+train,229,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,132794,85217
+train,65,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,80633,72289
+train,8,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,8065,8038
+train,11,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12960,12793
+train,12,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12671,12524
+train,14,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12960,12795
+train,17,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12672,12508
+train,88,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58520,55115
+train,76,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,27663,26234
+train,71,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,63610,62004
+train,44,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,63311,61761
+train,39,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,64493,52066
+train,59,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,64513,55317
+train,6,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,2290,2290
+train,IOBP2-564,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27041,23610
+train,742,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,98374,88740
+train,630,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,58063,42380
+train,730,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,19276,18156
+train,388,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152950,148674
+train,336,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126415,95194
+train,70,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,44981,42350
+train,134,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113204,108694
+train,195,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122131,104234
+train,1151,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,87885,85369
+train,1163,Loop,,,AID,LoopAlgorithm,138874,98347
+train,1171,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,120710,90413
+train,988,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88443,69872
+train,905,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,102488,95640
+train,241,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,83506,66022
+train,244,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,80822,54869
+train,1008,ShanghaiT1DM,,,SAP,,2296,766
+train,2310,T1D-UOM,,MiniMed 780G,SAP,Basal-Bolus,51155,50108
+train,167,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52483,51250
+train,169,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54540,53638
+train,17,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51071,48132
+train,99,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58438,54005
+train,95,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,57646,48418
+train,IOBP2-156,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27321,25351
+train,IOBP2-555,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26768,25393
+train,IOBP2-65,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26169,24706
+train,IOBP2-402,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27989,23270
+train,IOBP2-300,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28247,24118
+train,301,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88545,76237
+train,215,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113822,87874
+train,1103,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,142680,131368
+train,958,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152087,147167
+train,665,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,99100,92780
+train,760,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,76920,10591
+train,342,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121281,118477
+train,1203,Loop,,,AID,LoopAlgorithm,29096,22643
+train,9,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,151532,149359
+train,53,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,8587,8285
+train,73,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98241,95522
+train,1176,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124179,98479
+train,75,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,150973,149266
+train,105,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152942,147653
+train,935,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,69045,65252
+train,946,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,62817,60364
+train,109,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,90909,71921
+train,111,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,98766,83927
+train,20,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,80074,57621
+train,213,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,69874,65793
+train,82,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,69597,61913
+test,22,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,60235,54501
+test,19,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56661,55266
+test,IOBP2-233,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,77656,20670
+test,IOBP2-468,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13077,11993
+test,967,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,148952,139080
+test,295,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152411,143914
+test,460,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,69782,68498
+test,646,Loop,,,AID,LoopAlgorithm,133057,100753
+test,340,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,115441,97179
+test,21,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,34660,33184
+test,41,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,36540,34773
+test,IOBP2-302,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28304,17381
+test,430,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,20216,17997
+test,1161,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119613,116226
+test,74,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,66793,63968
+test,252,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,41371,40044
+test,381,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,47605,27592
+test,1164,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101721,90596
+test,366,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,66554,64010
+test,1048,Loop,,,AID,LoopAlgorithm,144365,111705
+test,222,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,53711,51844
+test,2403,T1D-UOM,,Multiple Daily Injections,MDI,MDI,136351,11924
+test,103,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,56650,51523
+test,986,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,125332,120675
+test,1074,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,48265,45448
+test,IOBP2-392,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26457,25375
+test,62,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,57902,54546
+test,854,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,16381,15638
+test,31,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,51406,42295
+test,158,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,85981,69583
+test,P01,BrisT1D,FreeStyle Libre 2,MiniMed 640G,,640G,29181,9581
+test,10,CTR3,Dexcom G4,Roche Accu-Check,AID,,60415,48537
+test,56,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,28651,26627
+test,IOBP2-171,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,34119,26141
+test,128,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61645,59339
+test,11,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,12520,11978
+test,IOBP2-443,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,33060,23799
+test,79,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,34347,19419
+test,IOBP2-130,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13543,11987
+test,150,Loop,,,AID,LoopAlgorithm,29893,26592
+train,7,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,57742,45583
+train,77,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,59590,51118
+train,86,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51435,50393
+train,91,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,57145,51739
+train,83,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,66409,27786
+train,4,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,62629,41142
+train,121,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,63965,55540
+train,101,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,62747,55133
+train,21,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58402,45430
+train,19,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,59672,54676
+train,IOBP2-447,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26759,24864
+train,IOBP2-194,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26822,21875
+train,IOBP2-186,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27640,26277
+train,IOBP2-600,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,12143,11336
+train,IOBP2-126,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26223,23111
+train,IOBP2-408,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27342,25255
+train,IOBP2-501,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28290,19552
+train,283,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79192,70729
+train,393,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,80352,79186
+train,520,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113500,106075
+train,38,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,63086,46807
+train,998,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152411,149181
+train,794,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,136854,87515
+train,854,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,16380,14863
+train,68,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,90776,87322
+train,1083,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,34857,34110
+train,1084,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120661,110361
+train,1104,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,95948,82375
+train,1013,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152977,137240
+train,143,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,96567,65934
+train,147,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,80426,62905
+train,152,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,78472,61566
+train,273,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,120689,69037
+train,278,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,97253,71052
+train,43,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54001,52202
+train,55,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51360,48903
+train,64,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52545,50653
+train,15,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,63302,48900
+train,33,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,23610,14021
+train,126,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,71081,50422
+train,79,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,34347,25368
+train,IOBP2-217,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13821,13341
+train,IOBP2-546,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28271,26108
+train,IOBP2-258,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26183,23487
+train,IOBP2-281,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26187,25456
+train,142,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,136576,129660
+train,151,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,97896,57478
+train,1190,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,115459,108245
+train,1208,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96260,95557
+train,1209,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115511,111691
+train,893,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,116699,104996
+train,904,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,102889,99002
+train,942,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152983,138307
+train,755,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,152409,145014
+train,770,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105660,85673
+train,793,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,135883,107273
+train,650,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,139291,127727
+train,653,Loop,,,AID,LoopAlgorithm,152403,142569
+train,98,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,144294,135983
+train,113,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113635,86112
+train,358,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61948,59398
+train,376,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,89546,86192
+train,193,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,125574,117267
+train,232,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,67968,66713
+train,1105,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,150973,144647
+train,248,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,71963,57484
+train,250,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,49803,26298
+train,253,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,114875,73758
+train,114,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,57306,47033
+train,120,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27017,25633
+train,137,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52541,51447
+train,90,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58983,57850
+train,15,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56354,54650
+train,94,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56740,51760
+train,57,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58420,56888
+train,79,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,61339,59410
+train,30,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,29202,25972
+train,51,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,57069,54262
+train,IOBP2-270,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26222,25413
+train,IOBP2-359,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28509,26754
+train,IOBP2-199,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28224,24697
+train,IOBP2-464,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,29669,26966
+train,803,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103724,100932
+train,495,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,143465,123314
+train,549,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87282,82807
+train,125,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,149923,128468
+train,947,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,135692,130747
+train,979,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124184,120916
+train,829,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,153216,130985
+train,304,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,45663,42475
+train,341,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,74304,65524
+train,103,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,126636,97269
+train,4,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,126059,93811
+train,291,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,106055,62234
+train,57,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58465,53990
+train,1,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58969,53907
+train,IOBP2-512,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26760,25690
+train,IOBP2-43,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27907,25560
+train,IOBP2-421,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28204,26966
+train,IOBP2-436,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28247,25331
+train,IOBP2-317,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,5545,4676
+train,IOBP2-283,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27829,24338
+train,IOBP2-494,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26237,20898
+train,962,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120730,118521
+train,569,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,110325,102128
+train,578,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101747,89066
+train,1047,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,92346,90679
+train,539,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87855,85344
+train,724,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,124183,114104
+train,386,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,95145,85219
+train,19,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,104439,94636
+train,83,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,104982,88532
+train,51,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,100558,96736
+train,58,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,101487,97979
+train,172,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,35246,28943
+train,179,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,118462,64657
+train,181,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,170057,58244
+train,31,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,41879,28358
+train,32,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,76390,69609
+train,16,CTR3,Dexcom G4,Roche Accu-Check,AID,,47488,34669
+train,22,CTR3,Dexcom G4,Roche Accu-Check,AID,,24975,22720
+train,29,CTR3,Dexcom G4,Roche Accu-Check,AID,,40757,30537
+train,83,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58380,55323
+train,42,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,100475,56341
+train,101,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,64160,63020
+train,58,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62167,31155
+train,IOBP2-282,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14091,12958
+train,IOBP2-525,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26219,24035
+train,IOBP2-163,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28181,24100
+train,IOBP2-510,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,69662,24947
+train,850,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,83893,82038
+train,542,Loop,,,AID,LoopAlgorithm,24859,21038
+train,551,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119879,110287
+train,62,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,57902,39873
+train,1116,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124731,122549
+train,493,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124716,122086
+train,90,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,100843,90014
+train,183,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,105006,63408
+train,198,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,102698,72330
+train,46,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,87652,71019
+train,52,ReplaceBG,,,,,41122,26972
+train,148,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53200,50966
+train,153,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53224,52022
+train,162,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52576,50026
+train,18,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,65140,52074
+train,90,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,60494,51568
+train,69,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58521,49665
+train,30,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,63115,50254
+train,106,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58447,53933
+train,IOBP2-394,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,77349,23312
+train,IOBP2-71,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,47134,24528
+train,IOBP2-459,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,47926,24550
+train,16,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,34035,32583
+train,149,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124425,122359
+train,995,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79567,72636
+train,626,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,66417,55835
+train,666,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119523,116804
+train,306,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,124409,118223
+train,188,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,75403,65387
+train,1184,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,42846,31414
+train,740,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120112,88491
+train,18,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,84403,77042
+train,106,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,77008,72245
+train,69,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,71472,69392
+train,23,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,85459,79089
+train,7,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,13536,13348
+train,P01,BrisT1D,FreeStyle Libre 2,MiniMed 640G,,640G,29181,9375
+train,58,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56723,55036
+train,122,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,55507,48059
+train,5,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,3858,3858
+train,20,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,2862,2862
+train,26,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,40605,40605
+train,IOBP2-490,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28203,26609
+train,IOBP2-411,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,8098,5227
+train,IOBP2-277,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26179,25252
+train,IOBP2-121,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26792,22284
+train,IOBP2-260,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27385,17165
+train,IOBP2-34,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26139,24185
+train,634,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,152408,145391
+train,436,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,71459,68758
+train,382,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,57045,21598
+train,100,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106343,100094
+train,129,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,34029,32900
+train,205,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,144587,137104
+train,1170,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122146,118129
+train,1101,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,46428,44159
+train,94,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,61900,59701
+train,108,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,81337,64918
+train,233,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,61439,11140
+train,96,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,36180,27167
+train,2401,T1D-UOM,,Multiple Daily Injections,MDI,MDI,28654,11911
+train,2307,T1D-UOM,,t:slim X2,SAP,Basal-Bolus,26785,8385
+train,164,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54356,48822
+train,28,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27095,26090
+train,69,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58478,55700
+train,18,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58198,55844
+train,4,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,25977,24413
+train,33,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,23903,22877
+train,IOBP2-4,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27918,26821
+train,IOBP2-472,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26476,25197
+train,IOBP2-116,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13806,13101
+train,IOBP2-289,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27912,26412
+train,IOBP2-578,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26537,23584
+train,IOBP2-473,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26220,25183
+train,356,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,90325,61307
+train,718,Loop,Medtronic Enlite,MiniMed 522/722,AID,LoopAlgorithm,89895,82137
+train,349,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124748,106669
+train,379,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96262,95217
+train,47,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,110086,105027
+train,1115,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120685,104319
+train,1158,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152397,150467
+train,900,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,41279,40692
+train,931,Loop,,,AID,LoopAlgorithm,33144,32468
+train,110,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,76072,65312
+train,115,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,96415,60926
+train,118,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,110094,51303
+train,206,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,93911,67910
+train,209,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,81877,48181
+test,66,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51909,51020
+test,1,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,62608,59683
+test,12,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58452,55987
+test,14,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62186,55992
+test,IOBP2-221,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13087,11616
+test,IOBP2-45,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27122,23107
+test,258,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,56941,54329
+test,435,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120350,117148
+test,256,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,46579,44624
+test,190,Loop,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,64224,59825
+test,689,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,93384,87173
+test,1005,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59633,53003
+test,239,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,92088,63459
+test,125,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,61284,58551
+test,IOBP2-81,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,15145,13427
+test,IOBP2-492,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,34558,26647
+test,IOBP2-396,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13236,12007
+test,156,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,76121,51850
+test,914,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,99550,91477
+test,1184,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,42846,39956
+test,15,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,51941,50124
+test,193,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,103073,89676
+test,384,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,63627,33428
+test,451,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112387,107658
+test,124,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,77631,68942
+test,96,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,32213,28107
+test,522,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,37171,35033
+test,250,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,49804,48489
+test,IOBP2-279,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27849,25285
+test,9,CTR3,Dexcom G4,Roche Accu-Check,AID,,32116,30600
+test,120,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27018,26148
+test,1083,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,34858,33458
+test,165,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,25902,25412
+test,21,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,2343,2343
+test,IOBP2-552,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,7515,5952
+test,105,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,49494,45938
+test,IOBP2-50,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14265,13012
+test,IOBP2-444,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,10342,9103
+train,596,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,17324,13620
+train,570,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,14688,13727
+train,563,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,16012,14694
+train,71,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53510,51299
+train,88,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52473,50934
+train,93,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,25407,22777
+train,95,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53429,51676
+train,97,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52474,48655
+train,116,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,65849,55747
+train,IOBP2-21,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26178,24262
+train,IOBP2-514,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26131,21601
+train,IOBP2-573,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26142,23969
+train,IOBP2-224,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27288,25500
+train,IOBP2-78,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26481,24509
+train,IOBP2-307,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26772,21517
+train,IOBP2-597,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26442,24486
+train,543,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,150974,135334
+train,605,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152983,147889
+train,278,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98579,93907
+train,143,Loop,,,AID,LoopAlgorithm,104903,85984
+train,1044,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,132504,117496
+train,848,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,58138,34317
+train,732,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,54093,51785
+train,457,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152386,148024
+train,110,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,114012,86678
+train,1065,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,95602,91622
+train,149,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,86826,64719
+train,156,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,92734,69260
+train,276,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,45084,23172
+train,39,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52936,51234
+train,59,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,55357,51620
+train,60,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52376,50925
+train,37,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,30674,13248
+train,11,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,66428,47374
+train,IOBP2-59,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,38479,25030
+train,IOBP2-137,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26230,25349
+train,IOBP2-261,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26209,25596
+train,IOBP2-417,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26785,25630
+train,IOBP2-135,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27036,23982
+train,IOBP2-63,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26771,21706
+train,1162,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152371,128018
+train,888,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,134486,128963
+train,925,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96553,84981
+train,852,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152391,149695
+train,874,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,117842,109790
+train,635,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,32034,27405
+train,623,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122885,115013
+train,663,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,41447,39686
+train,664,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,106985,105139
+train,181,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,102876,97760
+train,184,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115542,111356
+train,206,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87147,73738
+train,209,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,108864,90029
+train,129,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,104688,71433
+train,136,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,57006,16545
+train,138,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,75299,72185
+train,117,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54328,51401
+train,128,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52482,50773
+train,37,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,61609,59276
+train,IOBP2-249,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26781,25258
+train,IOBP2-323,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28194,25678
+train,764,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,36955,34217
+train,454,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,75961,71933
+train,468,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105191,98515
+train,179,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,120960,101362
+train,1019,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106874,101096
+train,1023,Loop,,,AID,LoopAlgorithm,83592,76452
+train,1125,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122783,96481
+train,1131,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88861,84609
+train,1153,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124758,122140
+train,1016,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,86219,84717
+train,385,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118927,102731
+train,8,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,126717,94121
+train,16,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,150050,67533
+train,283,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,72262,70857
+train,288,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,86835,65567
+train,29,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,120829,65367
+train,6,CTR3,Dexcom G4,Roche Accu-Check,AID,,84032,48086
+train,87,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,112925,100947
+train,74,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,57003,51746
+train,63,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,61296,57002
+train,IOBP2-336,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,29650,25405
+train,IOBP2-162,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27106,24710
+train,IOBP2-292,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27733,26972
+train,984,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93673,88049
+train,602,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,85030,49681
+train,198,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,111812,108507
+train,881,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,99018,96901
+train,615,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96200,93084
+train,668,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119279,115437
+train,725,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,64897,61512
+train,14,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,52386,51610
+train,38,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,67363,64795
+train,23,CTR3,Dexcom G4,Roche Accu-Check,AID,,24406,22533
+train,63,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58472,51831
+train,12,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,60438,49319
+train,17,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62459,42650
+train,IOBP2-13,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27037,24193
+train,IOBP2-373,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26493,19535
+train,IOBP2-498,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26741,25723
+train,903,Loop,,,AID,LoopAlgorithm,145187,137198
+train,535,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,145460,134840
+train,538,Loop,,,AID,LoopAlgorithm,133353,110753
+train,248,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123562,117856
+train,250,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,123949,120425
+train,310,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,123029,103544
+train,329,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61960,56519
+train,6,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,92791,80587
+train,52,Loop,,,AID,LoopAlgorithm,61293,57764
+train,1165,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124727,121824
+train,1191,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,95398,90753
+train,1074,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,48265,45156
+train,1135,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,86104,64840
+train,736,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,77674,56894
+train,769,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123321,117872
+train,795,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,50727,49832
+train,824,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,119005,112715
+train,844,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,188800,110668
+train,527,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101605,98745
+train,188,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,89588,69479
+train,48,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,107376,67243
+train,54,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,39764,33558
+train,141,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52545,47770
+train,154,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52456,50034
+train,56,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58237,53985
+train,IOBP2-252,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,68720,25890
+train,IOBP2-541,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,47088,23031
+train,IOBP2-511,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,33932,133
+train,32,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,60768,56290
+train,629,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93390,91260
+train,482,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118985,115996
+train,496,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,110330,101331
+train,1129,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,104888,101317
+train,687,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91384,78325
+train,798,Loop,,,AID,LoopAlgorithm,93383,64843
+train,11,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,79072,70400
+train,218,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,72246,70012
+train,61,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,74646,70121
+train,62,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,55789,16540
+train,72,ReplaceBG,,,,,78551,62522
+train,3,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,11232,10613
+train,24,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,10080,9908
+train,25,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,10944,10817
+train,P12,BrisT1D,Medtronic Guardian 4,MiniMed 780G,,780G Advanced HCL,64382,61553
+train,56,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,28650,27317
+train,87,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,59858,56883
+train,104,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,59557,55545
+train,67,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,61325,54638
+train,2,HUPA-UCM,FreeStyle Libre 2,Roche Pump,SAP,,3181,3181
+train,9,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,3812,3812
+train,10,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,2976,2976
+train,IOBP2-339,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,25965,21590
+train,IOBP2-350,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27045,11460
+train,IOBP2-306,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26757,24574
+train,IOBP2-51,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28014,24718
+train,IOBP2-376,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26238,24692
+train,IOBP2-556,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27609,26304
+train,IOBP2-542,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27072,24605
+train,IOBP2-176,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26524,22662
+train,IOBP2-148,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26181,23595
+train,657,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124484,121249
+train,659,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,111766,78059
+train,316,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87436,84984
+train,183,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,114101,102564
+train,1027,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79660,75323
+train,592,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,78336,77007
+train,232,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,98163,78636
+train,245,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,120425,86065
+train,98,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,64471,61183
+train,165,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,25901,23992
+train,168,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53991,52541
+train,24,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56070,49005
+train,25,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,55983,50766
+train,3,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,55961,52579
+train,17,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,63313,61995
+train,67,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56699,55476
+train,74,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58444,56207
+train,11,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,12520,11755
+train,IOBP2-507,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,4056,3836
+train,IOBP2-516,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27412,25272
+train,IOBP2-42,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14088,13550
+train,IOBP2-463,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26170,24468
+train,IOBP2-452,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13093,12274
+train,IOBP2-50,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14264,13749
+train,IOBP2-184,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27601,26386
+train,311,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,77808,62964
+train,430,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,20216,13515
+train,1187,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,146941,138232
+train,705,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,109288,100691
+train,360,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101720,97628
+train,46,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,4457,3624
+train,96,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,76492,68812
+train,902,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100388,86143
+train,123,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,98406,72855
+train,200,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,89801,63651
+train,205,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,120191,73368
+train,80,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,138541,49744
+test,IOBP2-255,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13507,12192
+test,IOBP2-346,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28200,24227
+test,456,Loop,,,AID,LoopAlgorithm,151934,130209
+test,692,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,191268,185586
+test,15,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,27985,26929
+test,115,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,107165,104336
+test,363,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,53019,50841
+test,588,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,49271,47999
+test,314,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,108623,100035
+test,1002,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,104619,102474
+test,3,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,38555,37780
+test,71,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,28364,20181
+test,277,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,111191,108956
+test,266,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59339,58479
+test,282,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,144062,139421
+test,788,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,62089,59859
+test,233,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,61439,52628
+test,100,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,29076,27223
+test,100,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,31236,16691
+test,831,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,56194,52549
+test,54,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,39764,37589
+test,1003,ShanghaiT1DM,,,MDI,,4015,1339
+test,1004,ShanghaiT1DM,,,SAP,,1375,459
+test,IOBP2-155,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14075,13091
+test,1082,Loop,,,AID,LoopAlgorithm,8748,8029
+test,124,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,32832,31372
+test,795,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,50728,49424
+test,IOBP2-527,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28476,26364
+test,716,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61209,60369
+test,13,Loop,,,AID,LoopAlgorithm,65339,63598
+test,414,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61083,58123
+test,1172,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,89137,51789
+test,18,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,5328,5277
+test,20,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,13343,13287
+test,13,CTR3,Dexcom G4,Roche Accu-Check,AID,,70403,57436
+test,123,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,50843,49428
+test,20,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,32103,10426
+test,77,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,28179,27534
+test,IOBP2-217,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13821,13192
+test,730,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,19276,18658
+test,22,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27211,26834
+test,IOBP2-187,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28210,21162
+test,251,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,88390,83375
+train,54,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,60026,46388
+train,123,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,63689,42934
+train,22,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62713,55093
+train,62,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58723,50399
+train,IOBP2-166,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27058,25835
+train,IOBP2-205,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,12836,11548
+train,IOBP2-247,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26168,22926
+train,IOBP2-134,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,25943,24192
+train,464,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124427,118137
+train,508,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,152379,132026
+train,556,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,42066,40637
+train,606,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,131083,125154
+train,353,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,42624,41703
+train,441,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,93231,84234
+train,449,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,110894,94653
+train,1206,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,153213,139297
+train,106,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,125626,107693
+train,982,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152914,146977
+train,1012,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113798,110902
+train,1025,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,104878,94960
+train,776,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,85011,79559
+train,779,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,143469,127087
+train,841,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,110315,104807
+train,814,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,58045,57016
+train,843,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,111597,108363
+train,69,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,117192,102857
+train,79,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,34253,32030
+train,1057,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91070,87250
+train,1085,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,121619,74679
+train,1091,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114691,111127
+train,1021,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,115514,108262
+train,1090,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119907,105567
+train,274,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,46924,25305
+train,41,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,26201,25245
+train,5,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,29222,24554
+train,16,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,67644,37416
+train,48,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,67941,43035
+train,IOBP2-39,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26736,25597
+train,IOBP2-295,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26195,24648
+train,IOBP2-574,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27300,25639
+train,90,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93963,92423
+train,163,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,107850,83394
+train,1169,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,138015,109315
+train,1199,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,151797,149156
+train,4,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,123472,92427
+train,941,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152983,114707
+train,756,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,77766,70252
+train,797,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,121573,115863
+train,513,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119277,116780
+train,633,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114296,109695
+train,727,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124760,121101
+train,194,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103732,101853
+train,204,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,38563,26129
+train,254,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,84167,79576
+train,299,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,84686,79526
+train,319,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152640,147777
+train,186,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,105707,75401
+train,191,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100578,95296
+train,1119,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,109179,107472
+train,132,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,72822,62375
+train,247,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,78340,68737
+train,30,CTR3,Dexcom G4,Roche Accu-Check,AID,,123951,26037
+train,111,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54387,52590
+train,13,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53451,52216
+train,72,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58167,55707
+train,100,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,29076,27630
+train,48,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,60166,58507
+train,IOBP2-274,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26447,23845
+train,IOBP2-280,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26213,23897
+train,IOBP2-153,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26242,22923
+train,IOBP2-341,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26485,24837
+train,IOBP2-576,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27863,22743
+train,IOBP2-8,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28191,26613
+train,1123,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,76057,73058
+train,787,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,75867,73856
+train,101,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,151521,136194
+train,831,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,56194,52438
+train,834,Loop,,,AID,LoopAlgorithm,152950,104931
+train,847,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87939,79733
+train,476,Loop,,,AID,LoopAlgorithm,112415,109941
+train,72,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,5627,5383
+train,38,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,108530,104307
+train,160,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,69077,63886
+train,167,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,70469,46583
+train,169,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,81109,56742
+train,17,ReplaceBG,Dexcom G4,Paradigm 522,SAP,Basal-Bolus,74866,73275
+train,170,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,234015,62897
+train,290,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,86344,64159
+train,P21,BrisT1D,FreeStyle Libre 2,Omnipod Dash,SAP,Basal-Bolus,60942,22497
+train,1,CTR3,Dexcom G4,Roche Accu-Check,AID,,43085,23993
+train,4,CTR3,Dexcom G4,Roche Accu-Check,AID,,121661,74112
+train,47,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,59190,58110
+train,80,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58508,56982
+train,62,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56996,54909
+train,61,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,63589,62155
+train,47,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,59869,48233
+train,61,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,60746,46735
+train,IOBP2-396,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13235,11994
+train,IOBP2-378,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27138,26085
+train,IOBP2-535,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28923,26436
+train,IOBP2-195,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27537,24294
+train,980,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123895,116006
+train,997,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,73667,58337
+train,610,Loop,Dexcom G4,MiniMed 522/722,AID,LoopAlgorithm,146428,105040
+train,173,Loop,,,AID,LoopAlgorithm,90312,88487
+train,235,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123312,115584
+train,1093,Loop,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,151061,144847
+train,929,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,85546,46401
+train,996,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98530,92188
+train,884,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152967,150348
+train,583,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,69298,65348
+train,625,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87300,75819
+train,676,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,125635,93195
+train,696,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98235,91461
+train,15,CTR3,Dexcom G4,Roche Accu-Check,AID,,98392,66721
+train,18,CTR3,Dexcom G4,Roche Accu-Check,AID,,41718,30506
+train,19,CTR3,Dexcom G4,Roche Accu-Check,AID,,40199,30147
+train,21,CTR3,Dexcom G4,Roche Accu-Check,AID,,24409,22132
+train,38,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,60456,59025
+train,100,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,31236,20464
+train,98,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,63910,42634
+train,29,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,66207,45367
+train,IOBP2-3,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13403,12087
+train,IOBP2-173,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27122,21448
+train,IOBP2-57,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13375,12763
+train,IOBP2-352,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27153,24636
+train,IOBP2-547,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27302,22155
+train,IOBP2-25,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27648,25890
+train,835,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,125624,119497
+train,923,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,135099,127917
+train,568,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,89605,88372
+train,302,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,138875,119202
+train,15,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,27984,26825
+train,1058,Loop,,,AID,LoopAlgorithm,115552,94161
+train,1064,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123896,116551
+train,677,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,102531,96017
+train,805,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98494,92856
+train,461,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112361,99806
+train,462,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,151908,126839
+train,16,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,98205,84550
+train,62,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,89563,85156
+train,157,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52421,47842
+train,72,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,64284,53675
+train,38,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,70260,44716
+train,IOBP2-347,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,78461,24919
+train,IOBP2-76,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,54336,387
+train,18,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105191,92407
+train,30,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120722,117391
+train,33,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124773,119958
+train,19,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,149490,133016
+train,121,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,109755,106791
+train,171,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91513,71302
+train,993,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,152939,147886
+train,594,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,80799,78419
+train,632,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,116416,113776
+train,427,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59484,56231
+train,21,Loop,Dexcom G5,,AID,LoopAlgorithm,41435,34082
+train,61,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,86364,85034
+train,68,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,78697,69234
+train,29,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,76673,75220
+train,221,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,82130,59838
+train,67,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,84001,75908
+train,5,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,6623,6481
+train,13,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12959,12781
+train,P13,BrisT1D,FreeStyle Libre 2,Omnipod Dash,SAP,Basal-Bolus,27336,8739
+train,P18,BrisT1D,Medtronic Guardian 4,MiniMed 780G,,780G Advanced HCL,64401,47165
+train,29,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,57694,55738
+train,16,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,94444,83885
+train,98,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,66926,63421
+train,68,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,60168,55519
+train,113,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,61557,52941
+train,7,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,1928,1928
+train,27,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,82653,82653
+train,28,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,25902,25902
+train,IOBP2-183,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,31458,104
+train,IOBP2-164,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28488,24863
+train,IOBP2-218,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,23897,19403
+train,IOBP2-313,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,40061,22234
+train,IOBP2-291,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26191,24601
+train,613,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93378,48136
+train,644,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152104,147344
+train,710,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,122417,119094
+train,401,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,121290,112851
+train,266,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59338,56196
+train,390,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114449,109533
+train,57,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,123609,120067
+train,954,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,89701,67673
+train,1100,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103461,96737
+train,968,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,152124,146502
+train,645,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117279,111203
+train,681,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,66344,64696
+train,100,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,61107,59325
+train,87,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,156302,64930
+train,1007,ShanghaiT1DM,,,MDI,,4009,1337
+train,1004,ShanghaiT1DM,,,SAP,,1374,458
+train,20,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,32103,18995
+train,26,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52479,50468
+train,54,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,120285,51811
+train,68,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,24178,23347
+train,IOBP2-332,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26839,25155
+train,IOBP2-130,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13543,12427
+train,IOBP2-214,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13088,11654
+train,IOBP2-557,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26784,24206
+train,258,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,56941,54278
+train,1138,Loop,,,AID,LoopAlgorithm,152124,140106
+train,722,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87035,61218
+train,252,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,41371,39389
+train,1118,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121853,119816
+train,1204,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,52468,28948
+train,919,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106496,63608
+train,972,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,97183,94689
+train,11,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,77772,60206
+train,116,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,87126,71945
+train,74,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,171634,70053
+train,8,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,73683,51138
+test,28,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27095,26104
+test,27,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,82653,82653
+test,245,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152374,149979
+test,1080,Loop,,,AID,LoopAlgorithm,152393,143032
+test,679,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,136363,131687
+test,880,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,121882,115555
+test,1145,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,92920,90060
+test,96,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,76492,67058
+test,77,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,102142,91167
+test,23,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,67961,56456
+test,IOBP2-318,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27098,26085
+test,IOBP2-503,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13253,12029
+test,82,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,62239,52853
+test,197,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,76451,65492
+test,65,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54518,52604
+test,93,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,25408,24853
+test,IOBP2-511,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,33933,26506
+test,1123,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,76057,74859
+test,764,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,36956,33662
+test,1141,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,95463,87665
+test,927,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100513,95770
+test,863,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,124463,121969
+test,1081,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152369,149897
+test,24,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,103230,68112
+test,IOBP2-590,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,46772,25554
+test,481,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,90207,82431
+test,129,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,34029,33270
+test,30,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,29203,24557
+test,400,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98023,95537
+test,732,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,54093,49978
+test,281,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,136824,129752
+test,16,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12384,12237
+test,5,CTR3,Dexcom G4,Roche Accu-Check,AID,,30119,19755
+test,12,CTR3,Dexcom G4,Roche Accu-Check,AID,,14595,14164
+test,122,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52524,50058
+test,41,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,26201,25373
+test,23,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,63281,57810
+test,IOBP2-89,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26552,24197
+test,787,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,75868,73704
+test,5,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,55693,53018
+test,636,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,77145,57592
+test,7,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,1929,1929
+test,453,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,42810,38928
+test,IOBP2-594,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26789,24346
+train,567,OhioT1DM,Medtronic Enlite,MiniMed 630G,SAP,,16515,13247
+train,68,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,60608,56996
+train,72,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52812,51324
+train,80,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53986,51654
+train,98,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52994,52151
+train,26,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58403,54166
+train,111,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62235,53047
+train,IOBP2-583,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26788,24984
+train,IOBP2-101,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26204,22804
+train,IOBP2-326,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13370,10988
+train,IOBP2-60,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,2171,1942
+train,IOBP2-410,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27910,25853
+train,IOBP2-383,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28508,26308
+train,446,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124470,118340
+train,559,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,46973,12635
+train,573,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79069,75068
+train,45,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,19829,16898
+train,146,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,108894,93992
+train,989,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123896,115668
+train,1009,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,130751,127332
+train,1014,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,82649,69331
+train,763,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,139675,113870
+train,791,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,71367,28773
+train,916,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,150597,119809
+train,752,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118099,115132
+train,773,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,75043,73356
+train,395,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,76294,74246
+train,415,Loop,,,AID,LoopAlgorithm,127297,99421
+train,453,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,42810,40729
+train,66,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,136554,110284
+train,86,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117856,107287
+train,1039,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114715,110064
+train,1120,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93119,91224
+train,987,Loop,Abbott Libre,OmniPod,AID,LoopAlgorithm,80033,75279
+train,1053,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,111174,105092
+train,1070,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,114257,109967
+train,141,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,85742,67105
+train,264,ReplaceBG,,,,,74378,45424
+train,275,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,166919,65102
+train,38,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54180,52063
+train,47,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,57460,52203
+train,48,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53923,52256
+train,54,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53442,51486
+train,26,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,64535,43186
+train,20,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,69675,46614
+train,IOBP2-226,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27907,27279
+train,IOBP2-529,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,71926,26635
+train,IOBP2-154,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26190,23453
+train,IOBP2-438,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26745,23874
+train,IOBP2-185,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26215,24927
+train,IOBP2-209,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27040,25693
+train,IOBP2-367,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28218,26450
+train,120,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,71948,70079
+train,913,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,19894,19278
+train,790,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96931,93314
+train,533,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,150134,142338
+train,548,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112349,110383
+train,616,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124342,119199
+train,112,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91627,84361
+train,114,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,86173,81322
+train,131,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,55166,53290
+train,303,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152123,130734
+train,347,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100322,64538
+train,380,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,124297,80144
+train,185,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119580,117672
+train,1095,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124472,118436
+train,128,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,71046,45689
+train,246,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,93665,60059
+train,2314,T1D-UOM,,Multiple Daily Injections,MDI,MDI,118596,10668
+train,2308,T1D-UOM,,MiniMed 780G,SAP,Basal-Bolus,30909,28694
+train,100,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52504,50522
+train,129,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,58891,49371
+train,13,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58745,34113
+train,IOBP2-94,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27077,22540
+train,IOBP2-191,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27918,25288
+train,IOBP2-221,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13087,11483
+train,IOBP2-441,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26515,24980
+train,IOBP2-369,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,894,721
+train,IOBP2-139,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28482,25887
+train,IOBP2-365,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,15109,13598
+train,IOBP2-56,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27620,26071
+train,175,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,124704,104187
+train,231,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,147727,137653
+train,1049,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,51000,46369
+train,1056,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115796,110601
+train,851,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,130118,105711
+train,540,Loop,Dexcom G6,,AID,LoopAlgorithm,136613,105840
+train,148,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,94585,89541
+train,1117,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93638,85936
+train,1030,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105056,94277
+train,1054,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,131372,103557
+train,899,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,51543,42155
+train,939,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,104218,86634
+train,272,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,55009,45345
+train,321,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117807,115713
+train,82,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,118858,94810
+train,13,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,51903,50064
+train,165,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,118462,68339
+train,168,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,79147,60700
+train,281,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,107089,67736
+train,293,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,83610,60436
+train,7,CTR3,Dexcom G4,Roche Accu-Check,AID,,105365,56926
+train,35,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,161776,64023
+train,49,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,57258,55875
+train,82,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58134,56127
+train,20,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,98208,54936
+train,65,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58454,53745
+train,49,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,62694,49403
+train,IOBP2-560,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26193,20281
+train,IOBP2-349,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26437,25166
+train,621,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,149194,141163
+train,153,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,122064,99372
+train,1108,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,127649,123934
+train,937,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,110335,107569
+train,1001,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,33384,31195
+train,611,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,109032,84594
+train,587,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,75203,45667
+train,423,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,97994,96007
+train,448,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,114043,61097
+train,20,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,102786,100071
+train,177,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,93453,51684
+train,3,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,121562,71750
+train,39,ReplaceBG,,,,,80589,32048
+train,27,CTR3,Dexcom G4,Roche Accu-Check,AID,,33812,31187
+train,28,CTR3,Dexcom G4,Roche Accu-Check,AID,,27253,24229
+train,35,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,61893,51141
+train,109,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,56565,40829
+train,5,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62745,52598
+train,IOBP2-391,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26260,24228
+train,IOBP2-429,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28832,26410
+train,IOBP2-428,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26203,23796
+train,IOBP2-483,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27311,23456
+train,IOBP2-241,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26233,23570
+train,IOBP2-570,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27335,24636
+train,IOBP2-364,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27303,24809
+train,537,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59029,57805
+train,552,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122451,96309
+train,561,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,118978,117080
+train,238,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88832,82086
+train,240,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,45856,37726
+train,7,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,36833,23958
+train,85,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152399,150001
+train,43,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,287102,195172
+train,1097,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,123320,109798
+train,703,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106342,103133
+train,726,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,92994,88408
+train,819,Loop,,,AID,LoopAlgorithm,152408,135744
+train,823,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,69522,68085
+train,500,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115228,106854
+train,550,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101924,79164
+train,138,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52802,50887
+train,142,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53710,52437
+train,149,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56627,49901
+train,150,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,50954,48910
+train,82,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58451,48983
+train,IOBP2-235,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,49411,25265
+train,IOBP2-554,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,68123,25795
+train,IOBP2-10,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,50493,11269
+train,55,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,152981,141106
+train,81,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,123320,114476
+train,137,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119293,108257
+train,983,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,122769,77200
+train,1011,Loop,,,AID,LoopAlgorithm,113538,108735
+train,1045,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,79560,73226
+train,597,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124479,114955
+train,432,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152408,148794
+train,164,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152372,148423
+train,227,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,145459,142887
+train,230,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,108755,100950
+train,249,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,42084,40526
+train,1132,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123901,93247
+train,1159,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114977,112518
+train,697,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,77947,74629
+train,219,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,87378,69228
+train,222,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,53711,10266
+train,60,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,73108,67065
+train,71,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,73573,65870
+train,22,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,11520,11245
+train,P02,BrisT1D,Dexcom G6,t:slim X2,,,60305,53948
+train,1,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,4096,4096
+train,4,HUPA-UCM,FreeStyle Libre 2,Roche Pump,SAP,,3184,3184
+train,19,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,3711,3711
+train,IOBP2-357,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,7487,4061
+train,IOBP2-47,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27594,26603
+train,IOBP2-412,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26135,22169
+train,675,Loop,,,AID,LoopAlgorithm,56969,54373
+train,695,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,89703,83216
+train,741,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,31772,19537
+train,684,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120993,110259
+train,759,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,146013,139922
+train,413,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,72580,69578
+train,420,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152409,150350
+train,255,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,50851,23917
+train,338,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118706,109385
+train,343,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,128186,122843
+train,409,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88259,81954
+train,50,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118431,111114
+train,239,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113820,107836
+train,1148,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124714,122147
+train,973,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,65609,48434
+train,1109,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,104839,96625
+train,976,Loop,Abbott Libre,MiniMed 523/723,AID,LoopAlgorithm,29581,8559
+train,554,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112964,94346
+train,582,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,116920,61972
+train,109,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,42760,41676
+train,5,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,61085,59554
+train,49,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,44405,43437
+train,243,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,104671,74571
+train,93,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,170973,65293
+train,95,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,125466,77986
+train,97,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,92673,62933
+train,1006,ShanghaiT1DM,,,MDI,,11124,3710
+train,1005,ShanghaiT1DM,,,SAP,,3766,1256
+train,22,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27210,26825
+train,29,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52902,50812
+train,5,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,63627,62385
+train,41,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,12259,11835
+train,IOBP2-584,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,29066,27322
+train,IOBP2-90,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28207,24513
+train,IOBP2-193,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,30228,25839
+train,263,Loop,,,AID,LoopAlgorithm,108335,84150
+train,352,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118957,117037
+train,176,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123568,118220
+train,256,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,46578,42573
+train,1082,Loop,,,AID,LoopAlgorithm,8747,7993
+train,887,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103725,94643
+train,909,Loop,,,AID,LoopAlgorithm,114461,109062
+train,926,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98811,95618
+train,284,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,133056,113686
+train,363,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,53018,49483
+train,27,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,121354,109080
+train,91,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121553,98697
+train,1142,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124446,122897
+train,1173,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,152937,150235
+train,917,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,70165,66508
+train,76,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,76329,72412
+test,163,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52539,49132
+test,21,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58149,55360
+test,8,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58034,55966
+test,95,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,77173,51789
+test,IOBP2-365,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,15109,9609
+test,291,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124411,113534
+test,450,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,76320,71705
+test,497,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,95432,93026
+test,255,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,50852,47396
+test,1107,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152973,143306
+test,1178,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,110046,103803
+test,405,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,72440,69358
+test,93,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,129587,95936
+test,65,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,84952,72705
+test,162,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,104954,41645
+test,276,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,45084,43717
+test,IOBP2-407,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27684,24680
+test,833,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152915,147281
+test,1079,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,76205,66615
+test,810,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,98221,95695
+test,249,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,42085,40170
+test,293,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,26327,12433
+test,396,Loop,,,AID,LoopAlgorithm,149291,141733
+test,1155,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,69745,66412
+test,274,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,46924,45723
+test,76,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,27664,27252
+test,IOBP2-23,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28183,25866
+test,IOBP2-36,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26999,24382
+test,IOBP2-203,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26459,19397
+test,120,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,71948,68856
+test,1046,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105185,101143
+test,26,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,121886,88729
+test,43,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,56443,55733
+test,641,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,151819,147092
+test,626,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,66417,64321
+test,358,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61948,59638
+test,285,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,61354,59421
+test,132,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56491,51297
+test,41,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,12260,11806
+test,88,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,66510,46578
+test,107,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,29682,27181
+test,773,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,75044,73212
+test,43,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58435,55609
+test,28,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,28120,25007
+test,304,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,45664,43191
+test,65,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,24809,23208
+test,75,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,31810,27687
+test,31,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,41879,40098
+train,552,OhioT1DM,Medtronic Enlite,MiniMed 630G,SAP,,15220,11444
+train,540,OhioT1DM,Medtronic Enlite,MiniMed 630G,SAP,,16314,14842
+train,575,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,15870,14456
+train,559,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,14972,13310
+train,69,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52520,51473
+train,79,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53358,49528
+train,90,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52059,50848
+train,94,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,58626,53049
+train,55,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,68431,61448
+train,112,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,37097,22805
+train,66,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58935,42748
+train,114,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58762,49695
+train,50,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,62492,55561
+train,IOBP2-138,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26178,24731
+train,477,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115578,106393
+train,375,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,73723,12084
+train,450,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,76320,65495
+train,13,Loop,,,AID,LoopAlgorithm,65339,60701
+train,1017,Loop,,,AID,LoopAlgorithm,43488,41961
+train,788,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,62089,58627
+train,796,Loop,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,126785,113761
+train,747,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118232,107168
+train,767,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,145491,138678
+train,799,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,111958,107521
+train,815,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,11536,10496
+train,410,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,107252,66604
+train,434,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,117234,107267
+train,5,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,55693,52853
+train,82,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,62238,56869
+train,1026,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,99998,92680
+train,140,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,106679,62585
+train,145,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,118831,60582
+train,155,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,121182,85418
+train,269,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,83199,75298
+train,277,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,96767,88448
+train,51,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51853,48584
+train,57,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,27299,26473
+train,58,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51095,50205
+train,85,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,31835,24663
+train,36,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,56984,47135
+train,120,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,31236,29690
+train,81,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,57883,50178
+train,IOBP2-462,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26194,22875
+train,IOBP2-586,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26604,24959
+train,IOBP2-271,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,12361,11562
+train,IOBP2-569,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26208,24705
+train,IOBP2-338,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27331,25949
+train,IOBP2-497,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28221,26912
+train,IOBP2-348,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,626,532
+train,930,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,71759,62674
+train,617,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,76320,65432
+train,651,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,119293,115914
+train,729,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,20563,16765
+train,178,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,76418,69983
+train,268,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101701,94936
+train,260,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,94080,85969
+train,27,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,128952,101577
+train,127,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,77206,72435
+train,130,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,122944,79441
+train,134,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,93330,70662
+train,2301,T1D-UOM,,t:slim X2,SAP,Basal-Bolus,31680,31157
+train,121,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52386,49374
+train,126,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52633,51676
+train,135,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56431,51434
+train,28,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,28120,25728
+train,64,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56513,54500
+train,IOBP2-551,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26213,25048
+train,IOBP2-549,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26473,23888
+train,IOBP2-125,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27595,26491
+train,IOBP2-6,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26488,22875
+train,IOBP2-321,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26216,20678
+train,217,Loop,,,AID,LoopAlgorithm,113482,77407
+train,251,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,148419,124533
+train,1087,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,49444,44335
+train,1121,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,69018,64608
+train,775,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112731,94474
+train,816,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,94248,91343
+train,1143,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,132241,113513
+train,1037,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118973,94465
+train,878,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101986,93325
+train,458,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,152983,148805
+train,488,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,51826,47977
+train,489,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117755,111640
+train,522,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,37170,34999
+train,320,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,94212,43619
+train,335,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117795,111204
+train,339,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91251,79703
+train,77,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,119874,96718
+train,5,CTR3,Dexcom G4,Roche Accu-Check,AID,,81652,29360
+train,55,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,55142,53055
+train,7,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,56995,55662
+train,91,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,63987,51901
+train,28,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,59576,56123
+train,77,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,57263,53455
+train,IOBP2-297,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26215,21937
+train,IOBP2-99,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27982,23364
+train,IOBP2-68,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26549,25447
+train,960,Loop,,,AID,LoopAlgorithm,152202,129863
+train,1008,Loop,,,AID,LoopAlgorithm,148923,113377
+train,189,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124198,89210
+train,228,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,129389,121610
+train,1086,Loop,,,AID,LoopAlgorithm,124475,116035
+train,956,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,97089,91396
+train,599,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,118683,94004
+train,688,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,128893,116170
+train,355,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126745,123861
+train,81,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,52712,51804
+train,66,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,103696,92009
+train,36,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,103980,101298
+train,40,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,212722,62618
+train,13,CTR3,Dexcom G4,Roche Accu-Check,AID,,33385,0
+train,20,CTR3,Dexcom G4,Roche Accu-Check,AID,,109134,67913
+train,26,CTR3,Dexcom G4,Roche Accu-Check,AID,,28880,21076
+train,66,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,51192,48045
+train,45,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,67617,47261
+train,IOBP2-202,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28204,26530
+train,IOBP2-53,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28060,24661
+train,IOBP2-144,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26187,23669
+train,745,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152981,143978
+train,750,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106330,102170
+train,758,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,120361,118217
+train,807,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,152403,149029
+train,528,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103707,99070
+train,244,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,78190,65575
+train,280,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,78276,56587
+train,20,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,114684,89364
+train,1154,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,101162,82509
+train,1062,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118962,116675
+train,1092,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118973,110789
+train,700,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,67968,42286
+train,739,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,72405,58963
+train,91,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,99661,90128
+train,190,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,75455,64879
+train,53,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,105747,70005
+train,15,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56268,49954
+train,159,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51681,50470
+train,86,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,65647,22545
+train,IOBP2-480,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,50241,25721
+train,IOBP2-181,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,50577,24241
+train,701,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,139140,131291
+train,738,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152250,137126
+train,503,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,125338,116719
+train,383,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,96799,93797
+train,406,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,68283,65500
+train,271,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124772,115666
+train,381,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,47604,28926
+train,157,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,125598,120464
+train,241,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106593,96814
+train,1134,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,27832,13530
+train,856,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152983,145822
+train,28,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,74449,68781
+train,214,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,81421,73045
+train,215,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,97234,66757
+train,216,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,127087,69656
+train,224,ReplaceBG,Dexcom G4,Paradigm 722,SAP,Basal-Bolus,73012,67263
+train,70,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,105404,76063
+train,1,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,11231,10881
+train,4,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12891,12750
+train,15,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,14112,13772
+train,18,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,5328,5224
+train,19,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,13248,13080
+train,21,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,13535,13214
+train,P03,BrisT1D,Dexcom G6,t:slim X2,,,28074,27652
+train,P06,BrisT1D,FreeStyle Libre 2,Omnipod Eros,SAP,Basal-Bolus,57727,18121
+train,P11,BrisT1D,Dexcom G6,t:slim X2,,640G,63850,52524
+train,P16,BrisT1D,Medtronic Guardian 4,MiniMed 780G,,780G Advanced HCL,57130,55522
+train,91,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,57928,55082
+train,50,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,64486,63456
+train,43,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58133,51695
+train,64,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,58742,50968
+train,7,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,66520,49595
+train,16,HUPA-UCM,FreeStyle Libre 2,Medtronic Pump,SAP,,3835,3835
+train,22,HUPA-UCM,FreeStyle Libre 2,Roche Pump,SAP,,4023,4023
+train,IOBP2-413,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,90812,25979
+train,IOBP2-405,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27857,26347
+train,IOBP2-79,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27041,26176
+train,IOBP2-426,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26180,24854
+train,IOBP2-591,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26752,23276
+train,447,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,108777,105556
+train,1167,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,123853,120898
+train,961,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152385,135825
+train,1069,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87048,81849
+train,892,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,152110,96900
+train,637,Loop,Dexcom G5,MiniMed 515/715,AID,LoopAlgorithm,122802,118851
+train,89,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,18781,17287
+train,10,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,194741,65467
+train,102,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,121626,76152
+train,105,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,49493,26340
+train,234,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,92748,69034
+train,1010,ShanghaiT1DM,,,MDI,,2752,918
+train,166,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53247,51466
+train,171,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53749,51549
+train,18,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52645,47316
+train,19,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54205,52449
+train,21,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52395,48024
+train,45,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58363,56971
+train,77,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,28178,27266
+train,36,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58552,53092
+train,86,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,23297,22844
+train,81,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,24855,24049
+train,27,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,24838,23636
+train,89,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,25050,23049
+train,85,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,24899,24053
+train,IOBP2-571,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28198,26227
+train,IOBP2-301,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27949,26355
+train,IOBP2-119,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27670,26514
+train,IOBP2-299,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26244,24059
+train,IOBP2-18,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27045,25959
+train,IOBP2-112,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28217,25620
+train,IOBP2-227,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27933,26451
+train,330,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,75234,71822
+train,408,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,40755,39846
+train,212,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152392,137901
+train,213,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152361,146702
+train,1183,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,86401,63111
+train,969,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,54442,51016
+train,981,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,124858,105414
+train,300,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,98767,85594
+train,312,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,150208,113389
+train,41,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,137721,87444
+train,119,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,40841,36285
+train,201,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,100783,71351
+train,203,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,129983,71617
+train,73,ReplaceBG,Dexcom G4,Paradigm 522,SAP,Basal-Bolus,98287,54484
+train,78,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,134584,55577
+test,66,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,51192,49089
+test,120,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,31236,22734
+test,IOBP2-377,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14127,13344
+test,IOBP2-30,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28501,25146
+test,675,Loop,,,AID,LoopAlgorithm,56969,52333
+test,733,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103999,101330
+test,2,ReplaceBG,Dexcom G4,t:slim G4,SAP,Basal-Bolus,104965,67525
+test,37,ReplaceBG,,,,,91037,70605
+test,42,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,61256,56811
+test,2313,T1D-UOM,,Multiple Daily Injections,MDI,MDI,20182,17695
+test,IOBP2-592,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27912,26660
+test,IOBP2-424,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27968,25784
+test,630,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,58063,56657
+test,467,Loop,Dexcom G4,MiniMed 523/723,AID,LoopAlgorithm,76491,75563
+test,660,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,125624,122137
+test,946,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,62818,58193
+test,59,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,27115,23214
+test,254,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,41710,25525
+test,27,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,60462,47531
+test,IOBP2-12,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26166,23990
+test,IOBP2-548,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27632,16727
+test,417,Loop,,,AID,LoopAlgorithm,152123,138230
+test,532,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,56647,51838
+test,1041,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,51766,51124
+test,1198,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,116366,112578
+test,899,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,51544,43174
+test,654,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,104708,102226
+test,327,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,66482,36677
+test,900,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,41280,40723
+test,1060,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,51577,50738
+test,136,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,57007,54398
+test,26,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124469,116766
+test,333,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,87692,70630
+test,76,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,58856,53373
+test,94,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,64194,51314
+test,IOBP2-326,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13370,10482
+test,62,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,55789,40836
+test,5,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,6624,6446
+test,P24,BrisT1D,Dexcom G6,t:slim X2,,,60625,59202
+test,130,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52362,51216
+test,143,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52409,50702
+test,5,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,29223,28743
+test,427,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59485,58097
+test,1133,Loop,,,AID,LoopAlgorithm,138015,134361
+test,23,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,3919,3919
+test,IOBP2-222,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,10984,10388
+test,16,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,34036,32036
+test,240,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,45856,41656
+test,70,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,44981,43309
+train,588,OhioT1DM,Medtronic Enlite,MiniMed 530G,SAP,,16128,15431
+train,96,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51106,46689
+train,IOBP2-552,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,7514,6317
+train,IOBP2-309,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28798,26608
+train,IOBP2-9,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,29662,28340
+train,584,Loop,,,AID,LoopAlgorithm,21232,12010
+train,1188,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,112888,55781
+train,910,Loop,Dexcom G6,,AID,LoopAlgorithm,114462,104116
+train,405,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,72439,67740
+train,414,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61082,58850
+train,516,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152410,146826
+train,99,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,55038,49072
+train,139,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,114421,103653
+train,146,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,111402,72166
+train,148,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,99043,61676
+train,27,ReplaceBG,Dexcom G4,Paradigm 722,SAP,Basal-Bolus,91595,67937
+train,272,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,80738,66646
+train,46,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,25511,23310
+train,6,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,56618,48683
+train,40,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,64200,56696
+train,78,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,66827,37469
+train,73,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,64196,41012
+train,IOBP2-443,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,33059,107
+train,IOBP2-393,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,47430,16568
+train,IOBP2-254,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26753,25319
+train,IOBP2-31,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26183,23333
+train,IOBP2-48,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26186,25548
+train,141,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121275,93412
+train,918,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,93063,84807
+train,753,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,94473,91051
+train,580,Loop,,,AID,LoopAlgorithm,37892,31550
+train,585,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121449,115867
+train,711,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,130495,106763
+train,223,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,105434,102561
+train,293,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,26327,2060
+train,1152,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,152977,147210
+train,131,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,132406,59443
+train,137,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,119804,76909
+train,249,ReplaceBG,,,,,92883,41031
+train,256,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,99304,55965
+train,263,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,117601,93686
+train,2304,T1D-UOM,,MiniMed 780G,SAP,Basal-Bolus,34717,22812
+train,115,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54044,51229
+train,118,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51282,50027
+train,34,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58453,56018
+train,9,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,108129,104849
+train,IOBP2-206,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26440,23675
+train,IOBP2-207,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26142,25457
+train,IOBP2-189,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26785,24245
+train,IOBP2-200,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27057,24122
+train,IOBP2-81,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,15144,14087
+train,IOBP2-93,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26205,22336
+train,IOBP2-588,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14384,13895
+train,165,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,80084,77237
+train,246,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,48887,45387
+train,1150,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,138015,125877
+train,879,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119503,72874
+train,589,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152944,148823
+train,154,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,80763,39343
+train,219,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,88488,32225
+train,1018,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124405,120578
+train,1079,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,76205,72589
+train,1033,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114485,85355
+train,877,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100249,63051
+train,891,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,123608,115758
+train,953,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,113976,76897
+train,572,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,120731,118189
+train,9,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,112813,103285
+train,164,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,100310,81000
+train,284,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,119605,56058
+train,P23,BrisT1D,Dexcom G6,t:slim X2,,,28668,17883
+train,3,CTR3,Dexcom G4,Roche Accu-Check,AID,,121432,65552
+train,40,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,62147,55159
+train,75,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,31809,24996
+train,124,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,61593,57550
+train,2,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,59873,57408
+train,IOBP2-430,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26505,24918
+train,IOBP2-37,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27626,26332
+train,IOBP2-451,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26142,24068
+train,IOBP2-372,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28256,26672
+train,IOBP2-55,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26146,23340
+train,975,Loop,,,AID,LoopAlgorithm,123900,104817
+train,607,Loop,,,AID,LoopAlgorithm,152167,137400
+train,620,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,97350,90956
+train,1124,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,112676,106681
+train,978,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,85213,83024
+train,943,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,47750,38717
+train,521,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,41760,40530
+train,545,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,95403,82441
+train,346,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,148665,130781
+train,402,Loop,Dexcom G4,OmniPod,AID,LoopAlgorithm,80013,16885
+train,438,Loop,,,AID,LoopAlgorithm,151726,118711
+train,174,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,121061,62155
+train,175,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,73900,69193
+train,176,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,169179,65802
+train,36,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,91753,66069
+train,24,CTR3,Dexcom G4,Roche Accu-Check,AID,,24987,23338
+train,25,CTR3,Dexcom G4,Roche Accu-Check,AID,,23295,22424
+train,53,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,64536,62602
+train,73,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58108,56545
+train,10,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58473,54486
+train,10,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,58680,48600
+train,119,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,64367,45186
+train,92,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,59864,48835
+train,107,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,29681,28116
+train,IOBP2-504,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26208,23648
+train,IOBP2-155,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14075,13033
+train,IOBP2-503,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13252,12430
+train,IOBP2-133,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28204,25169
+train,IOBP2-103,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26488,22211
+train,565,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,110351,80036
+train,88,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,117533,112402
+train,1211,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152412,138090
+train,25,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121883,118949
+train,1067,Loop,,,AID,LoopAlgorithm,127618,123896
+train,1068,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,118989,115701
+train,785,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,114815,111851
+train,800,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,110382,83168
+train,858,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,118465,68996
+train,525,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,125059,117346
+train,53,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,99256,91884
+train,70,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,96940,92990
+train,10,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,89140,84452
+train,185,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,81741,69515
+train,187,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,114458,74034
+train,43,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,71933,61225
+train,45,ReplaceBG,Dexcom G4,OmniPod,SAP,Basal-Bolus,273639,62012
+train,50,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,68816,61540
+train,144,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51266,49219
+train,147,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,54531,53084
+train,9,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,73144,42890
+train,102,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,64225,47385
+train,IOBP2-107,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,66983,19417
+train,IOBP2-440,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,63259,23004
+train,24,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126782,114255
+train,60,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,142911,120022
+train,84,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,152695,125513
+train,44,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,126497,115407
+train,95,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,110331,82935
+train,949,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,137407,114078
+train,1036,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,152981,149036
+train,439,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,49033,44848
+train,419,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,122412,116962
+train,437,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91843,86772
+train,445,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,143132,137473
+train,317,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106877,104797
+train,337,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,123602,121452
+train,359,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100572,95369
+train,1193,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,106055,103571
+train,3,Loop,,,AID,LoopAlgorithm,107685,87344
+train,691,Loop,,,AID,LoopAlgorithm,152696,147262
+train,743,Loop,Dexcom G4,MiniMed 522/722,AID,LoopAlgorithm,149662,143496
+train,751,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,137083,123188
+train,102,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,80797,76488
+train,107,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,74739,70437
+train,220,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,83374,74767
+train,227,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,92142,80254
+train,55,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,77952,53266
+train,64,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,74335,66387
+train,7,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,118028,77935
+train,6,AZT1D,Dexcom G6,t:slim X2,AID,Control-IQ,12839,12730
+train,P04,BrisT1D,Dexcom G6,t:slim X2,,,63042,58031
+train,P05,BrisT1D,FreeStyle Libre 2,MiniMed 640G,,640G,64152,19815
+train,P07,BrisT1D,Dexcom G6,Omnipod 5,AID,Omnipod 5,60318,57875
+train,P10,BrisT1D,Dexcom G6,t:slim X2,,,58928,46846
+train,P15,BrisT1D,Dexcom One,MiniMed 640G,,640G,65013,61691
+train,92,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,98648,92097
+train,78,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58507,55493
+train,75,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,61891,60091
+train,70,DCLP5,Dexcom G6,t:slim X2,AID,Control-IQ,58149,55550
+train,14,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,3829,3829
+train,17,HUPA-UCM,FreeStyle Libre 2,Multiple Daily Injections,MDI,,3599,3599
+train,IOBP2-160,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28447,24943
+train,IOBP2-62,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28494,25346
+train,IOBP2-182,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26145,22247
+train,IOBP2-170,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,20192,17212
+train,IOBP2-519,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27585,19692
+train,IOBP2-141,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26786,24009
+train,627,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,151261,146512
+train,642,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,77698,75272
+train,647,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,125635,123713
+train,369,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,118999,70444
+train,264,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,121824,116636
+train,1179,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,82575,78426
+train,1196,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115824,113212
+train,1005,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,59633,38860
+train,895,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124723,114941
+train,685,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,42240,32075
+train,78,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,60580,58317
+train,75,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,833,540
+train,34,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,23629,22362
+train,40,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,47051,46213
+train,231,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,75476,67340
+train,240,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,106324,74453
+train,91,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,105225,57299
+train,1001,ShanghaiT1DM,,,SAP,,1972,658
+train,1002,ShanghaiT1DM,,,SAP,,6711,2238
+train,1009,ShanghaiT1DM,,,SAP,,2041,681
+train,1011,ShanghaiT1DM,,,MDI,,1606,536
+train,2313,T1D-UOM,,Multiple Daily Injections,MDI,MDI,20182,10193
+train,2306,T1D-UOM,,Multiple Daily Injections,MDI,MDI,29527,11037
+train,31,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,51744,49072
+train,32,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,53668,48623
+train,IOBP2-467,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28203,26697
+train,IOBP2-72,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27954,23524
+train,IOBP2-315,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26231,23581
+train,IOBP2-20,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,5439,5172
+train,IOBP2-198,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13981,12968
+train,IOBP2-446,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,28287,27232
+train,IOBP2-158,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27203,25015
+train,428,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,136861,130307
+train,207,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,121296,115585
+train,222,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,105191,91110
+train,1078,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,100365,93871
+train,1112,Loop,,,AID,LoopAlgorithm,122444,119134
+train,1127,Loop,,,AID,LoopAlgorithm,10049,9583
+train,1149,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,93924,85993
+train,928,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,136800,130182
+train,669,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,137552,117381
+train,672,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,119576,114727
+train,728,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,103992,71904
+train,71,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,126489,124532
+train,59,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,119006,113875
+train,76,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,58855,56512
+train,93,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,144344,120230
+train,128,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,61645,59284
+train,870,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,151547,116553
+train,112,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,74441,54950
+train,86,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,86210,55507
+test,44,DCLP3,Dexcom G6,t:slim X2,AID,Control-IQ,52523,50559
+test,2,DCLP5,Dexcom G6,t:slim X2,SAP,Basal-IQ,105246,102885
+test,IOBP2-57,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13375,12994
+test,236,Loop,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,150653,147645
+test,969,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,54442,47865
+test,200,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,124715,119890
+test,463,Loop,,,AID,LoopAlgorithm,120431,116403
+test,487,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,99996,97241
+test,845,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,114078,109673
+test,1140,Loop,Dexcom G5,MiniMed 523/723,AID,LoopAlgorithm,152923,150229
+test,515,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,118998,116487
+test,97,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115529,111110
+test,921,Loop,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,134559,127043
+test,119,ReplaceBG,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,40842,33177
+test,139,ReplaceBG,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,87256,72970
+test,IOBP2-32,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26814,25175
+test,IOBP2-3,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13404,11464
+test,1000,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,120766,115019
+test,234,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,115840,110883
+test,973,Loop,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,65610,24330
+test,IOBP2-198,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,13982,13222
+test,IOBP2-128,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27067,25342
+test,408,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,40755,40036
+test,814,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,58046,57132
+test,162,Loop,Dexcom G5,OmniPod,AID,LoopAlgorithm,105753,91747
+test,87,PEDAP,Dexcom G6,t:slim X2,AID,Control-IQ,105631,97748
+test,157,ReplaceBG,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,69889,57487
+test,287,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,91683,64943
+test,46,Flair,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,32680,3731
+test,85,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,31836,26979
+test,IOBP2-445,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26464,24291
+test,778,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,91259,15711
+test,272,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,55009,49712
+test,37,Flair,Guardian 3,MiniMed 670G,AID,SmartGuard,30674,17283
+test,IOBP2-358,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,26196,23040
+test,IOBP2-588,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14385,13553
+test,883,Loop,Dexcom G6,OmniPod,AID,LoopAlgorithm,107736,103938
+test,204,Loop,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,38563,26768
+test,58,ReplaceBG,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,71044,69124
+test,IOBP2-282,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,14092,12573
+test,IOBP2-183,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,31458,25897
+test,IOBP2-151,IOBP2,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,27878,25669

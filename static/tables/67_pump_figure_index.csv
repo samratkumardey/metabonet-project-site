@@ -1,0 +1,44 @@
+pump,split,patients,subjects_on_pump,file
+(not recorded),test,3,16,pump__test__not_recorded.html
+(not recorded),train,3,71,pump__train__not_recorded.html
+Beta Bionics Gen 4 iLet,test,3,62,pump__test__Beta_Bionics_Gen_4_iLet.html
+Beta Bionics Gen 4 iLet,train,3,299,pump__train__Beta_Bionics_Gen_4_iLet.html
+Medtronic Pump,test,1,1,pump__test__Medtronic_Pump.html
+Medtronic Pump,train,3,8,pump__train__Medtronic_Pump.html
+MiniMed 515/715,test,3,6,pump__test__MiniMed_515_715.html
+MiniMed 515/715,train,3,14,pump__train__MiniMed_515_715.html
+MiniMed 522/722,test,3,25,pump__test__MiniMed_522_722.html
+MiniMed 522/722,train,3,132,pump__train__MiniMed_522_722.html
+MiniMed 523/723,test,3,16,pump__test__MiniMed_523_723.html
+MiniMed 523/723,train,3,72,pump__train__MiniMed_523_723.html
+MiniMed 530G,train,3,9,pump__train__MiniMed_530G.html
+MiniMed 530G 551,test,3,5,pump__test__MiniMed_530G_551.html
+MiniMed 530G 551,train,3,22,pump__train__MiniMed_530G_551.html
+MiniMed 530G 751,test,3,7,pump__test__MiniMed_530G_751.html
+MiniMed 530G 751,train,3,22,pump__train__MiniMed_530G_751.html
+MiniMed 554/754,test,1,1,pump__test__MiniMed_554_754.html
+MiniMed 554/754,train,3,4,pump__train__MiniMed_554_754.html
+MiniMed 630G,train,3,3,pump__train__MiniMed_630G.html
+MiniMed 640G,train,1,4,pump__train__MiniMed_640G.html
+MiniMed 670G,test,3,21,pump__test__MiniMed_670G.html
+MiniMed 670G,train,3,102,pump__train__MiniMed_670G.html
+MiniMed 780G,train,3,7,pump__train__MiniMed_780G.html
+Multiple Daily Injections,test,3,5,pump__test__Multiple_Daily_Injections.html
+Multiple Daily Injections,train,3,15,pump__train__Multiple_Daily_Injections.html
+OmniPod,test,3,104,pump__test__OmniPod.html
+OmniPod,train,3,513,pump__train__OmniPod.html
+Omnipod 5,train,1,1,pump__train__Omnipod_5.html
+Omnipod Dash,train,1,2,pump__train__Omnipod_Dash.html
+Paradigm 522,train,2,2,pump__train__Paradigm_522.html
+Paradigm 722,train,2,2,pump__train__Paradigm_722.html
+Paradigm Revel 523,test,3,6,pump__test__Paradigm_Revel_523.html
+Paradigm Revel 523,train,3,44,pump__train__Paradigm_Revel_523.html
+Paradigm Revel 723,test,3,11,pump__test__Paradigm_Revel_723.html
+Paradigm Revel 723,train,3,44,pump__train__Paradigm_Revel_723.html
+Roche Accu-Check,test,3,5,pump__test__Roche_Accu-Check.html
+Roche Accu-Check,train,3,30,pump__train__Roche_Accu-Check.html
+Roche Pump,train,3,4,pump__train__Roche_Pump.html
+t:slim G4,test,3,3,pump__test__t_slim_G4.html
+t:slim G4,train,3,18,pump__train__t_slim_G4.html
+t:slim X2,test,3,56,pump__test__t_slim_X2.html
+t:slim X2,train,3,281,pump__train__t_slim_X2.html

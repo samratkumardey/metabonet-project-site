@@ -1,0 +1,88 @@
+
+<!-- =========================================================== ABLATIONS -->
+<section id="ablations">
+  <div class="wrap">
+    <div class="eyebrow">Ablations &amp; negative results</div>
+    <h2>Everything we tried, with the number it got</h2>
+    <p class="prose">A negative result with its number is worth reporting: it closes a direction for the next person.
+      Each row below was measured, most with a paired interval, and none was selected by looking at evaluation targets.</p>
+
+    <div class="tlabel">Table · Closed directions</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Direction</th><th>What was measured</th><th class="num">Result</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Two-stream encoder (<code>dual</code>)</td><td>vs <code>lstm_s0</code>, 5 held-out studies</td><td class="num neg">−1.23</td><td>loses all five</td></tr>
+        <tr><td>TCN encoder</td><td>vs <code>lstm_s0</code>, 5 held-out studies</td><td class="num neg">−1.49</td><td>loses all five</td></tr>
+        <tr><td>Transformer encoder</td><td>vs <code>lstm_s0</code>, 5 held-out studies</td><td class="num neg">−2.14</td><td>loses all five; below persistence on CTR3</td></tr>
+        <tr><td>GRU decoder for the known-future block</td><td>vs <code>lstm_s0</code>, 5 held-out studies</td><td class="num neg">−0.97</td><td>loses all five, most at 90–120 min</td></tr>
+        <tr><td>50-epoch schedule</td><td>vs <code>lstm_s0</code></td><td class="num neg">−0.89</td><td>loses all five; confounded with the LR schedule</td></tr>
+        <tr><td>Checkpoint on stop-split DTS-A, 25 epochs</td><td>vs <code>lstm_s0</code></td><td class="num neg">−0.27</td><td>DTS-A is a noisier criterion than L1</td></tr>
+        <tr><td>Checkpoint on stop-split DTS-A, 50 epochs</td><td>vs <code>lstm_e50</code> (same schedule)</td><td class="num pos">+0.58</td><td>wins all five, but still −0.32 vs <code>lstm_s0</code></td></tr>
+        <tr><td>Horizon-dependent blend weights</td><td>leave-one-fold-out</td><td class="num">+0.016</td><td>positive in 10 of 20 cells; not shippable</td></tr>
+        <tr><td>Multi-model ensembles (11 unweighted candidates)</td><td>vs incumbent, on IOBP2</td><td class="num">+0.04</td><td>best candidate; TCN and transformer add nothing</td></tr>
+        <tr><td>Post-hoc calibration by prediction bin</td><td>leave-one-study-out</td><td class="num neg">−0.36</td><td>negative on 9 of 9 studies</td></tr>
+        <tr><td>Global prediction shift</td><td>per held-out study</td><td class="num">+0.37 pooled</td><td>negative in 3 of 5; a Loop-weighting artefact</td></tr>
+        <tr><td>DTS band-centred point selection</td><td>LightGBM ledger</td><td class="num neg">−0.24</td><td>closed</td></tr>
+        <tr><td>Per-source specialised models</td><td>vs global model on identical rows</td><td class="num neg">−0.05 / −0.02</td><td>Loop / ReplaceBG: the global model already extracts what is there</td></tr>
+        <tr><td>Monotone-constrained model</td><td>vs LSTM on IOBP2</td><td class="num neg">−13.39</td><td>safety property bought with accuracy</td></tr>
+        <tr><td>Realised-error / online-adaptation features</td><td>LightGBM</td><td class="num">0.00</td><td>algebraically redundant with CGM lags</td></tr>
+        <tr><td>Hypoglycaemia-targeted loss</td><td>ceiling analysis</td><td class="num">≤ 2.12</td><td>of a 26.88-point deficit; ceiling too low to pay</td></tr>
+        <tr><td>Wearable features (heart rate, steps)</td><td>coverage</td><td class="num">1.5%</td><td>of anchors; no large study has them</td></tr>
+      </tbody></table></div>
+    <p class="tnote">Units are DTS-A points on the mean of four horizons unless stated. Deep-model screens are single-seed
+      paired comparisons on the five held-out studies (<a href="#analysis">Figure 10</a>).</p>
+
+    <h3>Two mechanisms worth stating precisely</h3>
+    <div class="grid g2">
+      <div class="card"><h4>The 50-epoch run did not train for 50 epochs</h4>
+        <p>Every run early-stops at epoch 14–22 under patience 5, so raising the budget to 50 never bought more training.
+          What it changed was the learning-rate schedule: the cosine annealing is constructed over the epoch budget, so it
+          decays more slowly. <code>lstm_e50</code> therefore mixes length with schedule. The clean test is
+          <code>lstm_dz50</code> vs <code>lstm_e50</code> — same schedule, only the checkpoint criterion differs — and it
+          gains on all five studies (+0.85, +0.12, +0.46, +0.59, +0.87; mean +0.58), recovering about two-thirds of what the
+          longer schedule lost.</p></div>
+      <div class="card"><h4>Ensembles gain by re-weighting, not diversity</h4>
+        <p>Pairwise correlation of prediction errors is 0.857–0.922 across our six trained families, and about 0.92 within
+          the LSTM family. The most decorrelated partner is LightGBM — already in the blend. Adding a third member helps in
+          proportion to how little it costs, which is what shifting weight toward the LSTM would do. The public test set
+          agrees from the other side: weight 1.0 on the LSTM beats 0.5 at every horizon.</p></div>
+    </div>
+
+    <h3>Claims we made and retracted</h3>
+    <details class="finding"><summary><span class="sev high">RETRACTED</span>"Ensembling is closed: −0.12"</summary>
+      <div class="body">That number came from blending seventeen tabular models whose residuals correlated 0.840–0.998 —
+        variants of one model. Blending an LSTM with LightGBM is a different experiment and gains +1.45 to +2.37 over the
+        weaker parent on every held-out study.</div></details>
+    <details class="finding"><summary><span class="sev high">RETRACTED</span>"Deep sequence models are 5–14 points below the GBDT"</summary>
+      <div class="body">The deep models in that comparison were never given the known-future block, which is worth +4.52 on
+        its own. Given the same inputs, the LSTM beats LightGBM on four of five held-out studies.</div></details>
+    <details class="finding"><summary><span class="sev high">RETRACTED</span>"The model shrinks toward the mean"</summary>
+      <div class="body">Errors binned by the true value show regression to the mean, which any calibrated forecaster
+        exhibits. Binned by prediction, the residual is a flat +0.4 to +1.8 mg/dL offset (<a href="#rq3">RQ3</a>).</div></details>
+    <details class="finding"><summary><span class="sev high">RETRACTED</span>"Longer training is the cheapest improvement"</summary>
+      <div class="body">Measured: <code>lstm_e50</code> loses on all five studies (−0.89). See the mechanism above.</div></details>
+    <details class="finding"><summary><span class="sev high">RETRACTED</span>"The annual answers are computable from the public file"</summary>
+      <div class="body">A readiness check tested <code>isfinite</code>, and the holdout's <code>−1.0</code> sentinels are finite,
+        so every blanked value counted as present. The competition is properly held out; the scoring guard that refused to
+        report a number was right even though the first two explanations of why were wrong.</div></details>
+
+    <h3>Bugs that produced confident, wrong numbers</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Row alignment</h4><p>The tabular and deep writers order rows differently. Blending them by position
+        averages each row with an unrelated one and still scores plausibly: on a fixture a correctly aligned model scored 79.2
+        and the same model misaligned 27.3. Values cannot key the join — CGM is whole mg/dL and repeats hundreds of times per
+        subject. Fix: realign on (subject, position within subject), then <b>prove it</b> by checking the targets agree row
+        by row.</p></div>
+      <div class="card"><h4>Meta-data in the wrong order</h4><p>Diagnostic scripts read per-row metadata assuming template
+        order; only 14.2% of rows lined up. Two rounds of coherent, wrong conclusions followed — including a fabricated
+        27-point spread between studies. It was caught because volatility failed to grow with horizon, which is physically
+        impossible. Fix: reindex and abort below 99.9% target agreement.</p></div>
+      <div class="card"><h4>A script that ate its own output</h4><p>The seed averager's file pattern matched yesterday's
+        averaged file and averaged four "seeds". The mean survived by arithmetic luck (to 0.000000), but the reported
+        seed spread was wrong (2.02–4.31 vs the true 2.34–4.98 mg/dL), because an average varies less than a seed.</p></div>
+      <div class="card"><h4>A default path that cost seven hours, twice</h4><p>The annual writer defaulted its template to a
+        path above the project root. Two array jobs trained for seven hours and died on the final write. Every job that
+        writes a submission now passes the template explicitly and checks it exists before training starts.</p></div>
+    </div>
+  </div>
+</section>

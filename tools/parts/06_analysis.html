@@ -1,0 +1,106 @@
+
+<!-- ============================================================ ANALYSIS -->
+<section id="analysis">
+  <div class="wrap">
+    <div class="eyebrow">Analysis</div>
+    <h2>What the results say</h2>
+
+    <h3 id="rq1">RQ1 — Information moves accuracy; architecture does not</h3>
+    <div class="prose">
+      <p>In the tabular pipeline we measured nine ideas one at a time against the same baseline. One of them — adding the
+        insulin and carbohydrate recorded in the next two hours — was worth +4.52 DTS-A at 30 minutes (88.05 → 92.57). The
+        other eight together were worth +0.78, and two were negative.</p>
+    </div>
+    <figure class="figure"><img src="static/images/fig_feature_ledger.png" alt="Bar chart of DTS-A gain for nine tabular ideas" loading="lazy">
+      <figcaption><b>Figure 9: The tabular ledger.</b> Each bar is one change measured against the same LightGBM baseline.
+        The known-future block is larger than every other change combined. The same comparison on the public test set
+        gives 4.52 at 30 minutes and 15.03 at 120 minutes (<code>live_whatif</code> vs <code>live_causal</code>).</figcaption></figure>
+    <div class="prose">
+      <p>On the deep side we ran seven paired single-change screens against the plain LSTM — same anchors, folds, seed,
+        loss and budget, one change each — on all five held-out studies. None improved it.</p>
+    </div>
+    <figure class="figure"><img src="static/images/fig_screens_heatmap.png" alt="Heatmap of DTS-A difference versus plain LSTM for seven variants across five folds" loading="lazy">
+      <figcaption><b>Figure 10: Seven screens, zero wins.</b> Mean DTS-A difference against <code>lstm_s0</code> on each
+        held-out study; the mean across studies is in brackets. The transformer is the worst row (on CTR3 it scores 56.94,
+        below persistence at 58.81). The GRU decoder — which reads the known-future schedule step by step instead of
+        flattening it, and which we predicted would help most at long horizons — loses on all five studies and loses most at
+        90 and 120 minutes. The 50-epoch row confounds training length with the cosine learning-rate schedule
+        (<a href="#ablations">Ablations</a>).</figcaption></figure>
+    <div class="callout good"><b>Reading.</b> For this task the <em>content</em> of the upcoming insulin and carbohydrate
+      schedule carries the signal; its minute-level ordering and the choice of sequence encoder do not. Architecture is a
+      controlled variable here, not the lever.</div>
+
+    <h3 id="rq2">RQ2 — "Unseen" is two different questions</h3>
+    <div class="prose">
+      <p>Our two test sets disagreed. On whole held-out studies the 50/50 blend beat the pure LSTM on four of five
+        (<a href="#results">Figure 7</a>). On the public test set the pure LSTM beat the blend at every horizon, every paired
+        interval clear of zero. The leading explanation — that the public set shares patients with training and a sequence
+        model recognises them — does not survive: split the public set by whether a patient also appears in training, and
+        the LSTM wins on <b>both</b> groups, including the 151 patients it has never seen.</p>
+    </div>
+    <figure class="figure"><img src="static/images/fig_regime.png" alt="Forest plot of LSTM minus blend for seen and unseen patients, and bar chart of the gap by horizon" loading="lazy">
+      <figcaption><b>Figure 11: The regime, measured twice.</b> Left: LSTM − blend on public-test patients seen in training
+        (128; +0.28 [+0.15, +0.41]) and never seen (151; +0.45 [+0.36, +0.54]); the intervals overlap, so we claim only that
+        the gap is positive in both. Right: six-seed LSTM − six-seed blend by horizon on the full public set; the gap grows
+        from +0.28 at 30 minutes to +1.21 at 120.</figcaption></figure>
+    <div class="callout"><b>Reading.</b> A blend that hedges with LightGBM wins at reaching a <em>new study</em>; the
+      sequence model wins at reaching <em>new patients from a known study</em>. The annual set is the second kind: none of
+      its 92 subject ids appears in training, but its insulin-delivery algorithm string (<code>iLet Bionic Pancreas</code>)
+      occurs in exactly one training study. Our pre-registered rule was written for the first kind; we report both and
+      say which entry each favours (<a href="#submissions">Submissions</a>).</div>
+    <div class="callout warn"><b>The Loop row is confounded.</b> Loop is 73% of training data, so holding it out leaves a
+      quarter of the usual training set. "LightGBM suits Loop" and "LightGBM degrades more gracefully when data is scarce"
+      fit equally well and have opposite implications. The annual model trains on all 7.09 M anchors, so if the second is
+      true it does not apply. Untested.</div>
+
+    <h3 id="rq3">RQ3 — Offline evaluation can be trusted, and the model is calibrated</h3>
+    <div class="prose">
+      <p><b>Scoring.</b> On all five entries checked, the leaderboard's per-horizon DTS-A, MARD and RMSE equal our offline
+        values to the board's rounding (<a href="#results">table</a>). A noise floor of ~1.8 points we had assumed between
+        local and board scores was imaginary; paired subject-bootstrap intervals are the right test, and effects of a few
+        tenths are measurable.</p>
+      <p><b>Calibration.</b> An earlier table binned errors by the <em>true</em> glucose and showed predictions too high
+        when truth was low and too low when truth was high; we read that as shrinkage and tried three post-hoc corrections,
+        all of which failed. Binning by the truth produces exactly that pattern for a perfectly calibrated predictor — it is
+        regression to the mean, and nothing applied at prediction time can repair it. The actionable question bins by what
+        the model <em>predicted</em>:</p>
+    </div>
+    <figure class="figure"><img src="static/images/fig_calibration.png" alt="Residual by prediction level across horizons, and DTS-A change after correction" loading="lazy">
+      <figcaption><b>Figure 12: A flat offset, and a correction that loses.</b> <code>live_lstmseed6</code>, 2,648,987 rows,
+        20 equal-count bins by prediction (≈ 70–288 mg/dL). Left: mean truth − prediction is +0.38 / +0.89 / +1.34 / +1.80
+        mg/dL by horizon, near-constant across prediction levels (sd across bins 0.13–0.36). Right: subtracting it bin by bin
+        and scoring on the same rows — a fit that cannot lose by construction — still lowers DTS-A at every horizon, while
+        RMSE improves slightly. Fitted on eight studies and applied to the ninth, the correction costs −0.360 DTS-A on
+        average and loses on 9 of 9.</figcaption></figure>
+    <div class="callout good"><b>Mechanism.</b> The +1.80 mg/dL at 120 minutes is the gap between the mean and the median of
+      a right-skewed distribution, and it widens with horizon as uncertainty grows. L1 on the log ratio targets the median.
+      Shifting toward the mean helps RMSE (mean-optimal) and hurts MARD and zone A (both median-optimal). This closes global
+      shift, band-centred point selection and de-shrinkage as one family with one reason, and independently confirms the
+      choice of objective.</div>
+
+    <h3>Where the remaining error lives</h3>
+    <div class="grid g2">
+      <figure class="figure" style="margin-top:0"><img src="static/images/fig_error_bands.png" alt="Share of readings, share of MARD and zone A by glucose band" loading="lazy">
+        <figcaption><b>Figure 13: Error by glucose band</b> (persistence, t + 60). Below 70 mg/dL is 3.1% of readings and 8.8%
+          of total MARD; in range is 75% of readings and 72% of MARD. Lows cost five times as much per reading but there are
+          too few of them to move the analytical score — while zone A there is only 17–29%, which is where the clinical
+          track and the analytical track pull apart.</figcaption></figure>
+      <div>
+        <div class="tlabel">Table · Worst prediction bin moves with horizon (live_lstmseed6)</div>
+        <div class="tablebox"><table>
+          <thead><tr><th>Horizon</th><th>Worst bin</th><th class="num">Mean pred there</th><th class="num">DTS-A</th><th class="num">Best bin DTS-A</th></tr></thead>
+          <tbody>
+            <tr><td>30 min</td><td>lowest</td><td class="num">≈ 70</td><td class="num">86.66</td><td class="num">97.65 (≈ 288)</td></tr>
+            <tr><td>120 min</td><td><b>middle</b></td><td class="num">≈ 161</td><td class="num"><b>74.01</b></td><td class="num">82.11 (≈ 268)</td></tr>
+          </tbody></table></div>
+        <p class="small">At 30 minutes the difficulty is hypoglycaemia, where the zone is narrow in absolute terms. At 120
+          minutes the extremes are the easy cases: a patient at 160 mg/dL two hours out can go either way, and which way
+          depends on insulin and food timing over the next two hours. A hypoglycaemia-targeted loss cannot pay: below 70
+          mg/dL holds 2.12 of a 26.88-point zone-A deficit.</p>
+        <figure class="figure"><img src="static/images/fig_seeds.png" alt="Single-seed versus six-seed mean DTS-A, and seed spread by horizon" loading="lazy">
+          <figcaption><b>Figure 14: Seeds.</b> Six single LSTM seeds span 84.17–84.24 mean DTS-A; their average scores 84.70.
+            Going from three seeds to six added about +0.04 inside the blend. Seed-to-seed spread grows with horizon.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>

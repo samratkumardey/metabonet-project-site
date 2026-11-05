@@ -1,0 +1,152 @@
+
+<!-- ============================================================= RESULTS -->
+<section id="results">
+  <div class="wrap">
+    <div class="eyebrow">Results</div>
+    <h2>Every model, every horizon, both test sets</h2>
+    <p class="prose">All tables below are generated from <a href="static/tables/metabonet_results.csv">metabonet_results.csv</a>
+      (340 rows, 27 models), written by one scoring function for both test sets so the two sides are directly comparable.
+      Predictions are scored exactly as uploaded, with no clipping. Click a column header to sort; the best value in each
+      column is in bold.</p>
+
+    <h3>Public test set — 2,648,987 anchors</h3>
+    <div class="controls">
+      <label class="ctl">Metric</label>
+      <div class="seg" id="liveSeg">
+        <button data-v="dtsa" class="on">DTS-A</button><button data-v="mard">MARD</button>
+        <button data-v="rmse">RMSE</button><button data-v="mse">MSE</button>
+      </div>
+      <span class="sub" id="liveMetricLabel">DTS-A (%)</span>
+    </div>
+    <div class="tablebox" id="liveTable"></div>
+    <p class="tnote">Highlighted row: our best entry. Persistence is a reference computed separately on 2,648,723 of the
+      anchors and is excluded from the bold "best" marks. <code>live_lstm</code> through <code>live_lstm_s5</code> are six
+      independent LSTM seeds; their mean is <code>live_lstmseed6</code>.</p>
+
+    <figure class="figure"><img src="static/images/fig_live_horizons.png" alt="Line charts of DTS-A and MARD by horizon for five models on the public test set" loading="lazy">
+      <figcaption><b>Figure 6: Accuracy falls with distance; the gap to persistence widens.</b> DTS zone A and MARD on the
+        public test set. The same LightGBM without future inputs (dotted) sits 4.5 DTS-A points below its what-if
+        version at 30 minutes and 15.0 points below at 120 minutes. The pure six-seed LSTM is above the blend, and the blend
+        above LightGBM, at every horizon.</figcaption></figure>
+
+    <h3>Confirmed by the leaderboard</h3>
+    <p class="prose">Five entries were scored by the live leaderboard as well as locally. The board's per-horizon numbers
+      match ours to the board's own rounding every time — the offline numbers on this page are what the board would report.</p>
+    <div class="tlabel">Table · Leaderboard-reported vs our offline scoring, DTS-A (%)</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Entry</th><th></th><th class="num">30 min</th><th class="num">60 min</th><th class="num">90 min</th><th class="num">120 min</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td rowspan="2"><span class="mname">live_lstmseed6</span></td><td>board</td><td class="num">94.1</td><td class="num">86.4</td><td class="num">81.4</td><td class="num">76.9</td></tr>
+        <tr class="hl"><td>ours</td><td class="num">94.07</td><td class="num">86.43</td><td class="num">81.37</td><td class="num">76.91</td></tr>
+        <tr><td rowspan="2"><span class="mname">live_blendseed6</span></td><td>board</td><td class="num">93.8</td><td class="num">85.8</td><td class="num">80.4</td><td class="num">75.7</td></tr>
+        <tr><td>ours</td><td class="num">93.79</td><td class="num">85.78</td><td class="num">80.44</td><td class="num">75.69</td></tr>
+        <tr><td rowspan="2"><span class="mname">live_lstmseed</span> (3 seeds)</td><td>board</td><td class="num">94.0</td><td class="num">86.3</td><td class="num">81.2</td><td class="num">76.8</td></tr>
+        <tr><td>ours</td><td class="num">94.03</td><td class="num">86.31</td><td class="num">81.22</td><td class="num">76.77</td></tr>
+        <tr><td rowspan="2"><span class="mname">live_blendseed</span></td><td>board</td><td class="num">93.8</td><td class="num">85.7</td><td class="num">80.4</td><td class="num">75.6</td></tr>
+        <tr><td>ours</td><td class="num">93.78</td><td class="num">85.74</td><td class="num">80.38</td><td class="num">75.64</td></tr>
+        <tr><td rowspan="2"><span class="mname">live_whatif</span></td><td>board</td><td class="num">92.6</td><td class="num">83.3</td><td class="num">77.2</td><td class="num">71.5</td></tr>
+        <tr><td>ours</td><td class="num">92.57</td><td class="num">83.29</td><td class="num">77.16</td><td class="num">71.48</td></tr>
+      </tbody></table></div>
+    <p class="tnote">MARD and RMSE agree as well: for <code>live_lstmseed6</code> the board reports MARD 6.7 / 10.2 / 12.4 / 14.3
+      and RMSE 13.9 / 21.3 / 25.8 / 29.7. Throughout this page "mean" is the arithmetic mean of the four per-horizon values,
+      which is how the tracks are ranked. The board's own headline average column uses a different aggregate, so we do not
+      quote it.</p>
+
+    <h3>Model arena</h3>
+    <p class="prose">Pick any two public-test entries to compare them horizon by horizon.</p>
+    <div class="controls">
+      <label class="ctl">Model A <select id="arenaA" aria-label="Model A"></select></label>
+      <label class="ctl">Model B <select id="arenaB" aria-label="Model B"></select></label>
+      <div class="seg" id="arenaSeg">
+        <button data-v="dtsa" class="on">DTS-A</button><button data-v="mard">MARD</button>
+        <button data-v="rmse">RMSE</button><button data-v="mse">MSE</button>
+      </div>
+    </div>
+    <div class="arena"><div class="card" id="arenaPanelA"></div><div class="card" id="arenaPanelB"></div></div>
+    <div class="tablebox" id="arenaDelta" style="margin-top:12px"></div>
+    <p class="tnote">Green: A is better than B on that metric; red: worse.</p>
+
+    <h3>Leave-one-study-out — five held-out studies</h3>
+    <p class="prose">Each fold trains without one study and scores only that study. Absolute values are <b>not comparable
+      across folds</b> — holding out Loop removes 73% of the training data, holding out CTR3 removes 0.9% — so read
+      model-to-model differences within a fold.</p>
+    <div class="controls">
+      <label class="ctl">Held-out study <select id="losoFold" aria-label="Held-out study"></select></label>
+      <div class="seg" id="losoSeg">
+        <button data-v="dtsa" class="on">DTS-A</button><button data-v="mard">MARD</button>
+        <button data-v="rmse">RMSE</button><button data-v="mse">MSE</button>
+      </div>
+      <span class="sub" id="losoMetricLabel">DTS-A (%)</span>
+    </div>
+    <p class="sub small" id="losoInfo"></p>
+    <div class="tablebox" id="losoTable"></div>
+    <p class="tnote"><code>lstm_futseq_s0</code> finished on IOBP2 and PEDAP after the results file was written; its
+      four-horizon means there are 79.16 and 70.83 (from <code>37_xcohort_table.py</code>, included in the cross-cohort
+      table below and in Figure 10).</p>
+
+    <div class="tlabel">Table · Cross-cohort summary, mean of four horizons, 95% CI over subjects</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Held-out study</th><th class="num">Subjects</th><th class="num">FIT rows</th><th>Best single model</th>
+        <th class="num">LSTM (3 seeds)</th><th class="num">LightGBM</th><th class="num">LSTM − LightGBM</th><th class="num">95% CI</th></tr></thead>
+      <tbody>
+        <tr><td>PEDAP</td><td class="num">59</td><td class="num">5,591,896</td><td><span class="mname">lstm_s1</span> 71.72</td><td class="num">71.48</td><td class="num">69.35</td><td class="num pos">+2.09</td><td class="num">[+1.62, +2.64]</td></tr>
+        <tr><td>IOBP2</td><td class="num">294</td><td class="num">5,448,701</td><td><span class="mname">lstm_s0</span> 80.80</td><td class="num">80.51</td><td class="num">78.97</td><td class="num pos">+1.83</td><td class="num">[+1.68, +1.97]</td></tr>
+        <tr><td>ReplaceBG</td><td class="num">184</td><td class="num">4,801,409</td><td><span class="mname">lstm_dz25_s0</span> 71.41</td><td class="num">71.34</td><td class="num">70.04</td><td class="num pos">+1.33</td><td class="num">[+1.17, +1.49]</td></tr>
+        <tr><td>CTR3</td><td class="num">26</td><td class="num">5,699,843</td><td><span class="mname">lstm_dz50_s0</span> 61.24</td><td class="num">60.56</td><td class="num">60.10</td><td class="num pos">+1.12</td><td class="num">[+0.46, +1.83]</td></tr>
+        <tr><td>Loop</td><td class="num">749</td><td class="num">1,474,462</td><td><span class="mname">lightgbm_whatif</span> 73.79</td><td class="num">72.46</td><td class="num">73.79</td><td class="num neg">−0.74</td><td class="num">[−0.97, −0.51]</td></tr>
+      </tbody></table></div>
+    <p class="tnote">"LSTM (3 seeds)" is the average of the three single-seed scores. The gap and interval use seed 0 —
+      the gap for seeds 1 and 2 is +0.74 / −0.50 on CTR3, +1.57 / +1.23 on IOBP2, −0.93 / −2.32 on Loop, +2.41 / +1.99 on
+      PEDAP and +1.25 / +1.31 on ReplaceBG. Blends are excluded from "best single model".</p>
+
+    <figure class="figure"><img src="static/images/fig_loso_forest.png" alt="Forest plots of LSTM minus LightGBM and blend minus LSTM per held-out study" loading="lazy">
+      <figcaption><b>Figure 7: The better backbone depends on the cohort; the blend is never worse than both.</b> Left:
+        the LSTM beats LightGBM on four held-out studies and loses on Loop. Right: a fixed 50/50 blend beats the LSTM on
+        four of five (PEDAP indistinguishable) and beats LightGBM on all five, every interval clear of zero
+        (+1.39 to +2.37). Green: interval excludes zero in favour; red: against; grey: indistinguishable.</figcaption></figure>
+
+    <h3>Best model per test set</h3>
+    <p class="prose">Chosen after the fact by highest mean DTS-A — a reporting choice, not a step in building any
+      submission. The same model's MARD, RMSE and MSE are shown, so each row describes one model.
+      <a href="static/tables/best_model_per_test_set.xlsx">Download as Excel</a>.</p>
+    <div class="tablebox">{{BEST_TABLE}}</div>
+    <p class="tnote">On four of five studies the seed-averaged LSTM and its 50/50 blend with LightGBM sit within about
+      0.3 DTS-A of each other, so "best" per study is a label, not a settled ranking. The public-test row is the one that
+      resembles the annual set.</p>
+
+    <h3>How we got here — the earlier model history</h3>
+    <figure class="figure"><img src="static/images/fig_ladder.png" alt="Bar charts of MARD and DTS-A for persistence, damped trend, ridge and LightGBM" loading="lazy">
+      <figcaption><b>Figure 8: The first model ladder</b> (subject-disjoint five-fold CV on 3 M training anchors, 93
+        past-only features, before any future inputs). LightGBM improves on persistence by 16.9% relative MARD, 7.56 DTS-A
+        points and 20.7% relative RMSE. Persistence scores 23.56 MARD in this CV and 22.83 on the real scored anchors — a
+        0.7-point gap on a zero-parameter model, which is why the training-only validation was trusted from the start.</figcaption></figure>
+    <details class="finding"><summary><span class="sev med">HISTORY</span>Phase 1 (September 2026): seventeen submissions rescored on identical rows</summary>
+      <div class="body">
+        <div class="tablebox"><table>
+          <thead><tr><th>Model</th><th class="num">Avg DTS-A</th></tr></thead>
+          <tbody>
+            <tr><td>LightGBM what-if, 240 features (v2)</td><td class="num">82.07</td></tr>
+            <tr><td>LightGBM what-if (v1)</td><td class="num">81.12</td></tr>
+            <tr><td>v10 DTS-residual meta-model</td><td class="num">79.08</td></tr>
+            <tr><td>v09</td><td class="num">78.82</td></tr>
+            <tr><td>v11 regime model</td><td class="num">78.51</td></tr>
+            <tr><td>v12 trajectory model</td><td class="num">78.32</td></tr>
+            <tr><td>v08</td><td class="num">77.98</td></tr>
+            <tr><td>v11 selector</td><td class="num">77.79</td></tr>
+            <tr><td>v07 soft-gate</td><td class="num">76.80</td></tr>
+            <tr><td>v06 temporal transformer (no future inputs)</td><td class="num">76.74</td></tr>
+            <tr><td>v05b / v05</td><td class="num">74.89 / 74.86</td></tr>
+            <tr><td>v04 mixture-of-experts</td><td class="num">74.49</td></tr>
+            <tr><td>v03</td><td class="num">74.48</td></tr>
+            <tr><td>v02</td><td class="num">73.05</td></tr>
+            <tr><td>Causal LightGBM (no future inputs)</td><td class="num">69.45</td></tr>
+            <tr><td>v01 LightGBM + TCN hybrid (no future inputs)</td><td class="num">67.87</td></tr>
+            <tr><td>Persistence</td><td class="num">60.00</td></tr>
+          </tbody></table></div>
+        <p class="tnote">Scored with the toolkit aggregate in use at the time; compare rows within this table only. At the time
+          we read this as "sequence models are 5–14 points below the GBDT". That reading was wrong and is retracted: the two
+          deep models here were never given the known-future block. Given the same inputs, the LSTM beats LightGBM on four
+          of five held-out studies (Table above).</p>
+      </div></details>
+  </div>
+</section>

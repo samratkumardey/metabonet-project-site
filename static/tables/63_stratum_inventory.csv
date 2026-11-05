@@ -1,0 +1,52 @@
+family,level,subjects_train,subjects_test,presence
+pump,OmniPod,513,104,both
+pump,Beta Bionics Gen 4 iLet,299,62,both
+pump,t:slim X2,281,56,both
+pump,MiniMed 522/722,132,25,both
+pump,MiniMed 670G,102,21,both
+pump,(not recorded),71,16,both
+pump,MiniMed 523/723,72,16,both
+pump,Paradigm Revel 723,44,11,both
+pump,MiniMed 530G 751,22,7,both
+pump,MiniMed 515/715,14,6,both
+pump,Paradigm Revel 523,44,6,both
+pump,MiniMed 530G 551,22,5,both
+pump,Multiple Daily Injections,15,5,both
+pump,Roche Accu-Check,30,5,both
+pump,t:slim G4,18,3,both
+pump,Medtronic Pump,8,1,both
+pump,MiniMed 554/754,4,1,both
+pump,MiniMed 640G,3,1,both
+pump,MiniMed 530G,9,0,train only
+pump,MiniMed 630G,3,0,train only
+pump,MiniMed 780G,7,0,train only
+pump,Omnipod 5,1,0,train only
+pump,Omnipod Dash,2,0,train only
+pump,Omnipod Eros,1,0,train only
+pump,Paradigm 522,2,0,train only
+pump,Paradigm 722,2,0,train only
+pump,Roche Pump,4,0,train only
+sensor,Dexcom G6,1157,234,both
+sensor,Dexcom G4,226,44,both
+sensor,Dexcom G5,115,29,both
+sensor,Guardian 3,102,21,both
+sensor,(not recorded),81,18,both
+sensor,FreeStyle Libre 2,25,5,both
+sensor,Abbott Libre,2,0,train only
+sensor,Dexcom One,1,0,train only
+sensor,Medtronic Enlite,13,0,train only
+sensor,Medtronic Guardian 4,3,0,train only
+study,Loop,761,160,both
+study,IOBP2,299,62,both
+study,ReplaceBG,188,38,both
+study,DCLP3,101,21,both
+study,Flair,102,21,both
+study,DCLP5,90,19,both
+study,PEDAP,59,11,both
+study,CTR3,30,5,both
+study,AZT1D,21,4,both
+study,HUPA-UCM,20,4,both
+study,BrisT1D,18,2,both
+study,ShanghaiT1DM,11,2,both
+study,T1D-UOM,13,2,both
+study,OhioT1DM,12,0,train only

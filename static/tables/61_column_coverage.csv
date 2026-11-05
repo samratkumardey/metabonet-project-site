@@ -1,0 +1,38 @@
+column,pct_rows_filled_test,pct_rows_filled_train,pct_subjects_test,pct_subjects_train,verdict
+air_temp,0.0,0.06,0.0,0.5,EMPTY IN TEST — unusable
+galvanic_skin_response,0.0,0.11,0.0,1.0,EMPTY IN TEST — unusable
+skin_temp,0.0,0.11,0.0,1.0,EMPTY IN TEST — unusable
+workout_intensity,0.0,0.0,0.0,0.8,EMPTY IN TEST — unusable
+misc_notes,0.03,0.03,1.0,1.4,near-empty in test (<5% of subjects)
+workout_duration,0.05,0.06,29.8,38.9,partial (<50% of test subjects)
+meal_label,0.06,0.06,21.4,27.0,partial (<50% of test subjects)
+workout_label,0.06,0.08,30.4,39.4,partial (<50% of test subjects)
+steps,0.72,0.61,2.6,4.8,near-empty in test (<5% of subjects)
+heartrate,0.77,0.66,1.9,3.7,near-empty in test (<5% of subjects)
+extension_date,5.96,5.72,18.1,22.6,partial (<50% of test subjects)
+randomization_date,22.36,22.11,39.2,38.3,partial (<50% of test subjects)
+calories_burned,25.2,23.35,30.4,40.2,partial (<50% of test subjects)
+treatment_group,34.3,35.49,48.5,45.6,partial (<50% of test subjects)
+is_pregnant,64.19,67.35,72.8,72.7,usable
+carbs,69.59,66.32,67.6,72.7,usable
+gender,82.58,85.07,72.5,71.5,usable
+insulin_type_bolus,88.29,92.2,92.2,93.2,usable
+CGM,88.63,83.84,100.0,100.0,usable
+insulin_type_basal,89.01,92.7,92.9,94.3,usable
+ethnicity,90.48,93.96,93.9,94.6,usable
+basal,90.55,87.65,97.7,98.5,usable
+bolus,90.78,88.53,98.4,98.5,usable
+age_of_diagnosis,92.08,94.26,94.8,95.1,usable
+weight,92.32,94.24,94.5,94.3,usable
+cgm_device,92.39,94.94,94.8,95.3,usable
+height,92.61,94.05,94.8,93.6,usable
+insulin_delivery_device,93.1,95.21,95.5,96.3,usable
+insulin,93.22,90.4,100.0,100.0,usable
+insulin_delivery_algorithm,97.94,97.6,98.1,98.6,usable
+insulin_delivery_modality,99.18,99.12,99.4,98.8,usable
+date,100.0,100.0,100.0,100.0,usable
+subject_split_across_traintest,100.0,100.0,100.0,100.0,usable
+source_file,100.0,100.0,100.0,100.0,usable
+is_test,100.0,100.0,100.0,100.0,usable
+id,100.0,100.0,100.0,100.0,usable
+age,100.0,99.86,100.0,99.6,usable

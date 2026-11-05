@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MetaboNet CGM Forecasting</title>
+<meta name="description" content="Forecasting continuous glucose 30, 60, 90 and 120 minutes ahead on the MetaboNet benchmark: data audit, method, every result, every negative result, leaderboard submissions and an interactive patient atlas.">
+<meta property="og:title" content="MetaboNet CGM Forecasting">
+<meta property="og:description" content="Information, not architecture: glucose forecasting 30–120 minutes ahead on the MetaboNet Glucose Prediction Challenge.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0e7490">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e7490'/%3E%3Cpath d='M8 40 L20 40 L26 22 L34 48 L40 30 L46 36 L56 36' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<a id="top"></a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">MetaboNet <span>CGM</span></a>
+    <button class="theme-btn menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#overview">Overview</a>
+      <a href="#dataset">Data</a>
+      <a href="#preprocessing">Prep</a>
+      <a href="#task">Metrics</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#ablations">Ablations</a>
+      <a href="#submissions">Submissions</a>
+      <a href="#atlas">Atlas</a>
+      <a href="#reproduce">Reproduce</a>
+      <a href="#citation">Cite</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+  </div>
+</header>
+
+<!-- ================================================================ HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Glucose forecasting · Type 1 diabetes · MetaboNet Glucose Prediction Challenge 2026</div>
+    <h1>Information, Not Architecture: Forecasting Glucose 30–120 Minutes Ahead on MetaboNet</h1>
+    <div class="authors" id="authors">Anonymous Author<sup>1</sup>, Anonymous Author<sup>1</sup></div>
+    <div class="affil" id="affils"><sup>1</sup>Anonymous Institution</div>
+
+    <p class="lead">We forecast continuous glucose monitor (CGM) readings 30, 60, 90 and 120 minutes ahead
+      for 279 people with type 1 diabetes drawn from nine clinical studies. A six-seed LSTM that reads 24 hours
+      of history together with the insulin and carbohydrates already scheduled for the next two hours reaches
+      <b>84.70% DTS error-grid zone A</b> and <b>10.90% MARD</b> on the 2,648,987-anchor public test set —
+      better at every horizon than every other model we built, and <b>24.9 points above persistence</b>.</p>
+
+    <div class="badges">
+      <a class="badge" data-link="paper" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Paper</a>
+      <a class="badge" data-link="code" href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Code</a>
+      <a class="badge ghost" href="#dataset">Dataset &amp; Audit</a>
+      <a class="badge ghost" href="#results">Results</a>
+      <a class="badge ghost" href="#submissions">Leaderboard Entries</a>
+      <a class="badge ghost" href="#atlas">Patient Atlas</a>
+      <a class="badge ghost" data-link="leaderboard" href="#" target="_blank" rel="noopener">Live Leaderboard ↗</a>
+    </div>
+    <div class="chips">
+      <span class="chip">155 M five-minute rows</span>
+      <span class="chip">14 studies · 1,492 subject records</span>
+      <span class="chip">2,648,987 scored anchors</span>
+      <span class="chip">4 horizons</span>
+      <span class="chip">Known-future insulin &amp; carbs</span>
+      <span class="chip">Leave-one-study-out</span>
+      <span class="chip">Paired subject bootstrap</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n" data-count="84.70" data-dec="2" data-suf="%">84.70%</div><div class="l">mean DTS zone A, public test<br>(persistence 59.84%)</div></div>
+      <div class="stat"><div class="n" data-count="10.90" data-dec="2" data-suf="%">10.90%</div><div class="l">mean MARD, public test<br>(persistence 22.83%)</div></div>
+      <div class="stat"><div class="n" data-count="22.66" data-dec="2">22.66</div><div class="l">mean RMSE, mg/dL<br>(persistence 43.98)</div></div>
+      <div class="stat"><div class="n" data-count="4.52" data-dec="2" data-pre="+">+4.52</div><div class="l">DTS-A points from known-future<br>insulin &amp; carbs alone</div></div>
+    </div>
+
+    <div class="hero-widget">
+      <h4>DTS error-grid zone A by horizon — public test set (2,648,987 anchors)</h4>
+      <div class="hbars" id="heroBars"></div>
+      <div class="hero-legend"><span><i style="background:#94a3b8"></i>Persistence (predict the current reading)</span><span><i style="background:#67e8f9"></i>LSTM, six-seed mean (our best entry)</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- ============================================================ OVERVIEW -->
+<section id="overview">
+  <div class="wrap">
+    <div class="eyebrow">Overview</div>
+    <h2>Abstract</h2>
+    <div class="prose">
+      <p>Forecasting glucose half an hour to two hours ahead is what lets an insulin or food decision be made
+        <em>before</em> a low or a high arrives. We entered the MetaboNet Glucose Prediction Challenge, which
+        pools fourteen type 1 diabetes studies — 155 million five-minute rows from 1,492 subject records — and
+        scores predictions at four horizons on two primary metrics: the share of predictions in zone A of the
+        Diabetes Technology Society (DTS) error grid, and the mean absolute relative difference (MARD).</p>
+      <p>Three findings organise this report. <b>First, information beats architecture.</b> Conditioning on the
+        insulin and carbohydrate recorded in the next two hours — which the organisers explicitly permit — was
+        worth +4.52 DTS-A points at 30 minutes, more than every other modelling change we tried combined, while
+        three alternative encoders, three training-procedure changes and a sequence decoder for the future block
+        all scored below a plain LSTM on average across five held-out studies. <b>Second, "unseen" means two different things.</b>
+        A 50/50 LSTM–LightGBM blend wins when an entire study is held out; the pure LSTM wins at every horizon
+        on new patients from studies already in training, which is the regime of both leaderboards.
+        <b>Third, offline evaluation can be trusted.</b> Our local scoring reproduced the live leaderboard's
+        per-horizon numbers to its rounding on every entry, and the model is calibrated on its own predictions
+        because L1 loss on the log glucose ratio estimates the conditional median that both MARD and zone A reward.</p>
+      <p>Our best entry, a six-seed LSTM average, scores <b>94.07 / 86.43 / 81.37 / 76.91%</b> zone A and
+        <b>6.70 / 10.21 / 12.36 / 14.31%</b> MARD at 30 / 60 / 90 / 120 minutes. We report every result table,
+        every negative result with its number, the full submission history, and an interactive atlas of raw
+        patient records stratified by study, sensor and insulin pump.</p>
+    </div>
+
+    <div class="grid g3" style="margin-top:1.6rem">
+      <div class="card rq"><span class="tag">RQ1</span><h4>What actually moves accuracy?</h4>
+        <p>Known-future insulin &amp; carbs: <b>+4.52</b> DTS-A. The next eight tabular ideas combined: +0.78.
+          Seven encoder / training / decoder screens against the plain LSTM: <b>0 of 7</b> improved it on average.</p>
+        <p><a href="#rq1">Read the evidence →</a></p></div>
+      <div class="card rq"><span class="tag">RQ2</span><h4>Which kind of "unseen"?</h4>
+        <p>LSTM minus LightGBM ranges from <b>+2.09</b> (PEDAP) to <b>−0.74</b> (Loop) across held-out studies.
+          On new patients from known studies the pure LSTM beats the blend at every horizon, +0.28 → +1.21.</p>
+        <p><a href="#rq2">Read the evidence →</a></p></div>
+      <div class="card rq"><span class="tag">RQ3</span><h4>Can offline scores be trusted?</h4>
+        <p>Offline scoring matched the board to its rounding on all five entries checked. A post-hoc calibration
+          correction loses even in-sample and loses on <b>9 of 9</b> held-out studies.</p>
+        <p><a href="#rq3">Read the evidence →</a></p></div>
+    </div>
+
+    <h3>Overview of the pipeline</h3>
+    <figure class="figure" style="padding:18px">
+      <svg class="diagram" viewBox="0 0 1080 330" role="img" aria-label="Pipeline from raw MetaboNet data to submissions and evaluation">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+        </defs>
+        <g font-size="13" fill="#0f172a">
+          <!-- data -->
+          <rect x="10" y="110" width="150" height="110" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+          <text x="85" y="140" text-anchor="middle" font-weight="700">MetaboNet</text>
+          <text x="85" y="160" text-anchor="middle" fill="#475569">train 132.8 M rows</text>
+          <text x="85" y="178" text-anchor="middle" fill="#475569">test 22.1 M rows</text>
+          <text x="85" y="196" text-anchor="middle" fill="#475569">14 studies · 37 cols</text>
+          <!-- preprocess -->
+          <rect x="195" y="110" width="170" height="110" rx="12" fill="#ecfeff" stroke="#67e8f9"/>
+          <text x="280" y="138" text-anchor="middle" font-weight="700">Preprocess</text>
+          <text x="280" y="158" text-anchor="middle" fill="#475569">(study, id) subject key</text>
+          <text x="280" y="176" text-anchor="middle" fill="#475569">5-min integer clock</text>
+          <text x="280" y="194" text-anchor="middle" fill="#475569">6.28 M duplicates resolved</text>
+          <text x="280" y="212" text-anchor="middle" fill="#475569">windows in time, not rows</text>
+          <!-- anchors -->
+          <rect x="400" y="110" width="150" height="110" rx="12" fill="#ecfeff" stroke="#67e8f9"/>
+          <text x="475" y="138" text-anchor="middle" font-weight="700">Anchors</text>
+          <text x="475" y="158" text-anchor="middle" fill="#475569">organisers' filter chain</text>
+          <text x="475" y="176" text-anchor="middle" fill="#475569">24 h history, gap rules</text>
+          <text x="475" y="194" text-anchor="middle" fill="#475569">15-min stride</text>
+          <text x="475" y="212" text-anchor="middle" fill="#475569">7.09 M training anchors</text>
+          <!-- arms -->
+          <rect x="590" y="30" width="200" height="110" rx="12" fill="#fffbeb" stroke="#f59e0b"/>
+          <text x="690" y="58" text-anchor="middle" font-weight="700">LightGBM what-if</text>
+          <text x="690" y="78" text-anchor="middle" fill="#475569">240 features</text>
+          <text x="690" y="96" text-anchor="middle" fill="#475569">incl. future insulin &amp; carbs</text>
+          <text x="690" y="114" text-anchor="middle" fill="#475569">1 booster/horizon × 3 seeds</text>
+          <text x="690" y="132" text-anchor="middle" fill="#475569">L1 on log-ratio</text>
+          <rect x="590" y="190" width="200" height="110" rx="12" fill="#ecfeff" stroke="#0e7490"/>
+          <text x="690" y="218" text-anchor="middle" font-weight="700">LSTM forecaster</text>
+          <text x="690" y="238" text-anchor="middle" fill="#475569">history 288 × 9 → LSTM(192)</text>
+          <text x="690" y="256" text-anchor="middle" fill="#475569">future 24 × 4 doses → MLP(96)</text>
+          <text x="690" y="274" text-anchor="middle" fill="#475569">4-horizon head, L1 log-ratio</text>
+          <text x="690" y="292" text-anchor="middle" fill="#475569">6 seeds averaged</text>
+          <!-- combine -->
+          <rect x="825" y="110" width="110" height="110" rx="12" fill="#f5f3ff" stroke="#a78bfa"/>
+          <text x="880" y="146" text-anchor="middle" font-weight="700">Combine</text>
+          <text x="880" y="166" text-anchor="middle" fill="#475569">seed mean</text>
+          <text x="880" y="184" text-anchor="middle" fill="#475569">fixed 0.5 blend</text>
+          <text x="880" y="202" text-anchor="middle" fill="#475569">no fitted weights</text>
+          <!-- eval -->
+          <rect x="965" y="40" width="105" height="70" rx="12" fill="#f0fdf4" stroke="#4ade80"/>
+          <text x="1017" y="70" text-anchor="middle" font-weight="700">Live board</text>
+          <text x="1017" y="90" text-anchor="middle" fill="#475569" font-size="12">2,648,987 rows</text>
+          <rect x="965" y="130" width="105" height="70" rx="12" fill="#f0fdf4" stroke="#4ade80"/>
+          <text x="1017" y="160" text-anchor="middle" font-weight="700">Annual</text>
+          <text x="1017" y="180" text-anchor="middle" fill="#475569" font-size="12">2,228 rows</text>
+          <rect x="965" y="220" width="105" height="70" rx="12" fill="#f0fdf4" stroke="#4ade80"/>
+          <text x="1017" y="250" text-anchor="middle" font-weight="700">LOSO folds</text>
+          <text x="1017" y="270" text-anchor="middle" fill="#475569" font-size="12">5 held-out studies</text>
+        </g>
+        <g stroke="#64748b" stroke-width="1.8" fill="none" marker-end="url(#ar)">
+          <path d="M160 165 H192"/><path d="M365 165 H397"/>
+          <path d="M550 150 C570 150 570 85 587 85"/><path d="M550 180 C570 180 570 245 587 245"/>
+          <path d="M790 85 C810 85 805 150 822 150"/><path d="M790 245 C810 245 805 180 822 180"/>
+          <path d="M935 150 C950 150 945 75 962 75"/><path d="M935 165 H962"/><path d="M935 180 C950 180 945 255 962 255"/>
+        </g>
+      </svg>
+      <figcaption><b>Figure 1: Pipeline.</b> Raw MetaboNet parquet is re-keyed on (study, id), placed on an integer
+        five-minute clock, de-duplicated and windowed in time rather than by row position. Training anchors are
+        selected with the organisers' own filter chain so that training matches scoring. Two model families read the
+        same anchors; their predictions are seed-averaged and optionally blended with a weight fixed before any score
+        was seen. Every number reported on this page comes from one of the three evaluation sets on the right.</figcaption>
+    </figure>
+
+    <div class="grid g4">
+      <div class="card"><div class="big">94.07%</div><p>zone A at 30 min; <b>6.70%</b> MARD — the strongest horizon</p></div>
+      <div class="card"><div class="big">76.91%</div><p>zone A at 120 min; where the remaining deficit sits</p></div>
+      <div class="card"><div class="big">−0.36</div><p>DTS-A from post-hoc recalibration, out of study — negative on 9 of 9 studies (<a href="#rq3">RQ3</a>)</p></div>
+      <div class="card"><div class="big">= board</div><p>offline per-horizon scores match the leaderboard to its rounding</p></div>
+    </div>
+  </div>
+</section>

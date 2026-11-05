@@ -1,0 +1,237 @@
+family,level,split,rank,patient_id,source_file,date,n_days,rows,n_CGM,n_basal,n_bolus,n_insulin,n_carbs,cgm_device,insulin_delivery_device,insulin_delivery_modality,insulin_delivery_algorithm,computed_cgm_mean,computed_tir_70_180_pct,computed_pct_below_55,computed_pct_above_250
+pump,(not recorded),test,1,1133,Loop,2019-01-22,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,139.9,93.8,0.0,0.0
+pump,(not recorded),test,2,1080,Loop,2018-08-07,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,150.0,80.6,0.0,0.0
+pump,(not recorded),test,3,675,Loop,2019-02-28,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,114.5,82.3,0.0,0.0
+pump,(not recorded),train,1,12,Loop,2018-07-09,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,162.9,62.5,0.0,2.08
+pump,(not recorded),train,2,859,Loop,2018-08-04,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,180.6,39.2,5.56,14.58
+pump,(not recorded),train,3,21,Loop,2018-07-18,1,288,288,288,288,288,0,Dexcom G5,,AID,LoopAlgorithm,130.8,84.7,0.0,0.0
+pump,Beta Bionics Gen 4 iLet,test,1,IOBP2-45,IOBP2,2020-10-28,1,288,283,287,287,287,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,137.7,90.8,0.0,0.0
+pump,Beta Bionics Gen 4 iLet,test,2,IOBP2-255,IOBP2,2021-05-03,1,288,283,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,168.9,61.1,0.35,14.84
+pump,Beta Bionics Gen 4 iLet,test,3,IOBP2-424,IOBP2,2021-03-23,1,288,288,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,156.4,69.4,0.35,4.17
+pump,Beta Bionics Gen 4 iLet,train,1,IOBP2-241,IOBP2,2021-05-06,1,288,287,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,148.1,80.1,0.0,0.0
+pump,Beta Bionics Gen 4 iLet,train,2,IOBP2-125,IOBP2,2020-09-08,1,288,288,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,134.1,93.8,0.0,0.0
+pump,Beta Bionics Gen 4 iLet,train,3,IOBP2-240,IOBP2,2021-07-01,1,288,288,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,147.0,87.5,0.0,0.0
+pump,Medtronic Pump,test,1,7,HUPA-UCM,2018-09-27,1,288,288,288,7,288,6,FreeStyle Libre 2,Medtronic Pump,SAP,,162.3,47.9,1.04,18.4
+pump,Medtronic Pump,train,1,7,HUPA-UCM,2018-09-20,1,288,288,288,6,288,5,FreeStyle Libre 2,Medtronic Pump,SAP,,180.6,18.8,19.79,26.74
+pump,Medtronic Pump,train,2,10,HUPA-UCM,2018-11-08,1,288,288,288,7,288,3,FreeStyle Libre 2,Medtronic Pump,SAP,,158.3,62.8,0.0,5.21
+pump,Medtronic Pump,train,3,9,HUPA-UCM,2018-09-20,1,288,288,288,5,288,3,FreeStyle Libre 2,Medtronic Pump,SAP,,207.5,22.9,0.0,5.56
+pump,MiniMed 515/715,test,1,689,Loop,2019-02-27,1,288,288,288,288,288,288,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,145.3,81.6,0.0,0.0
+pump,MiniMed 515/715,test,2,282,Loop,2018-03-07,1,288,288,288,288,288,288,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,102.6,83.7,3.12,0.0
+pump,MiniMed 515/715,test,3,973,Loop,2018-10-14,1,288,288,288,288,288,288,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,274.3,18.4,0.0,64.24
+pump,MiniMed 515/715,train,1,242,Loop,2018-09-28,1,288,288,288,288,288,288,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,159.7,81.2,0.0,14.58
+pump,MiniMed 515/715,train,2,923,Loop,2018-06-01,1,288,288,288,191,288,86,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,95.2,83.3,0.69,0.0
+pump,MiniMed 515/715,train,3,1150,Loop,2018-07-12,1,288,288,288,288,288,288,Dexcom G6,MiniMed 515/715,AID,LoopAlgorithm,101.8,93.1,0.0,0.0
+pump,MiniMed 522/722,test,1,826,Loop,2018-06-12,1,288,288,288,288,288,288,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,159.5,70.1,0.0,13.89
+pump,MiniMed 522/722,test,2,967,Loop,2018-09-08,1,288,288,288,288,288,288,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,103.1,89.2,2.78,0.0
+pump,MiniMed 522/722,test,3,425,Loop,2018-04-11,1,288,288,288,72,288,72,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,197.6,28.1,0.0,7.29
+pump,MiniMed 522/722,train,1,470,Loop,2018-08-29,1,288,288,288,288,288,288,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,137.1,85.8,0.0,0.35
+pump,MiniMed 522/722,train,2,448,Loop,2018-12-05,1,288,288,288,288,288,288,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,111.3,76.0,3.12,1.74
+pump,MiniMed 522/722,train,3,718,Loop,2019-05-22,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 522/722,AID,LoopAlgorithm,119.2,93.4,2.43,0.0
+pump,MiniMed 523/723,test,1,1107,Loop,2018-07-07,1,288,288,288,288,288,288,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,103.8,87.5,1.74,0.0
+pump,MiniMed 523/723,test,2,236,Loop,2018-06-02,1,288,288,288,288,288,54,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,151.6,71.2,0.0,3.47
+pump,MiniMed 523/723,test,3,467,Loop,2019-01-12,1,288,288,288,288,288,288,Dexcom G4,MiniMed 523/723,AID,LoopAlgorithm,89.4,93.8,0.0,0.0
+pump,MiniMed 523/723,train,1,1044,Loop,2018-09-19,1,288,288,288,288,288,288,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,106.9,95.1,0.0,0.0
+pump,MiniMed 523/723,train,2,793,Loop,2018-02-13,1,288,288,288,288,288,288,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,137.5,88.5,0.0,0.0
+pump,MiniMed 523/723,train,3,1199,Loop,2018-01-31,1,288,288,288,288,288,288,Dexcom G6,MiniMed 523/723,AID,LoopAlgorithm,116.7,99.0,0.0,0.0
+pump,MiniMed 530G,train,1,544,OhioT1DM,2027-05-12,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,217.5,41.0,0.0,37.85
+pump,MiniMed 530G,train,2,575,OhioT1DM,2021-11-23,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,152.2,80.9,0.0,1.04
+pump,MiniMed 530G,train,3,591,OhioT1DM,2021-12-01,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,177.6,55.6,0.0,16.32
+pump,MiniMed 530G 551,test,1,62,ReplaceBG,2015-03-14,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,219.2,31.2,0.0,28.12
+pump,MiniMed 530G 551,test,2,24,ReplaceBG,2014-10-30,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,132.5,71.2,2.43,2.78
+pump,MiniMed 530G 551,test,3,158,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,133.0,93.1,0.0,0.0
+pump,MiniMed 530G 551,train,1,62,ReplaceBG,2015-01-03,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,178.9,47.2,1.74,8.33
+pump,MiniMed 530G 551,train,2,65,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,149.9,64.2,1.74,4.17
+pump,MiniMed 530G 551,train,3,149,ReplaceBG,2015-01-05,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,181.1,47.6,0.0,9.38
+pump,MiniMed 530G 751,test,1,197,ReplaceBG,2015-01-02,1,288,288,288,288,288,0,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,185.7,41.0,2.08,25.35
+pump,MiniMed 530G 751,test,2,124,ReplaceBG,2015-01-03,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,209.9,21.2,9.38,38.19
+pump,MiniMed 530G 751,test,3,193,ReplaceBG,2014-11-11,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,113.9,96.2,0.0,0.0
+pump,MiniMed 530G 751,train,1,235,ReplaceBG,2014-11-09,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,132.9,38.9,12.15,7.29
+pump,MiniMed 530G 751,train,2,269,ReplaceBG,2014-10-24,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,143.4,76.4,0.0,0.0
+pump,MiniMed 530G 751,train,3,271,ReplaceBG,2014-11-10,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,157.7,73.3,0.0,0.0
+pump,MiniMed 554/754,test,1,190,Loop,2018-12-27,1,288,288,288,288,288,288,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,125.3,66.7,3.47,3.47
+pump,MiniMed 554/754,train,1,796,Loop,2018-03-16,1,288,288,288,288,288,288,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,179.9,59.7,0.0,14.93
+pump,MiniMed 554/754,train,2,1093,Loop,2018-04-25,1,288,288,288,288,288,288,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,98.2,100.0,0.0,0.0
+pump,MiniMed 554/754,train,3,247,Loop,2018-12-31,1,288,288,86,70,86,79,Dexcom G6,MiniMed 554/754,AID,LoopAlgorithm,142.7,81.9,0.0,2.08
+pump,MiniMed 630G,train,1,540,OhioT1DM,2027-05-23,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 630G,SAP,,135.6,95.1,0.0,0.0
+pump,MiniMed 630G,train,2,552,OhioT1DM,2025-04-18,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 630G,SAP,,141.8,79.9,0.0,0.69
+pump,MiniMed 630G,train,3,567,OhioT1DM,2027-01-31,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 630G,SAP,,159.5,57.3,3.82,1.39
+pump,MiniMed 640G,train,1,P15,BrisT1D,2023-06-09,1,288,288,0,0,288,11,Dexcom One,MiniMed 640G,,640G,165.7,63.2,0.35,13.54
+pump,MiniMed 670G,test,1,107,Flair,2019-08-21,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,SmartGuard,145.2,78.8,0.0,1.39
+pump,MiniMed 670G,test,2,13,Flair,2019-03-05,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,194.0,41.3,0.0,28.12
+pump,MiniMed 670G,test,3,46,Flair,2018-11-26,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,197.7,59.7,0.0,27.08
+pump,MiniMed 670G,train,1,126,Flair,2018-10-16,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,177.2,48.6,2.08,13.19
+pump,MiniMed 670G,train,2,115,Flair,2019-01-16,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,SmartGuard,121.8,85.1,1.39,0.35
+pump,MiniMed 670G,train,3,87,Flair,2019-04-07,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,180.2,49.3,0.0,7.99
+pump,MiniMed 780G,train,1,P16,BrisT1D,2023-06-06,1,288,288,0,0,288,13,Medtronic Guardian 4,MiniMed 780G,,780G Advanced HCL,153.6,80.6,0.0,3.82
+pump,MiniMed 780G,train,2,2310,T1D-UOM,2024-02-10,1,288,288,5,8,5,0,,MiniMed 780G,SAP,Basal-Bolus,147.2,81.6,0.0,3.47
+pump,MiniMed 780G,train,3,2308,T1D-UOM,2023-12-06,1,288,288,11,5,11,3,,MiniMed 780G,SAP,Basal-Bolus,170.8,54.9,0.0,12.15
+pump,Multiple Daily Injections,test,1,2313,T1D-UOM,2023-12-21,1,288,288,1,3,1,2,,Multiple Daily Injections,MDI,MDI,131.9,64.6,2.08,9.03
+pump,Multiple Daily Injections,test,2,27,HUPA-UCM,2021-04-11,1,288,288,288,2,288,3,FreeStyle Libre 2,Multiple Daily Injections,MDI,,103.6,76.4,3.12,0.0
+pump,Multiple Daily Injections,test,3,23,HUPA-UCM,2020-01-17,1,288,288,288,3,288,6,FreeStyle Libre 2,Multiple Daily Injections,MDI,,117.7,68.8,8.68,0.0
+pump,Multiple Daily Injections,train,1,2313,T1D-UOM,2023-11-13,1,288,288,1,4,1,2,,Multiple Daily Injections,MDI,MDI,157.8,64.9,0.0,14.58
+pump,Multiple Daily Injections,train,2,26,HUPA-UCM,2020-08-05,1,288,288,288,2,288,1,FreeStyle Libre 2,Multiple Daily Injections,MDI,,136.7,64.6,4.86,0.0
+pump,Multiple Daily Injections,train,3,27,HUPA-UCM,2020-06-27,1,288,288,288,3,288,4,FreeStyle Libre 2,Multiple Daily Injections,MDI,,122.9,97.9,0.0,0.0
+pump,OmniPod,test,1,15,Loop,2019-01-23,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,173.3,58.7,0.0,14.93
+pump,OmniPod,test,2,1172,Loop,2019-05-10,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,160.9,67.7,0.0,8.33
+pump,OmniPod,test,3,382,Loop,2019-04-03,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,165.6,64.9,0.0,4.51
+pump,OmniPod,train,1,409,Loop,2018-11-04,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,177.0,51.7,0.0,20.83
+pump,OmniPod,train,2,223,Loop,2018-12-03,1,288,288,288,288,288,176,Dexcom G5,OmniPod,AID,LoopAlgorithm,175.7,65.6,0.0,15.97
+pump,OmniPod,train,3,343,Loop,2018-12-13,1,288,288,40,288,40,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,146.3,81.9,0.0,0.0
+pump,Omnipod 5,train,1,P07,BrisT1D,2023-06-03,1,288,288,0,0,288,4,Dexcom G6,Omnipod Eros,SAP,Basal-Bolus,182.8,54.2,0.0,7.99
+pump,Omnipod Dash,train,1,P21,BrisT1D,2023-11-26,1,288,288,0,0,288,2,Dexcom G6,Omnipod Dash,SAP,Basal-Bolus,189.6,46.9,0.0,16.67
+pump,Paradigm 522,train,1,17,ReplaceBG,2015-01-04,1,288,288,288,288,288,288,Dexcom G4,Paradigm 522,SAP,Basal-Bolus,171.1,54.2,0.0,20.49
+pump,Paradigm 522,train,2,73,ReplaceBG,2015-01-03,1,288,288,288,288,288,0,Dexcom G4,Paradigm 522,SAP,Basal-Bolus,180.9,41.3,0.69,5.9
+pump,Paradigm 722,train,1,27,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm 722,SAP,Basal-Bolus,133.4,56.6,8.33,4.86
+pump,Paradigm 722,train,2,224,ReplaceBG,2015-01-07,1,288,288,288,288,288,288,Dexcom G4,Paradigm 722,SAP,Basal-Bolus,205.5,29.9,0.0,20.49
+pump,Paradigm Revel 523,test,1,287,ReplaceBG,2015-01-03,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,124.3,44.4,7.29,1.39
+pump,Paradigm Revel 523,test,2,276,ReplaceBG,2015-03-31,1,288,288,288,288,288,0,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,154.6,62.2,1.74,5.21
+pump,Paradigm Revel 523,test,3,106,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,156.4,66.3,0.0,0.0
+pump,Paradigm Revel 523,train,1,16,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,129.4,75.3,3.82,0.0
+pump,Paradigm Revel 523,train,2,20,ReplaceBG,2014-12-03,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,107.8,94.4,0.69,0.0
+pump,Paradigm Revel 523,train,3,50,ReplaceBG,2014-12-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,127.8,71.9,4.17,2.08
+pump,Paradigm Revel 723,test,1,31,ReplaceBG,2015-04-18,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,186.3,43.1,0.0,4.17
+pump,Paradigm Revel 723,test,2,239,ReplaceBG,2015-01-16,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,224.0,31.2,0.0,39.58
+pump,Paradigm Revel 723,test,3,41,ReplaceBG,2015-03-13,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,230.4,20.1,0.0,43.75
+pump,Paradigm Revel 723,train,1,288,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,134.7,80.6,0.35,6.25
+pump,Paradigm Revel 723,train,2,110,ReplaceBG,2015-03-20,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,176.6,56.9,0.0,0.69
+pump,Paradigm Revel 723,train,3,291,ReplaceBG,2015-01-21,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 723,SAP,Basal-Bolus,132.6,80.9,0.69,0.0
+pump,Roche Accu-Check,test,1,10,CTR3,2013-04-05,1,288,288,0,0,65,2,Dexcom G4,Roche Accu-Check,AID,,112.7,89.6,0.0,0.0
+pump,Roche Accu-Check,test,2,12,CTR3,2013-07-31,1,288,288,0,0,176,4,Dexcom G4,Roche Accu-Check,AID,,107.4,97.9,0.0,0.0
+pump,Roche Accu-Check,test,3,13,CTR3,2012-08-21,1,288,288,0,0,250,4,Dexcom G4,Roche Accu-Check,AID,,161.9,77.8,0.0,9.03
+pump,Roche Accu-Check,train,1,2,CTR3,2013-12-19,1,288,288,0,0,230,4,Dexcom G4,Roche Accu-Check,AID,,144.0,83.0,0.0,0.0
+pump,Roche Accu-Check,train,2,7,CTR3,2015-01-09,1,288,287,0,0,74,5,Dexcom G4,Roche Accu-Check,AID,,126.5,89.9,0.0,0.0
+pump,Roche Accu-Check,train,3,19,CTR3,2014-07-22,1,288,288,0,0,63,2,Dexcom G4,Roche Accu-Check,AID,,188.3,39.2,0.0,0.0
+pump,Roche Pump,train,1,2,HUPA-UCM,2018-06-14,1,288,288,288,4,288,1,FreeStyle Libre 2,Roche Pump,SAP,,78.9,47.9,37.5,0.0
+pump,Roche Pump,train,2,25,HUPA-UCM,2020-01-17,1,288,288,288,10,288,3,FreeStyle Libre 2,Roche Pump,SAP,,109.2,88.2,4.86,0.0
+pump,Roche Pump,train,3,4,HUPA-UCM,2018-07-10,1,288,288,288,6,288,0,FreeStyle Libre 2,Roche Pump,SAP,,186.6,55.6,1.04,16.67
+pump,t:slim G4,test,1,172,ReplaceBG,2015-03-29,1,288,288,288,288,288,288,Dexcom G4,t:slim G4,SAP,Basal-Bolus,139.4,77.1,0.0,0.0
+pump,t:slim G4,test,2,2,ReplaceBG,2015-01-04,1,288,288,288,288,288,288,Dexcom G4,t:slim G4,SAP,Basal-Bolus,124.8,88.5,0.0,0.0
+pump,t:slim G4,test,3,96,ReplaceBG,2015-03-14,1,288,288,288,288,288,288,Dexcom G4,t:slim G4,SAP,Basal-Bolus,165.8,46.2,0.0,5.56
+pump,t:slim G4,train,1,48,ReplaceBG,2015-01-05,1,288,288,288,288,288,288,Dexcom G4,t:slim G4,SAP,Basal-Bolus,118.8,78.1,0.0,0.35
+pump,t:slim G4,train,2,38,ReplaceBG,2014-12-19,1,288,288,288,288,288,288,Dexcom G4,t:slim G4,SAP,Basal-Bolus,117.5,95.1,0.69,0.0
+pump,t:slim G4,train,3,215,ReplaceBG,2014-12-18,1,288,288,288,288,288,288,Dexcom G4,t:slim G4,SAP,Basal-Bolus,136.3,58.3,4.86,0.0
+pump,t:slim X2,test,1,26,PEDAP,2020-12-07,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,151.7,68.1,0.0,7.64
+pump,t:slim X2,test,2,66,DCLP5,2018-11-27,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,SAP,Basal-IQ,136.4,81.9,0.35,1.39
+pump,t:slim X2,test,3,44,DCLP3,2017-09-27,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,145.8,73.3,1.04,2.43
+pump,t:slim X2,train,1,13,AZT1D,2024-01-14,1,288,288,0,6,0,6,Dexcom G6,t:slim X2,AID,Control-IQ,119.9,90.3,0.0,0.0
+pump,t:slim X2,train,2,66,DCLP5,2018-05-31,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,SAP,Basal-IQ,148.5,71.2,0.0,0.0
+pump,t:slim X2,train,3,26,DCLP3,2017-10-29,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,158.8,70.1,0.0,6.6
+sensor,(not recorded),test,1,1133,Loop,2019-01-22,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,139.9,93.8,0.0,0.0
+sensor,(not recorded),test,2,1080,Loop,2018-08-07,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,150.0,80.6,0.0,0.0
+sensor,(not recorded),test,3,675,Loop,2019-02-28,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,114.5,82.3,0.0,0.0
+sensor,(not recorded),train,1,12,Loop,2018-07-09,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,162.9,62.5,0.0,2.08
+sensor,(not recorded),train,2,859,Loop,2018-08-04,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,180.6,39.2,5.56,14.58
+sensor,(not recorded),train,3,1163,Loop,2018-08-30,1,288,288,0,288,0,288,,,AID,LoopAlgorithm,106.2,99.7,0.0,0.0
+sensor,Abbott Libre,train,1,987,Loop,2019-05-15,1,288,288,288,288,288,288,Abbott Libre,OmniPod,AID,LoopAlgorithm,106.8,79.5,5.9,0.0
+sensor,Dexcom G4,test,1,62,ReplaceBG,2015-03-14,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,219.2,31.2,0.0,28.12
+sensor,Dexcom G4,test,2,24,ReplaceBG,2014-10-30,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,132.5,71.2,2.43,2.78
+sensor,Dexcom G4,test,3,197,ReplaceBG,2015-01-02,1,288,288,288,288,288,0,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,185.7,41.0,2.08,25.35
+sensor,Dexcom G4,train,1,2,CTR3,2013-12-19,1,288,288,0,0,230,4,Dexcom G4,Roche Accu-Check,AID,,144.0,83.0,0.0,0.0
+sensor,Dexcom G4,train,2,16,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,129.4,75.3,3.82,0.0
+sensor,Dexcom G4,train,3,20,ReplaceBG,2014-12-03,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,107.8,94.4,0.69,0.0
+sensor,Dexcom G5,test,1,249,Loop,2019-08-03,1,288,288,288,288,288,288,Dexcom G5,OmniPod,AID,LoopAlgorithm,193.9,51.7,1.04,22.92
+sensor,Dexcom G5,test,2,967,Loop,2018-09-08,1,288,288,288,288,288,288,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,103.1,89.2,2.78,0.0
+sensor,Dexcom G5,test,3,425,Loop,2018-04-11,1,288,288,288,72,288,72,Dexcom G5,MiniMed 522/722,AID,LoopAlgorithm,197.6,28.1,0.0,7.29
+sensor,Dexcom G5,train,1,223,Loop,2018-12-03,1,288,288,288,288,288,176,Dexcom G5,OmniPod,AID,LoopAlgorithm,175.7,65.6,0.0,15.97
+sensor,Dexcom G5,train,2,369,Loop,2019-01-26,1,288,288,288,288,288,288,Dexcom G5,OmniPod,AID,LoopAlgorithm,196.2,23.3,0.0,5.56
+sensor,Dexcom G5,train,3,1122,Loop,2018-07-12,1,288,288,288,288,288,288,Dexcom G5,OmniPod,AID,LoopAlgorithm,122.1,83.7,4.86,0.0
+sensor,Dexcom G6,test,1,26,PEDAP,2020-12-07,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,151.7,68.1,0.0,7.64
+sensor,Dexcom G6,test,2,IOBP2-45,IOBP2,2020-10-28,1,288,283,287,287,287,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,137.7,90.8,0.0,0.0
+sensor,Dexcom G6,test,3,66,DCLP5,2018-11-27,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,SAP,Basal-IQ,136.4,81.9,0.35,1.39
+sensor,Dexcom G6,train,1,13,AZT1D,2024-01-14,1,288,288,0,6,0,6,Dexcom G6,t:slim X2,AID,Control-IQ,119.9,90.3,0.0,0.0
+sensor,Dexcom G6,train,2,409,Loop,2018-11-04,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,177.0,51.7,0.0,20.83
+sensor,Dexcom G6,train,3,IOBP2-241,IOBP2,2021-05-06,1,288,287,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,148.1,80.1,0.0,0.0
+sensor,Dexcom One,train,1,P15,BrisT1D,2023-06-09,1,288,288,0,0,288,11,Dexcom One,MiniMed 640G,,640G,165.7,63.2,0.35,13.54
+sensor,FreeStyle Libre 2,test,1,7,HUPA-UCM,2018-09-27,1,288,288,288,7,288,6,FreeStyle Libre 2,Medtronic Pump,SAP,,162.3,47.9,1.04,18.4
+sensor,FreeStyle Libre 2,test,2,27,HUPA-UCM,2021-04-11,1,288,288,288,2,288,3,FreeStyle Libre 2,Multiple Daily Injections,MDI,,103.6,76.4,3.12,0.0
+sensor,FreeStyle Libre 2,test,3,23,HUPA-UCM,2020-01-17,1,288,288,288,3,288,6,FreeStyle Libre 2,Multiple Daily Injections,MDI,,117.7,68.8,8.68,0.0
+sensor,FreeStyle Libre 2,train,1,7,HUPA-UCM,2018-09-20,1,288,288,288,6,288,5,FreeStyle Libre 2,Medtronic Pump,SAP,,180.6,18.8,19.79,26.74
+sensor,FreeStyle Libre 2,train,2,10,HUPA-UCM,2018-11-08,1,288,288,288,7,288,3,FreeStyle Libre 2,Medtronic Pump,SAP,,158.3,62.8,0.0,5.21
+sensor,FreeStyle Libre 2,train,3,2,HUPA-UCM,2018-06-14,1,288,288,288,4,288,1,FreeStyle Libre 2,Roche Pump,SAP,,78.9,47.9,37.5,0.0
+sensor,Guardian 3,test,1,107,Flair,2019-08-21,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,SmartGuard,145.2,78.8,0.0,1.39
+sensor,Guardian 3,test,2,13,Flair,2019-03-05,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,194.0,41.3,0.0,28.12
+sensor,Guardian 3,test,3,46,Flair,2018-11-26,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,197.7,59.7,0.0,27.08
+sensor,Guardian 3,train,1,126,Flair,2018-10-16,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,177.2,48.6,2.08,13.19
+sensor,Guardian 3,train,2,115,Flair,2019-01-16,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,SmartGuard,121.8,85.1,1.39,0.35
+sensor,Guardian 3,train,3,87,Flair,2019-04-07,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,180.2,49.3,0.0,7.99
+sensor,Medtronic Enlite,train,1,718,Loop,2019-05-22,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 522/722,AID,LoopAlgorithm,119.2,93.4,2.43,0.0
+sensor,Medtronic Enlite,train,2,544,OhioT1DM,2027-05-12,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,217.5,41.0,0.0,37.85
+sensor,Medtronic Enlite,train,3,575,OhioT1DM,2021-11-23,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,152.2,80.9,0.0,1.04
+sensor,Medtronic Guardian 4,train,1,P16,BrisT1D,2023-06-06,1,288,288,0,0,288,13,Medtronic Guardian 4,MiniMed 780G,,780G Advanced HCL,153.6,80.6,0.0,3.82
+sensor,Medtronic Guardian 4,train,2,P18,BrisT1D,2023-06-05,1,288,288,0,0,288,2,Dexcom One,MiniMed 780G,,780G Advanced HCL,204.4,38.5,0.0,33.33
+sensor,Medtronic Guardian 4,train,3,P12,BrisT1D,2023-06-02,1,288,288,0,0,288,4,Medtronic Guardian 4,MiniMed 780G,,780G Advanced HCL,174.3,53.8,0.0,13.89
+study,AZT1D,test,1,16,AZT1D,2024-01-19,1,288,288,0,7,0,7,Dexcom G6,t:slim X2,AID,Control-IQ,146.9,77.4,0.0,0.35
+study,AZT1D,test,2,5,AZT1D,2024-01-04,1,288,288,288,9,288,9,Dexcom G6,t:slim X2,AID,Control-IQ,138.5,89.9,0.0,0.0
+study,AZT1D,test,3,18,AZT1D,2024-02-27,1,288,288,288,8,288,8,Dexcom G6,t:slim X2,AID,Control-IQ,165.2,58.0,0.0,7.99
+study,AZT1D,train,1,13,AZT1D,2024-01-14,1,288,288,0,6,0,6,Dexcom G6,t:slim X2,AID,Control-IQ,119.9,90.3,0.0,0.0
+study,AZT1D,train,2,4,AZT1D,2023-12-09,1,288,288,0,12,0,12,Dexcom G6,t:slim X2,AID,Control-IQ,174.3,64.2,0.0,12.15
+study,AZT1D,train,3,12,AZT1D,2024-01-09,1,288,288,0,7,0,7,Dexcom G6,t:slim X2,AID,Control-IQ,149.8,85.1,0.0,0.0
+study,BrisT1D,test,1,P24,BrisT1D,2023-06-01,1,288,288,0,0,287,3,Dexcom G6,t:slim X2,,,130.0,91.3,0.0,1.04
+study,BrisT1D,train,1,P03,BrisT1D,2023-06-01,1,288,288,0,0,287,5,Dexcom G6,t:slim X2,,,160.1,53.8,0.69,12.85
+study,BrisT1D,train,2,P22,BrisT1D,2023-06-06,1,288,288,0,0,288,5,Dexcom G6,t:slim X2,,,141.7,85.1,0.0,2.78
+study,BrisT1D,train,3,P10,BrisT1D,2023-06-02,1,288,288,0,0,288,4,Dexcom G6,t:slim X2,,,107.1,99.0,0.0,0.0
+study,CTR3,test,1,10,CTR3,2013-04-05,1,288,288,0,0,65,2,Dexcom G4,Roche Accu-Check,AID,,112.7,89.6,0.0,0.0
+study,CTR3,test,2,12,CTR3,2013-07-31,1,288,288,0,0,176,4,Dexcom G4,Roche Accu-Check,AID,,107.4,97.9,0.0,0.0
+study,CTR3,test,3,13,CTR3,2012-08-21,1,288,288,0,0,250,4,Dexcom G4,Roche Accu-Check,AID,,161.9,77.8,0.0,9.03
+study,CTR3,train,1,2,CTR3,2013-12-19,1,288,288,0,0,230,4,Dexcom G4,Roche Accu-Check,AID,,144.0,83.0,0.0,0.0
+study,CTR3,train,2,7,CTR3,2015-01-09,1,288,287,0,0,74,5,Dexcom G4,Roche Accu-Check,AID,,126.5,89.9,0.0,0.0
+study,CTR3,train,3,19,CTR3,2014-07-22,1,288,288,0,0,63,2,Dexcom G4,Roche Accu-Check,AID,,188.3,39.2,0.0,0.0
+study,DCLP3,test,1,44,DCLP3,2017-09-27,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,145.8,73.3,1.04,2.43
+study,DCLP3,test,2,66,DCLP3,2018-01-26,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,108.7,87.2,3.47,0.0
+study,DCLP3,test,3,41,DCLP3,2018-01-19,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,233.1,35.8,1.39,43.06
+study,DCLP3,train,1,26,DCLP3,2017-10-29,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,158.8,70.1,0.0,6.6
+study,DCLP3,train,2,145,DCLP3,2018-05-18,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,123.6,95.1,0.0,0.0
+study,DCLP3,train,3,95,DCLP3,2018-01-16,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,144.7,58.3,1.74,7.29
+study,DCLP5,test,1,66,DCLP5,2018-11-27,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,SAP,Basal-IQ,136.4,81.9,0.35,1.39
+study,DCLP5,test,2,100,DCLP5,2019-05-04,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,145.7,76.7,0.0,7.99
+study,DCLP5,test,3,28,DCLP5,2019-02-10,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,225.7,28.5,0.0,37.15
+study,DCLP5,train,1,66,DCLP5,2018-05-31,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,SAP,Basal-IQ,148.5,71.2,0.0,0.0
+study,DCLP5,train,2,16,DCLP5,2019-03-07,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,SAP,Basal-IQ,157.2,71.9,0.0,14.24
+study,DCLP5,train,3,58,DCLP5,2018-12-28,1,288,288,288,288,288,0,Dexcom G6,t:slim X2,AID,Control-IQ,166.4,65.6,0.0,9.38
+study,Flair,test,1,107,Flair,2019-08-21,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,SmartGuard,145.2,78.8,0.0,1.39
+study,Flair,test,2,13,Flair,2019-03-05,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,194.0,41.3,0.0,28.12
+study,Flair,test,3,46,Flair,2018-11-26,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,197.7,59.7,0.0,27.08
+study,Flair,train,1,126,Flair,2018-10-16,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,177.2,48.6,2.08,13.19
+study,Flair,train,2,115,Flair,2019-01-16,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,SmartGuard,121.8,85.1,1.39,0.35
+study,Flair,train,3,87,Flair,2019-04-07,1,288,288,288,288,288,0,Guardian 3,MiniMed 670G,AID,780G Advanced HCL,180.2,49.3,0.0,7.99
+study,HUPA-UCM,test,1,7,HUPA-UCM,2018-09-27,1,288,288,288,7,288,6,FreeStyle Libre 2,Medtronic Pump,SAP,,162.3,47.9,1.04,18.4
+study,HUPA-UCM,test,2,27,HUPA-UCM,2021-04-11,1,288,288,288,2,288,3,FreeStyle Libre 2,Multiple Daily Injections,MDI,,103.6,76.4,3.12,0.0
+study,HUPA-UCM,test,3,23,HUPA-UCM,2020-01-17,1,288,288,288,3,288,6,FreeStyle Libre 2,Multiple Daily Injections,MDI,,117.7,68.8,8.68,0.0
+study,HUPA-UCM,train,1,7,HUPA-UCM,2018-09-20,1,288,288,288,6,288,5,FreeStyle Libre 2,Medtronic Pump,SAP,,180.6,18.8,19.79,26.74
+study,HUPA-UCM,train,2,10,HUPA-UCM,2018-11-08,1,288,288,288,7,288,3,FreeStyle Libre 2,Medtronic Pump,SAP,,158.3,62.8,0.0,5.21
+study,HUPA-UCM,train,3,2,HUPA-UCM,2018-06-14,1,288,288,288,4,288,1,FreeStyle Libre 2,Roche Pump,SAP,,78.9,47.9,37.5,0.0
+study,IOBP2,test,1,IOBP2-45,IOBP2,2020-10-28,1,288,283,287,287,287,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,137.7,90.8,0.0,0.0
+study,IOBP2,test,2,IOBP2-255,IOBP2,2021-05-03,1,288,283,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,168.9,61.1,0.35,14.84
+study,IOBP2,test,3,IOBP2-424,IOBP2,2021-03-23,1,288,288,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,156.4,69.4,0.35,4.17
+study,IOBP2,train,1,IOBP2-241,IOBP2,2021-05-06,1,288,287,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,148.1,80.1,0.0,0.0
+study,IOBP2,train,2,IOBP2-125,IOBP2,2020-09-08,1,288,288,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,134.1,93.8,0.0,0.0
+study,IOBP2,train,3,IOBP2-240,IOBP2,2021-07-01,1,288,288,288,288,288,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,147.0,87.5,0.0,0.0
+study,Loop,test,1,1133,Loop,2019-01-22,1,288,288,288,288,288,288,,,AID,LoopAlgorithm,139.9,93.8,0.0,0.0
+study,Loop,test,2,15,Loop,2019-01-23,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,173.3,58.7,0.0,14.93
+study,Loop,test,3,826,Loop,2018-06-12,1,288,288,288,288,288,288,Dexcom G6,MiniMed 522/722,AID,LoopAlgorithm,159.5,70.1,0.0,13.89
+study,Loop,train,1,409,Loop,2018-11-04,1,288,288,288,288,288,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,177.0,51.7,0.0,20.83
+study,Loop,train,2,223,Loop,2018-12-03,1,288,288,288,288,288,176,Dexcom G5,OmniPod,AID,LoopAlgorithm,175.7,65.6,0.0,15.97
+study,Loop,train,3,343,Loop,2018-12-13,1,288,288,40,288,40,288,Dexcom G6,OmniPod,AID,LoopAlgorithm,146.3,81.9,0.0,0.0
+study,OhioT1DM,train,1,544,OhioT1DM,2027-05-12,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,217.5,41.0,0.0,37.85
+study,OhioT1DM,train,2,575,OhioT1DM,2021-11-23,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,152.2,80.9,0.0,1.04
+study,OhioT1DM,train,3,591,OhioT1DM,2021-12-01,1,288,288,288,288,288,288,Medtronic Enlite,MiniMed 530G,SAP,,177.6,55.6,0.0,16.32
+study,PEDAP,test,1,26,PEDAP,2020-12-07,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,151.7,68.1,0.0,7.64
+study,PEDAP,test,2,3,PEDAP,2022-02-11,1,288,288,0,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,157.9,60.4,0.0,0.0
+study,PEDAP,test,3,43,PEDAP,2021-06-11,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,166.5,60.8,0.0,14.93
+study,PEDAP,train,1,103,PEDAP,2020-06-10,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,182.8,38.9,0.0,18.06
+study,PEDAP,train,2,5,PEDAP,2021-06-10,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,154.9,66.7,0.0,4.17
+study,PEDAP,train,3,95,PEDAP,2021-05-11,1,288,288,288,288,288,288,Dexcom G6,t:slim X2,AID,Control-IQ,121.6,88.5,0.0,0.35
+study,ReplaceBG,test,1,62,ReplaceBG,2015-03-14,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,219.2,31.2,0.0,28.12
+study,ReplaceBG,test,2,24,ReplaceBG,2014-10-30,1,288,288,288,288,288,288,Dexcom G4,MiniMed 530G 551,SAP,Basal-Bolus,132.5,71.2,2.43,2.78
+study,ReplaceBG,test,3,197,ReplaceBG,2015-01-02,1,288,288,288,288,288,0,Dexcom G4,MiniMed 530G 751,SAP,Basal-Bolus,185.7,41.0,2.08,25.35
+study,ReplaceBG,train,1,16,ReplaceBG,2015-01-02,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,129.4,75.3,3.82,0.0
+study,ReplaceBG,train,2,20,ReplaceBG,2014-12-03,1,288,288,288,288,288,288,Dexcom G4,Paradigm Revel 523,SAP,Basal-Bolus,107.8,94.4,0.69,0.0
+study,ReplaceBG,train,3,204,ReplaceBG,2014-12-06,1,288,288,288,288,288,288,Dexcom G4,OmniPod,SAP,Basal-Bolus,132.4,71.5,6.25,0.0
+study,T1D-UOM,test,1,2313,T1D-UOM,2023-12-21,1,288,288,1,3,1,2,,Multiple Daily Injections,MDI,MDI,131.9,64.6,2.08,9.03
+study,T1D-UOM,train,1,2301,T1D-UOM,2023-11-10,1,288,288,137,10,137,5,,t:slim X2,SAP,Basal-Bolus,187.0,49.3,0.0,18.75
+study,T1D-UOM,train,2,2313,T1D-UOM,2023-11-13,1,288,288,1,4,1,2,,Multiple Daily Injections,MDI,MDI,157.8,64.9,0.0,14.58
+study,T1D-UOM,train,3,2310,T1D-UOM,2024-02-10,1,288,288,5,8,5,0,,MiniMed 780G,SAP,Basal-Bolus,147.2,81.6,0.0,3.47
+multiday,2-day,test,1,26,PEDAP,2020-12-07,2,576,562,576,576,576,576,Dexcom G6,t:slim X2,AID,Control-IQ,174.3,53.9,0.0,12.1
+multiday,2-day,test,2,IOBP2-45,IOBP2,2020-08-11,2,576,537,573,573,573,0,Dexcom G6,Beta Bionics Gen 4 iLet,AID,iLet Bionic Pancreas,155.3,82.5,0.0,4.84
+multiday,2-day,train,1,13,AZT1D,2024-01-13,2,575,546,0,11,0,11,Dexcom G6,t:slim X2,AID,Control-IQ,126.3,92.5,0.0,0.0
+multiday,2-day,train,2,2,CTR3,2013-08-27,2,514,499,0,0,0,0,Dexcom G4,Roche Accu-Check,AID,,168.9,61.3,1.4,12.63

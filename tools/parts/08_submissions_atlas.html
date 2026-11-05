@@ -1,0 +1,114 @@
+
+<!-- ========================================================= SUBMISSIONS -->
+<section id="submissions">
+  <div class="wrap">
+    <div class="eyebrow">Submissions</div>
+    <h2>What we submitted, and why</h2>
+    <p class="prose">Team: <b data-team>withheld for review</b>. Submissions went to the live leaderboard (public test set,
+      instant feedback) and to the annual competition (held-out set, scores released only after the competition closes).
+      Every annual entry was mirrored on the live board with the identical recipe, so each has a scorable twin.</p>
+
+    <h3>Live leaderboard entries</h3>
+    <div class="tablebox">{{LIVE_SUB_TABLE}}</div>
+    <p class="tnote">DTS-A by horizon and four-horizon means from our offline scoring, which matches the board to its rounding
+      (<a href="#results">Results</a>). ✓ marks entries whose per-horizon scores we read back from the board.</p>
+
+    <h3>The annual cohort</h3>
+    <p class="prose">The annual file replaces <code>source_file</code> with a single anonymous label, so the study is hidden.
+      The data is not:</p>
+    <div class="tlabel">Table · Identifying the annual cohort</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Evidence</th><th>Finding</th></tr></thead>
+      <tbody>
+        <tr><td><code>insulin_delivery_algorithm</code></td><td><b>iLet Bionic Pancreas</b> — present in IOBP2 and in no other training study</td></tr>
+        <tr><td>Carbohydrate channel</td><td>0 entries in 2.6 M rows (IOBP2 also 0; the iLet does not require carbohydrate counting)</td></tr>
+        <tr><td><code>insulin_delivery_modality</code> / <code>cgm_device</code></td><td>automated insulin delivery / Dexcom G6</td></tr>
+        <tr><td>Subject overlap with training</td><td>none — 0 of 92 subject ids; patient-disjoint</td></tr>
+        <tr><td>Scored anchors</td><td>2,228, 28 h to 60 days apart, 100% on the five-minute grid, ≥ 24 h of history for 98.7%</td></tr>
+        <tr><td>CGM standard deviation</td><td>71.3 mg/dL vs 59.7 in IOBP2 — second-highest of all cohorts</td></tr>
+        <tr><td>Channel null-rate fingerprint</td><td>closest to IOBP2 (14.64 pp) but poorly separated from Flair (17.32) and DCLP5 (18.07) — this test alone does not identify the cohort</td></tr>
+      </tbody></table></div>
+    <div class="callout warn"><b>Difficulty is not only model quality.</b> Zone A is a fixed ±20% band, so identical skill earns
+      a lower percentage on a more volatile cohort. Part of whatever the annual score turns out to be will be the cohort's
+      volatility, not the model.</div>
+    <p class="prose small">The public holdout blanks the future CGM with <code>−1.0</code>, not null: exactly 48 rows (four
+      hours) after each anchor, CGM channel only — 106,922 = 2,228 × 48 − 22. History is clean (0.0% sentinels in the 288-row
+      window), insulin and carbohydrate carry none, and features never read future CGM.</p>
+
+    <h3>Annual entries</h3>
+    <div class="tlabel">Table · Every annual file built</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Date</th><th>File</th><th>Recipe</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>22 Sep</td><td><span class="mname">annual_whatif_v2</span></td><td>LightGBM what-if, 3 seeds, no calibration</td><td><b>Marked for final evaluation</b> — the most different model</td></tr>
+        <tr><td>23 Sep</td><td><span class="mname">annual_blend50</span></td><td>0.5 × single-seed LSTM + 0.5 × LightGBM</td><td>superseded — a strictly worse duplicate of the seed-averaged blend</td></tr>
+        <tr><td>4 Oct</td><td><span class="mname">annual_blendseed</span></td><td>0.5 × 3-seed LSTM + 0.5 × LightGBM</td><td>submitted; selected by the pre-registered IOBP2 rule</td></tr>
+        <tr><td>5 Oct</td><td><span class="mname">annual_lstmseed</span></td><td>3-seed LSTM</td><td>submitted</td></tr>
+        <tr class="hl"><td>5 Oct</td><td><span class="mname">annual_lstmseed6</span></td><td>6-seed LSTM</td><td><b>Marked for final evaluation</b> — twin of the best live entry</td></tr>
+        <tr class="hl"><td>5 Oct</td><td><span class="mname">annual_blendseed6</span></td><td>0.5 × 6-seed LSTM + 0.5 × LightGBM</td><td><b>Marked for final evaluation</b> — the pre-registered recipe, six seeds</td></tr>
+      </tbody></table></div>
+    <div class="prose">
+      <p>The three marked entries span the whole disagreement in our evidence: the held-out-study folds favour the blend, the
+        regime analysis and the public test set favour the pure LSTM, and LightGBM wins only if the annual cohort behaves like
+        Loop. Seed averaging is not a re-selection — same architecture, data and blend weight, only the random initialisation
+        differs — so moving from three seeds to six changed nothing that could leak. Only the blend recipe was chosen by the
+        pre-registered rule; the other two are hedges chosen on stated reasoning, and we do not present them as the rule's
+        output.</p>
+      <p>Predicted means on the annual anchors by horizon: LightGBM 155.65 / 152.68 / 150.62 / 147.76 mg/dL; three-seed LSTM
+        156.59 / 156.14 / 156.62 / 156.84 — nearly flat, against an observed cohort mean of 155.2 at the anchor. Every file
+        passed the format validator (row count, keys, order, Arrow storage type).</p>
+    </div>
+
+    <div class="callout"><b>Annual results.</b> Pending release by the organisers. This section will be updated with the
+      official scores for the three marked entries when they are published.</div>
+  </div>
+</section>
+
+<!-- =============================================================== ATLAS -->
+<section id="atlas">
+  <div class="wrap">
+    <div class="eyebrow">Interactive atlas</div>
+    <h2>Raw patient record atlas</h2>
+    <div class="prose">
+      <p>Aggregate profiling says what the corpus contains; it cannot say whether any one record is coherent. The atlas draws
+        the raw record — no imputation, no unit conversion, no derived labels — for three deterministically chosen patients
+        from <b>every</b> level of study, CGM sensor and insulin pump, in train and test separately: 84 one-day figures,
+        2 two-day figures and 43 pump data profiles, 236 patient panels in all.</p>
+      <p class="small muted">Selection: subjects with ≥ 864 CGM readings, ordered by MD5(seed | study | id) with seed 20260101,
+        first three taken; the day drawn is the best-covered one (≥ 180 of 288 readings), preferring days with bolus and
+        carbohydrate records. Hover any point for its timestamp, column and value; click a legend entry to hide a series; drag
+        to zoom.</p>
+    </div>
+    <div class="controls">
+      <label class="ctl">View
+        <select id="atKind" aria-label="Atlas view">
+          <option value="study">One day · by study</option>
+          <option value="sensor">One day · by CGM sensor</option>
+          <option value="pump">One day · by insulin pump</option>
+          <option value="multiday">Two consecutive days</option>
+          <option value="pumpprofile">Pump data profile</option>
+        </select></label>
+      <label class="ctl">Split
+        <select id="atSplit" aria-label="Split"><option value="test">test</option><option value="train">train</option></select></label>
+      <label class="ctl">Level <select id="atLevel" aria-label="Level"></select></label>
+      <a id="atOpen" href="static/atlas/index.html" target="_blank" rel="noopener">Open full screen ↗</a>
+    </div>
+    <iframe id="atFrame" class="atlas-frame" title="Patient atlas figure" data-lazy="1" loading="lazy"></iframe>
+    <div class="grid g3" style="margin-top:14px">
+      <div class="card"><h4>Reading a panel</h4><p>Glucose on the left axis with dashed lines at <b style="color:#c1121f">55</b>,
+        70, 180 and <b style="color:#c1121f">250</b> mg/dL (red: Level 2 thresholds; black: target range). Basal records as
+        amber triangles, boluses as markers on the right axis, carbohydrate along the top. Sensor dropouts are breaks, not
+        lines drawn across them.</p></div>
+      <div class="card"><h4>Raw units, stated</h4><p>Each header carries the patient's study, sensor, pump, therapy mode and
+        algorithm, and the raw demographic fields as stored — height in feet and weight in pounds, not silently converted.
+        <code>insulin</code> is shown only where <code>basal</code> and <code>bolus</code> are absent (CTR3, BrisT1D).</p></div>
+      <div class="card"><h4>More</h4><p><a href="static/atlas/index.html">Full atlas index</a> ·
+        <a href="static/atlas/00_channel_availability.html">channel availability</a> ·
+        <a href="static/tables/64_panels_drawn.csv">every panel drawn (CSV)</a> ·
+        <a href="static/tables/66_pump_population_coverage.csv">pump coverage (CSV)</a> ·
+        <a href="static/tables/68_insulin_identity.csv">insulin identity (CSV)</a></p></div>
+    </div>
+    <p class="tnote">Records are de-identified MetaboNet data. Do not attempt to re-identify any individual. Reuse of the
+      underlying data is governed by the MetaboNet terms of use.</p>
+  </div>
+</section>

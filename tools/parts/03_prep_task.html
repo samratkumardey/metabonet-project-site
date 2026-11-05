@@ -1,0 +1,164 @@
+
+<!-- ======================================================== PREPROCESSING -->
+<section id="preprocessing">
+  <div class="wrap">
+    <div class="eyebrow">Preprocessing</div>
+    <h2>From 155 million rows to one training anchor</h2>
+    <p class="prose">Nine steps, each a response to something measured in the audit. None of them is visible from a
+      row count, and each would silently corrupt a model that skipped it.</p>
+    <div class="steps">
+      <div class="card step"><h4>Identify the patient</h4><p>A patient is the pair <code>(source_file, id)</code>.
+        1,492 id values describe 2,076 patients; 254 ids are shared across studies.</p></div>
+      <div class="card step"><h4>Put everything on one clock</h4><p><code>t = epoch(date) ÷ 300</code>. Every
+        timestamp in both files lands exactly on a five-minute boundary — zero off-grid rows — so a missing hour is a
+        jump of 12, and "30 minutes ago" is index − 6.</p></div>
+      <div class="card step"><h4>Resolve the duplicates</h4><p>Among rows sharing a patient and an index, keep the most
+        complete; break ties with a hash of the row, never by file position (which changes with thread count).
+        Train 132.8 M → 115.2 M unique moments, test 22.1 M → 18.7 M (after also dropping never-scored subjects).</p></div>
+      <div class="card step"><h4>Windows in time, not rows</h4><p>Every lag and rolling statistic is a range over the
+        time index. With 11.4% of readings missing, mostly in long gaps, "six rows above" can mean thirty minutes or three
+        hours; a time window returns empty instead.</p></div>
+      <div class="card step"><h4>Compute wide, store narrow</h4><p>A 24-hour statistic must be computed at all 115 M
+        moments but is read at about 3 M. Filtering in the same query cut storage from 11 GB (which exceeded the cluster
+        quota) to 1.5 GB with identical values.</p></div>
+      <div class="card step"><h4>Read the contract from the file</h4><p>The template fixes the exact rows and their
+        order; scoring is positional. Submissions copy the template's three key columns untouched.</p></div>
+      <div class="card step"><h4>Rebuild the selection rule</h4><p>Training anchors pass the organisers' own filter
+        chain (below), so the training distribution matches what is scored.</p></div>
+      <div class="card step"><h4>Build one feature row</h4><p>One code path builds features for training and scoring
+        anchors, so a feature cannot mean one thing when fitted and another when used.</p></div>
+      <div class="card step"><h4>Validate on unseen patients</h4><p>Folds split by patient, never by row; a whole-study
+        hold-out is the harder second test. See <a href="#method">Method</a>.</p></div>
+    </div>
+
+    <h3>Cleaning policy</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Applied</h4><ul class="tight small">
+        <li><b>CGM interpolation</b> only across gaps ≤ 15 min, into existing rows, always flagged (<code>cgm_imputed</code>).</li>
+        <li><b>CGM clipped</b> to [40, 400] mg/dL — a rail reading is censored, not wrong.</li>
+        <li><b>Implausible doses nulled</b>, not clipped (e.g. a 300 U bolus).</li>
+        <li><b>Missingness by (cohort × column)</b>: a blank bolus is a structural zero where the cohort records boluses and "not collected" where it never does.</li>
+        <li><b>Units decided once</b>: feet → cm, pounds → kg, °F → °C (affine).</li></ul></div>
+      <div class="card"><h4>Never done</h4><ul class="tight small">
+        <li>No test row is dropped or reordered — every source <code>(id, date)</code> survives (asserted).</li>
+        <li>No value is changed except through an entry in a printed policy table with the measurement that justified it.</li>
+        <li>Forward-filled CGM is used for inputs only; targets are masked to real readings.</li>
+        <li><code>subject_split_across_traintest</code> is analysis metadata and never a model feature.</li></ul></div>
+    </div>
+
+    <h3>Reconstructing the scored set</h3>
+    <p class="prose">The organisers describe the live set as "24 h history, CGM gaps under 30 min, insulin gaps under
+      2 h, mandatory carbohydrate information, 15-minute stride". The carbohydrate clause cannot be literal — iLet
+      patients record no carbohydrate and are scored. Testing <em>any food channel</em> (carbs or meal label) against
+      template membership predicts inclusion exactly, study by study. Reproducing the chain on <code>test.parquet</code>
+      lands on the official count to the row:</p>
+    <div class="tlabel">Table · Filter chain on the public test split</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Step</th><th class="num">Anchors</th></tr></thead>
+      <tbody>
+        <tr><td>All four targets present</td><td class="num">18,732,751</td></tr>
+        <tr><td>24 h of lookback (position ≥ 287)</td><td class="num">−77,409</td></tr>
+        <tr><td>Anchor CGM not missing</td><td class="num">−235,730</td></tr>
+        <tr><td>No CGM gap of ≥ 6 rows in the window</td><td class="num">−4,511,858</td></tr>
+        <tr><td>No insulin zero/missing run of ≥ 25 rows</td><td class="num">−3,195,115</td></tr>
+        <tr><td>At least one carbohydrate or meal record in the window</td><td class="num">−2,765,960</td></tr>
+        <tr><td>Survivors</td><td class="num">7,946,679</td></tr>
+        <tr class="hl"><td><b>Every third survivor, counted from the end of each subject</b></td><td class="num"><b>2,648,987</b></td></tr>
+        <tr><td>Distinct (source_file, id) groups</td><td class="num">279</td></tr>
+      </tbody></table></div>
+    <p class="tnote">Targets are positional (row offsets 6/12/18/24 inside each subject), not clock-shifted. Striding
+      forwards gives 2,648,905 and striding on raw row position 2,649,624; only counting backwards reproduces the
+      template. Reconstructing anchors from the prose alone matches the counts but only 31% of the actual rows, so every
+      submission is built from the official template.</p>
+  </div>
+</section>
+
+<!-- ================================================================ TASK -->
+<section id="task">
+  <div class="wrap">
+    <div class="eyebrow">Task &amp; metrics</div>
+    <h2>Four horizons, two primary metrics, two leaderboards</h2>
+    <div class="grid g3">
+      <div class="card"><span class="tag">Task</span><h4>Given the past, predict four points</h4>
+        <p>At each anchor, use everything recorded up to that moment — plus insulin and carbohydrate already scheduled
+          for the next two hours — and predict CGM at <b>t + 30, 60, 90 and 120 min</b>. 2,648,987 anchors × 4 = 10.6 M
+          numbers in one file in one fixed row order.</p></div>
+      <div class="card"><span class="tag">Clinical track</span><h4>DTS error grid, zone A</h4>
+        <p>Share of predictions in the "no clinical risk" zone. Ranked on the <b>average over the four horizons</b>;
+          RMSE breaks ties.</p></div>
+      <div class="card"><span class="tag">Analytical track</span><h4>MARD</h4>
+        <p><code>mean(|pred − true| / true) × 100</code>. A 20 mg/dL miss at 70 counts three times as much as at 250.
+          Also averaged over horizons; RMSE breaks ties.</p></div>
+    </div>
+
+    <h3>Zone A, exactly</h3>
+    <p class="prose">For reference value <i>y</i> and prediction <i>ŷ</i>, a pair is in zone A when
+      <i>low(y)</i> ≤ <i>ŷ</i> ≤ <i>up(y)</i>, with the piecewise-linear bounds used verbatim in all our scoring:</p>
+<pre><code>up(y)  = 60                               if y ≤ 50
+       = (540 / 450) · (y − 50) + 60       otherwise
+low(y) = 0                                if y ≤ 62.5
+       = (430 / 537.5) · (y − 62.5) + 50   otherwise</code></pre>
+    <p class="prose">Above about 62.5 mg/dL this is a band of roughly ±20% around the truth — a <em>multiplicative</em>
+      band. In log space it is approximately [−0.223, +0.182], which is why our models predict the log ratio
+      <code>log(CGM<sub>t+h</sub>) − log(CGM<sub>t</sub>)</code> and are trained with L1 loss (<a href="#method">Method</a>).</p>
+
+    <h3>The submission contract</h3>
+    <div class="grid g2">
+      <div>
+        <div class="tlabel">Table · Seven columns, in this order</div>
+        <div class="tablebox"><table>
+          <thead><tr><th>Column</th><th>Type</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>id</code></td><td>string</td><td>subject id (string, not int)</td></tr>
+            <tr><td><code>source_file</code></td><td>string</td><td>study</td></tr>
+            <tr><td><code>date</code></td><td>timestamp[ns]</td><td>the anchor</td></tr>
+            <tr><td><code>pred_30 … pred_120</code></td><td>double</td><td>glucose in mg/dL at t + h</td></tr>
+          </tbody></table></div>
+      </div>
+      <div>
+        <div class="tlabel">Table · What the checker enforces</div>
+        <div class="tablebox"><table><tbody>
+          <tr><td>1</td><td>Row count equals the template's</td></tr>
+          <tr><td>2</td><td>All seven columns present</td></tr>
+          <tr><td>3</td><td>Key columns equal to the template element-wise</td></tr>
+          <tr><td>4</td><td>Rows in the same order — compared by position, never joined</td></tr>
+          <tr><td>5</td><td>At least one prediction column fully populated</td></tr>
+          <tr><td>6</td><td>All-or-nothing per column: a partly filled column is rejected</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="callout warn"><b>A failure that no value-level check can see.</b> A file was rejected with "keys do not
+      match the template near row 1" while every local check passed. pyarrow 23 writes string keys as
+      <code>large_string</code>; the organisers' template uses <code>string</code>, and pandas reads both back as the same
+      dtype. Our writer now copies the template's Arrow arrays verbatim, and our validator checks Arrow storage type
+      (19 checks in all). Row order is also part of the contract: a mis-ordered file of a good model measured 91.68 → 39.84.</div>
+
+    <h3>Two leaderboards with opposite temptations</h3>
+    <div class="grid g2">
+      <div class="card"><span class="tag">Live leaderboard</span><h4>Public test set — 2,648,987 anchors, 279 patients, 9 studies</h4>
+        <p>The correct answers ship with the toolkit; feedback in seconds; one submission per minute. The organisers note
+          that leakage is not controlled here. Anything tuned to the published answers buys a sandbox score and transfers
+          nothing.</p></div>
+      <div class="card"><span class="tag">Annual competition</span><h4>Held-out set — 2,228 anchors</h4>
+        <p>Answers kept on the server; no feedback until the competition closes; three entries marked for final
+          evaluation; deadline 5 October 2026. The public holdout file blanks the future CGM with <code>−1.0</code> sentinels.</p></div>
+    </div>
+
+    <h3>The floor any model must clear</h3>
+    <div class="tlabel">Table · Zero-parameter references on the scored anchors</div>
+    <div class="tablebox"><table>
+      <thead><tr><th>Predictor</th><th class="num">RMSE</th><th class="num">MARD (%)</th><th class="num">DTS-A (%)</th></tr></thead>
+      <tbody>
+        <tr><td>Persistence, t + 30</td><td class="num">25.17</td><td class="num">13.12</td><td class="num">79.92</td></tr>
+        <tr><td>Persistence, t + 60</td><td class="num">39.98</td><td class="num">21.31</td><td class="num">61.34</td></tr>
+        <tr><td>Persistence, t + 90</td><td class="num">49.26</td><td class="num">26.62</td><td class="num">51.81</td></tr>
+        <tr><td>Persistence, t + 120</td><td class="num">55.48</td><td class="num">30.26</td><td class="num">46.31</td></tr>
+        <tr class="hl"><td><b>Persistence, all horizons</b></td><td class="num"><b>43.98</b></td><td class="num"><b>22.83</b></td><td class="num"><b>59.84</b></td></tr>
+        <tr><td>Linear extrapolation of the 30-min slope, undamped</td><td class="num">67.41</td><td class="num">34.27</td><td class="num">47.23</td></tr>
+        <tr><td>… damped × 0.30</td><td class="num">47.66</td><td class="num">24.13</td><td class="num">58.93</td></tr>
+      </tbody></table></div>
+    <p class="tnote">Glucose is strongly mean-reverting at these horizons: undamped extrapolation is far worse than
+      persistence, and damping helps only at 30 minutes. For scale, the toolkit README's own worked example prints
+      RMSE 53.17 / MARD 33.51 / DTS-A 38.2 at t + 60 — below persistence on every metric.</p>
+  </div>
+</section>

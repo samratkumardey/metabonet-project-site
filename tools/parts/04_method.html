@@ -1,0 +1,133 @@
+
+<!-- ============================================================== METHOD -->
+<section id="method">
+  <div class="wrap">
+    <div class="eyebrow">Method</div>
+    <h2>Two model families, one target, one rule</h2>
+
+    <h3>The target: a log ratio, fitted to its median</h3>
+    <div class="prose">
+      <p>Every model predicts <code>r<sub>h</sub> = log(CGM<sub>t+h</sub>) − log(CGM<sub>t</sub>)</code> and is trained
+        with <b>L1 loss</b>. Two reasons, both measured rather than assumed:</p>
+      <ul class="tight">
+        <li><b>Predicting the change hands the model persistence for free.</b> Glucose over two hours is strongly
+          mean-reverting, so the current reading is the best single guess; all capacity goes to what happens next.</li>
+        <li><b>L1 estimates the conditional median, and both ranked metrics are median-optimal.</b> MARD is a relative
+          error and zone A is a multiplicative band, so both reward the centre of the log-ratio distribution. Glucose is
+          right-skewed — it can run to 400 but floors near 39 — so the mean sits above the median. On a matched ablation,
+          log-ratio beats raw-level targets and L1 adds a little more; RMSE, a mean-targeting metric, is only a tiebreaker
+          and is deliberately not what is optimised. <a href="#rq3">RQ3</a> confirms this on the final model.</li>
+      </ul>
+      <p>The prediction submitted is <code>CGM<sub>t</sub> · exp(r̂<sub>h</sub>)</code>, clipped to [39, 401] mg/dL.</p>
+    </div>
+
+    <h3>The lever: inputs that are already known</h3>
+    <div class="grid g2">
+      <div class="prose">
+        <p>The organisers state that <em>"what-if (conditional) models are welcome"</em> on both leaderboards — models may
+          condition on insulin doses and carbohydrates recorded after the anchor. Those records exist at a large share of
+          scored moments:</p>
+        <div class="tablebox"><table>
+          <thead><tr><th>In the window (t, t + 120]</th><th class="num">Share of anchors</th></tr></thead>
+          <tbody>
+            <tr><td>A bolus is recorded</td><td class="num">43.41%</td></tr>
+            <tr><td>Carbohydrate is recorded</td><td class="num">31.58%</td></tr>
+            <tr><td>A bolus in the next 30 min</td><td class="num">15.76%</td></tr>
+            <tr><td>Carbohydrate in the next 30 min</td><td class="num">9.38%</td></tr>
+          </tbody></table></div>
+        <p class="small muted">A CGM-only forecaster cannot see any of this. The caveat we carry: these are doses that
+          were actually given, not a stated plan, so the conditional result answers "what happens given this treatment",
+          and we report a strict past-only ablation beside it.</p>
+      </div>
+      <figure class="figure" style="margin-top:0"><img src="static/images/fig_known_future.png" alt="Mean glucose change over two hours with and without upcoming carbs or bolus" loading="lazy">
+        <figcaption><b>Figure 5: What the next two hours already say.</b> Mean glucose change from anchor to t + 120 is
+          +10.9 mg/dL when carbohydrate follows and −5.5 when none does; +10.8 vs −8.8 for a bolus — a systematic
+          16–20 mg/dL divergence, known in advance, on about 43% of scored rows.</figcaption></figure>
+    </div>
+
+    <h3>Family A — LightGBM "what-if"</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Features (240)</h4><ul class="tight small">
+        <li><b>CGM shape</b> — lag deltas out to 24 h, least-squares slopes over 15 min–6 h, acceleration, rolling mean / sd / min / max / range, z-scores, time in range at 54 / 70 / 180 / 250 over 6 h and 24 h, time since last hypo / hyper, missingness counts.</li>
+        <li><b>Insulin</b> — insulin-on-board as exponential decays (τ = 20, 45, 90, 180, 360 min), two activity curves peaking near 55 and 120 min, rolling sums 30 min–24 h, basal rate, time since and size of last bolus.</li>
+        <li><b>Carbohydrate</b> — carbs-on-board decays (τ = 20, 45, 90 min), rolling sums, time since and size of last entry, meal-label counts.</li>
+        <li><b>Clock and context</b> — time-of-day sine / cosine, weekday; study, sensor, delivery modality and algorithm as categoricals; age, weight, height, BMI, age at diagnosis.</li>
+        <li><b>What-if block</b> — insulin, bolus and carbohydrate summed over the next four 30-minute bins and 2 h totals, plus time-to-next-event and 10-minute future bins. The only features that look past the anchor.</li></ul></div>
+      <div class="card"><h4>Training</h4><ul class="tight small">
+        <li>One booster per horizon × 3 seeds = 12 models; predictions averaged over seeds.</li>
+        <li>L1 on the log ratio; 511 leaves, learning rate 0.02, up to 12,000 rounds with early stopping.</li>
+        <li>7.09 M training anchors, subject-disjoint validation (15% of subjects held out, seed 1234).</li>
+        <li>About 17 hours on 32 CPU cores for the full four-horizon, three-seed fit.</li>
+        <li>No post-hoc calibration in the submitted files: the fitted DTS warp measured −0.1 to −0.4 and is disabled.</li>
+        <li>The causal variant (no future inputs, 174 features) is kept as an ablation: <code>live_causal</code>.</li></ul></div>
+    </div>
+
+    <h3>Family B — LSTM forecaster with a known-future block</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Architecture</h4><ul class="tight small">
+        <li><b>History encoder</b>: 288 five-minute steps (24 h) × 9 input channels → LSTM, hidden size 192.</li>
+        <li><b>Known-future block</b>: the 24 future steps (120 min) × 4 dose channels plus a validity mask, flattened and passed through an MLP to a 96-dimensional vector.</li>
+        <li><b>Head</b>: concatenate (192 + 96) → 128 → GELU → 4 outputs, one log ratio per horizon.</li>
+        <li>No static patient or device features enter the network — a deliberate difference from Family A, and an open lever (<a href="#limitations">Limitations</a>).</li></ul></div>
+      <div class="card"><h4>Training</h4><ul class="tight small">
+        <li>L1 on the log ratio; cosine-annealed learning rate over a 25-epoch budget.</li>
+        <li>Early stopping on a subject-disjoint stop split, patience 5; runs stop at epoch 14–22. Checkpoint chosen on stop-split L1.</li>
+        <li>Six independent seeds for the final entry; the mean of their predictions is submitted.</li>
+        <li>GPU training on a university SLURM cluster. Fold screens train one model per held-out study.</li></ul></div>
+    </div>
+
+    <h3>Combining models — with nothing fitted</h3>
+    <div class="prose">
+      <p><b>Seed averaging</b> removes the part of the score that depends on the random initialisation; there is no
+        selection step, so nothing can leak. <b>Blending</b> uses a weight of <b>0.5, fixed before any blend was
+        scored</b>. A per-horizon weight fitted leave-one-fold-out bought +0.016 DTS-A and was rejected
+        (<a href="#ablations">Ablations</a>).</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="algo"><div class="h">Algorithm 1 · Anchors and inputs</div>
+<pre><code>for each subject s = (source_file, id):
+    t_idx  ← epoch(date) / 300             # integer 5-min clock
+    rows   ← dedupe(s, keep = most complete,
+                    tie = hash(row))
+    for each anchor a passing the filter chain:
+        hist   ← rows[t_idx(a) − 287 … t_idx(a)]   # 24 h
+        fut    ← doses[t_idx(a) + 1 … + 24]         # 2 h
+        target ← log CGM[a + k] − log CGM[a],
+                 k ∈ {6, 12, 18, 24}  (rows)
+        mask   ← CGM[a + k] is a real reading</code></pre></div>
+      <div class="algo"><div class="h">Algorithm 2 · Train, combine, submit</div>
+<pre><code>for seed in 0 … 5:
+    θ_seed ← argmin  Σ |f_θ(hist, fut) − target|
+             (early stop on stop-split L1)
+r̂_lstm ← mean_seed f_θseed(hist, fut)
+r̂_gbm  ← mean_seed LightGBM_seed(features)
+r̂      ← r̂_lstm                  # lstmseed6
+       or 0.5·r̂_lstm + 0.5·r̂_gbm # blendseed6
+pred_h ← clip(CGM_t · exp(r̂_h), 39, 401)
+write template keys verbatim ⊕ pred_30 … pred_120</code></pre></div>
+    </div>
+
+    <h3>Evaluation protocol</h3>
+    <div class="grid g3">
+      <div class="card"><span class="tag">Test set 1</span><h4>Public test set</h4><p>Fixed by the organisers:
+        2,648,987 anchors, 279 patients, 9 studies. <b>New patients, known study</b> — the same regime as the annual
+        set. Scored locally against the toolkit's <code>targets.parquet</code>.</p></div>
+      <div class="card"><span class="tag">Test set 2</span><h4>Leave-one-study-out</h4><p>Built by us. Remove every
+        patient of one study from training, early stopping and normalisation; fit on the rest; score on the removed
+        study. A study qualifies at <b>≥ 20 subjects and ≥ 50,000 anchors</b>: Loop, ReplaceBG, IOBP2, PEDAP, CTR3.
+        <b>A whole new study</b> — new devices, protocol and population.</p></div>
+      <div class="card"><span class="tag">Statistics</span><h4>Paired subject bootstrap</h4><p>The patient is the unit of
+        independence. 2,000 resamples of subjects, one shared draw seed (7) for every model so comparisons are paired.
+        "Better" means a 95% interval that excludes zero.</p></div>
+    </div>
+
+    <h3>Rules that held for the whole project</h3>
+    <div class="callout"><b>Nothing is ever fitted on evaluation targets.</b> Not blend weights, calibration, model
+      selection, point-estimate shifts or normalisation statistics. The live targets are opened only to print a score
+      after a model is frozen; the annual targets do not exist on our side. The selection rule for the annual entry was
+      written down on 22 September 2026, before the deciding measurements ran: <em>the submission is whichever model scores
+      highest on average DTS-A when trained with IOBP2 excluded and scored on IOBP2</em> — the only training cohort that
+      uses the annual set's insulin pump.</div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+{
+  "notebook": "004.cgm_metabonet_patient_charts.ipynb",
+  "generated": "2026-09-17T12:28:38",
+  "data_dir": "<redacted local path>",
+  "figures": "<redacted local path>",
+  "tables": "<redacted local path>",
+  "config": {
+    "dimensions": {
+      "study": "source_file",
+      "sensor": "cgm_device",
+      "pump": "insulin_delivery_device"
+    },
+    "splits": [
+      "test",
+      "train"
+    ],
+    "patients_per_stratum": 3,
+    "oversample": 3,
+    "days_per_patient": 1,
+    "seed": 20260101,
+    "min_cgm_readings_on_day": 180,
+    "min_cgm_per_subject": 864,
+    "sg_lines": [
+      55,
+      70,
+      180,
+      250
+    ],
+    "sg_line_colors": {
+      "55": "#c1121f",
+      "70": "#111111",
+      "180": "#111111",
+      "250": "#c1121f"
+    },
+    "multiday_patients_per_split": 2,
+    "multiday_n_days": 2,
+    "insulin_default_visible": false,
+    "pump_channels": [
+      "CGM",
+      "basal",
+      "bolus",
+      "insulin",
+      "carbs",
+      "meal_label",
+      "workout_label",
+      "workout_duration",
+      "workout_intensity",
+      "heartrate",
+      "steps",
+      "calories_burned",
+      "skin_temp",
+      "air_temp",
+      "galvanic_skin_response",
+      "misc_notes"
+    ],
+    "html_plotlyjs": "directory",
+    "inline_per_dim": 3,
+    "row_height_px": 380,
+    "legend_gap_px": 34
+  },
+  "atlas_figures": 84,
+  "multiday_figures": 2,
+  "pump_figures": 43,
+  "panels": 236,
+  "versions": {
+    "python": "3.11.15",
+    "plotly": "7.0.0",
+    "duckdb": "1.5.5",
+    "pandas": "3.0.5"
+  }
+}

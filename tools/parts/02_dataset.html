@@ -1,0 +1,159 @@
+
+<!-- ============================================================= DATASET -->
+<section id="dataset">
+  <div class="wrap">
+    <div class="eyebrow">Dataset</div>
+    <h2>The MetaboNet corpus, and what is actually inside it</h2>
+    <div class="prose">
+      <p>MetaboNet (Wolff et al., <em>Journal of Diabetes Science and Technology</em>, 2026) harmonises
+        publicly available type 1 diabetes data sets into one tabular format on a uniform five-minute grid,
+        requiring both CGM readings and insulin dosing records for inclusion. The full resource covers 3,135
+        subjects and 1,228 patient-years. The challenge distributes a train/test split of it as two parquet files
+        with a shared 37-column schema: who and when (<code>id</code>, <code>source_file</code>, <code>date</code>),
+        the sensor (<code>CGM</code>, mg/dL), treatment (<code>basal</code>, <code>bolus</code>,
+        <code>insulin</code>, <code>carbs</code>, <code>meal_label</code>) and context (devices, therapy mode,
+        demographics, wearables).</p>
+      <p>Pooling fourteen studies is the corpus's strength and its main difficulty: fourteen sets of devices,
+        recording conventions and missing-data habits sit side by side with no column that reconciles them. Most
+        of the preprocessing in the next section exists because of that. We audited the files before modelling
+        (notebooks 001, 002 and 004), and every number below was measured on the real files.</p>
+    </div>
+
+    <div class="tlabel">Dataset table · Splits</div>
+    <div class="tablebox"><table>
+      <thead><tr><th></th><th class="num">Train</th><th class="num">Test</th></tr></thead>
+      <tbody>
+        <tr><td>Rows (five-minute epochs)</td><td class="num">132,772,529</td><td class="num">22,069,548</td></tr>
+        <tr><td>Subject records</td><td class="num">1,183</td><td class="num">309</td></tr>
+        <tr><td>Subject-days</td><td class="num">437,098</td><td class="num">76,530</td></tr>
+        <tr><td>CGM readings (share of rows)</td><td class="num">111,312,646 (83.8%)</td><td class="num">19,560,193 (88.6%)</td></tr>
+        <tr><td>Contributing studies</td><td class="num">14</td><td class="num">13</td></tr>
+        <tr><td>Date span</td><td class="num">2011-11-17 → 2027-07-14*</td><td class="num">2012-02-03 → 2024-06-29</td></tr>
+        <tr><td>Mean / median CGM (mg/dL)</td><td class="num">148.6 / 136.0</td><td class="num">145.6 / 133.0</td></tr>
+        <tr><td>Largest study's share of rows</td><td class="num">Loop 61%</td><td class="num">Loop 63%</td></tr>
+      </tbody></table></div>
+    <p class="tnote">* One training timestamp falls in July 2027 — a corrupt record, filtered. No column shifts between
+      train and test by a population stability index of 0.10 or more (largest: <code>insulin_delivery_device</code>, 0.099),
+      so the two splits are drawn from the same pool.</p>
+
+    <h3>Studies</h3>
+    <p class="prose">Eleven of the fourteen training studies produce eligible anchors. The scored live set is a filtered
+      slice of the test file — 279 of 351 subject–study pairs and 9 of 13 studies — and three-quarters of it is a single
+      study, Loop.</p>
+    <div class="tlabel">Dataset table · Study inventory and share of the scored set</div>
+    <div class="tablebox">{{STUDY_TABLE}}</div>
+    <p class="tnote">Subjects per split from the atlas stratum inventory (table 63). Scored anchors and share from the live
+      leaderboard template (2,648,987 rows). DCLP3, Flair, DCLP5 and T1D-UOM appear in the test file but contribute no
+      scored row; their subjects carry no food channel, which is the inclusion rule we reconstruct in
+      <a href="#preprocessing">Preprocessing</a>.</p>
+
+    <figure class="figure"><img src="static/images/fig_study_share.png" alt="Bar chart: share of scored anchors by study; Loop 76.84 percent" loading="lazy">
+      <figcaption><b>Figure 2: The live score is three-quarters Loop.</b> Share of the 2,648,987 scored anchors by
+        contributing study. A model tuned to this mix is tuned to Loop; the annual competition's cohort is different
+        (<a href="#submissions">Submissions</a>), which is why we also evaluate with whole studies held out.</figcaption></figure>
+
+    <h3>Devices</h3>
+    <div class="grid g2">
+      <div>
+        <div class="tlabel">Dataset table · CGM sensors (subjects)</div>
+        <div class="tablebox">{{SENSOR_TABLE}}</div>
+      </div>
+      <div>
+        <div class="tlabel">Dataset table · Therapy algorithm and modality</div>
+        <div class="tablebox"><table>
+          <thead><tr><th>Insulin delivery algorithm</th><th class="num">Share of rows</th></tr></thead>
+          <tbody>
+            <tr><td>LoopAlgorithm</td><td class="num">61%</td></tr>
+            <tr><td>Basal-Bolus</td><td class="num">13.6%</td></tr>
+            <tr><td>Control-IQ</td><td class="num">11.1%</td></tr>
+            <tr><td>iLet Bionic Pancreas</td><td class="num">6.2%</td></tr>
+            <tr><td>SmartGuard</td><td class="num">2.4%</td></tr>
+            <tr><td>780G Advanced HCL</td><td class="num">2.3%</td></tr>
+            <tr><td>Basal-IQ</td><td class="num">0.5%</td></tr>
+          </tbody></table></div>
+        <p class="tnote">Modality by subjects (train / test): automated insulin delivery 1,114 / 277; sensor-augmented
+          pump 221 / 41; multiple daily injections 24 / 7.</p>
+      </div>
+    </div>
+    <details class="finding"><summary><span class="sev med">TABLE</span>Insulin delivery devices — 27 in train, 18 in test</summary>
+      <div class="body"><div class="tablebox">{{PUMP_TABLE}}</div>
+        <p class="tnote">Nine pump models and four sensor models are train-only. No level is test-only, so a model never
+          meets a device at scoring time that it has not seen in training.</p></div></details>
+
+    <h3>Glycemic profile</h3>
+    <figure class="figure"><img src="static/images/fig_glycemic_bands.png" alt="Stacked bars of time in consensus glucose bands for train and test" loading="lazy">
+      <figcaption><b>Figure 3: Corpus glycemic profile.</b> Share of CGM readings in the international consensus bands
+        (Battelino et al., 2019). Time in range is 72.1% (train) and 73.6% (test); time below 70 mg/dL 3.2% / 3.5%; below
+        55 mg/dL 0.70% / 0.71%; above 250 mg/dL 6.8% / 6.0%. The corpus meets three of the four consensus goals and misses
+        time above 250.</figcaption></figure>
+
+    <h3>Eight findings from the audit</h3>
+    <p class="prose">Severity is "would a competent modeller notice before it damaged their results", not effect size.
+      Click a finding for the measurement behind it.</p>
+    <details class="finding"><summary><span class="sev crit">CRITICAL</span>The subject identifier is not a subject key</summary>
+      <div class="body">There are 1,492 distinct <code>id</code> values but 2,076 subject–study pairs: <b>254 ids are reused
+        by more than one study</b> (222 in train, 32 in test), one of them by nine studies. Grouping by <code>id</code>
+        alone merges 584 different people into someone else and can put the same person on both sides of a validation
+        split. Every grouping, fold and feature in this work is keyed on <code>(source_file, id)</code>. The same problem
+        shows up as 6,277,774 duplicate <code>(id, date)</code> keys (7.46 M surplus rows, 5.6% of train).</div></details>
+    <details class="finding"><summary><span class="sev crit">CRITICAL</span>Height is in feet, not metres</summary>
+      <div class="body">A median height of 5.50 was read as metres and multiplied by 100, giving heights of 594–626 cm and
+        failing 100% of rows against the bounds check. The correct factor is ×30.48. Units are now detected by which band
+        a median is plausible in, not by the nearest reference value.</div></details>
+    <details class="finding"><summary><span class="sev crit">CRITICAL</span>Air and skin temperature are Fahrenheit</summary>
+      <div class="body">Means of 84.6 and 86.7 against °C bounds with a "null" action would have silently deleted 99.98% and
+        99.93% of both channels. Fixed with an affine (factor, offset) conversion. Both channels are, in any case, 100%
+        empty in the test split.</div></details>
+    <details class="finding"><summary><span class="sev high">HIGH</span>The pump decides whether food data exists</summary>
+      <div class="body">OmniPod: carbs 100% / meal_label 0%. Beta Bionics iLet: carbs <b>0%</b> / meal_label 100%.
+        MiniMed 670G: both 0%. t:slim X2: carbs 28.6% of test subjects. Consequence: <b>100 of 309 evaluation patients have
+        no carbohydrate record at all</b> (14.9% of rows) and 36 have no food data in any form. See Figure 4.</div></details>
+    <details class="finding"><summary><span class="sev high">HIGH</span><code>insulin</code> is a total, not a third dose type</summary>
+      <div class="body"><code>insulin = basal + bolus</code> to floating-point equality on 98.99% of rows corpus-wide — but CTR3
+        (0% match) and BrisT1D (8–10%) record only the total. For those cohorts <code>insulin</code> is the only insulin
+        channel; a model reading <code>basal</code> and <code>bolus</code> alone sees them as receiving no insulin.
+        Per-cohort counts are in table 68.</div></details>
+    <details class="finding"><summary><span class="sev high">HIGH</span>Missingness is a property of the study</summary>
+      <div class="body">CGM missingness ranges from 0% to 43% across cohorts and is flat across the clock (≤2.3 percentage
+        points by hour), so it is neither a night-time nor a mealtime artefact. 61.5% of missing CGM sits in runs longer than
+        24 hours; only 13.4% in runs of 15 minutes or less. Short-gap interpolation recovers that 13.4% and cannot rescue
+        the rest.</div></details>
+    <details class="finding"><summary><span class="sev med">MEDIUM</span>No distribution shift overall, but drift inside levels</summary>
+      <div class="body">No column has a population stability index of 0.10 between splits, yet time in range differs by up to
+        18.8 percentage points between train and test patients <em>within</em> one study (T1D-UOM). A split-level PSI cannot
+        see this.</div></details>
+    <details class="finding"><summary><span class="sev med">MEDIUM</span>Several cohorts were converted from mmol/L</summary>
+      <div class="body">BrisT1D, T1D-UOM and ShanghaiT1DM all top out at exactly 500.9 mg/dL (27.8 mmol/L) and bottom at
+        39.6 (2.2 mmol/L). Clipping CGM to [40, 400] therefore censors 400–500.9 in those three cohorts only — a
+        cohort-dependent censoring the model will see.</div></details>
+
+    <figure class="figure"><img src="static/images/fig_food_by_pump.png" alt="Bars of carbohydrate and meal label availability by insulin pump" loading="lazy">
+      <figcaption><b>Figure 4: The pump decides whether food data exists.</b> Share of test subjects on each pump (≥5
+        subjects) with any carbohydrate record and any meal label. The iLet records meals as labels, never as grams;
+        the MiniMed 670G records neither. A feature built on <code>carbs</code> alone is structurally blank for these
+        patients, which is why the organisers' inclusion rule — and ours — tests for <em>any</em> food channel.</figcaption></figure>
+
+    <h3>Column coverage</h3>
+    <details class="finding"><summary><span class="sev med">TABLE</span>Every raw column — share of rows filled and of subjects reached, per split</summary>
+      <div class="body"><div class="tablebox">{{COVERAGE_TABLE}}</div>
+        <p class="tnote">From table 61. Wearable channels (<code>heartrate</code>, <code>steps</code>) exist in four small
+          studies, about 105,000 anchors or 1.5% of the 7.09 M training anchors; no study large enough to hold out has them.</p></div></details>
+
+    <h3>What the corpus does not contain</h3>
+    <div class="grid g2">
+      <div class="card"><h4>Glucose and insulin</h4><ul class="tight small">
+        <li>No sensor session boundaries, warm-up or calibration events, no reference fingerstick, no trend arrow, no per-reading quality flag.</li>
+        <li>No bolus type: normal, extended, dual-wave and automated corrections are one number.</li>
+        <li>No programmed basal profile, temporary basal or suspend events; no insulin-on-board as the pump computed it.</li>
+        <li>No bolus-calculator settings, no auto-mode entry or exit, no site changes, no non-insulin medication.</li></ul></div>
+      <div class="card"><h4>Food and context</h4><ul class="tight small">
+        <li>Nothing beyond grams of carbohydrate: no fat, protein, fibre or glycemic index; no announced-vs-retrospective flag.</li>
+        <li>No time zone or daylight-saving information — timestamps are naive.</li>
+        <li>No sleep, illness, stress, menstrual cycle or alcohol; no usable exercise record in the test split.</li>
+        <li>No per-row units declaration — units have to be inferred, per cohort.</li></ul></div>
+    </div>
+    <p class="sub">These absences bound what any model trained on this corpus can represent. Unannounced meals and
+      hand-judged doses in the manual-dosing cohorts (ReplaceBG, CTR3) are never recorded — we show in
+      <a href="#ablations">Ablations</a> that this, not model capacity, limits accuracy there.</p>
+  </div>
+</section>

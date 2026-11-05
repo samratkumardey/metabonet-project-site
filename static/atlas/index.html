@@ -1,0 +1,205 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MetaboNet T1D CGM — Raw Patient Record Atlas</title>
+<style>
+ :root { --ink:#12303a; --muted:#5c7278; --rule:#dfe7e9; --accent:#0c8fa3; --bg:#ffffff; }
+ * { box-sizing:border-box }
+ body { font:15px/1.65 Georgia,"Times New Roman",serif; color:var(--ink); background:var(--bg);
+        margin:0; padding:0 1.5rem 5rem; }
+ .wrap { max-width:62rem; margin:0 auto; }
+ header { border-bottom:3px double var(--ink); padding:3rem 0 1.5rem; margin-bottom:2rem; }
+ header .kicker { font:600 12px/1.4 system-ui,sans-serif; letter-spacing:.14em;
+                   text-transform:uppercase; color:var(--accent); }
+ h1 { font-size:2rem; line-height:1.2; margin:.6rem 0 .3rem; font-weight:600; }
+ h1 small { display:block; font-size:1.05rem; font-weight:400; color:var(--muted);
+             margin-top:.45rem; font-style:italic; }
+ .byline { font:14px/1.6 system-ui,sans-serif; color:var(--muted); margin-top:1.2rem; }
+ .byline b { color:var(--ink); font-weight:600 }
+ h2 { font-size:1.25rem; margin:2.6rem 0 .8rem; padding-bottom:.35rem;
+       border-bottom:1px solid var(--rule); }
+ h3 { font-size:1.02rem; margin:1.8rem 0 .6rem; color:var(--ink); }
+ p, li { max-width:56rem }
+ .muted { color:var(--muted); font-weight:400 }
+ table { border-collapse:collapse; width:100%; margin:.8rem 0 1.4rem;
+          font:13.5px/1.5 system-ui,sans-serif; }
+ th,td { text-align:left; padding:.42rem .7rem; border-bottom:1px solid var(--rule);
+          vertical-align:top }
+ th { background:#f4f9fa; font-weight:600; border-bottom:2px solid var(--rule) }
+ tbody tr:hover { background:#f8fcfd }
+ a { color:var(--accent); text-decoration:none } a:hover { text-decoration:underline }
+ .abstract { background:#f7fafb; border-left:3px solid var(--accent); padding:1rem 1.3rem;
+              margin:1.5rem 0; }
+ .abstract p { margin:.4rem 0 }
+ .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(11rem,1fr)); gap:.9rem;
+          margin:1.2rem 0 }
+ .stat { border:1px solid var(--rule); border-radius:4px; padding:.75rem .9rem }
+ .stat .n { font:600 1.35rem/1.2 system-ui,sans-serif; color:var(--accent) }
+ .stat .l { font:12px/1.4 system-ui,sans-serif; color:var(--muted);
+             text-transform:uppercase; letter-spacing:.06em; margin-top:.2rem }
+ .note { font:13.5px/1.6 system-ui,sans-serif; background:#fffbf2;
+          border-left:3px solid #e0a32e; padding:.8rem 1.1rem; margin:1.2rem 0 }
+ ol.toc { font:14px/1.9 system-ui,sans-serif; columns:2; max-width:46rem }
+ footer { margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid var(--rule);
+           font:12.5px/1.6 system-ui,sans-serif; color:var(--muted) }
+ code { font:12.5px/1.5 ui-monospace,Menlo,Consolas,monospace; background:#f4f9fa;
+         padding:.1rem .3rem; border-radius:3px }
+ @media print { a { color:var(--ink) } body { padding:0 } }
+</style></head><body><div class="wrap"><p style="font:13px system-ui,sans-serif;margin:1rem 0 0"><a href="../../index.html#atlas">&larr; Back to the project page</a></p>
+
+<header>
+  <div class="kicker">MetaboNet Glucose Prediction Challenge · Notebook 004</div>
+  <h1>Raw Patient Record Atlas
+      <small>Interactive per-patient visualisation of glucose, insulin and food intake,
+      stratified by contributing study, CGM sensor model and insulin delivery device</small></h1>
+  <div class="byline">
+    <b>Anonymous Authors</b><br>
+    Generated 17 September 2026, 12:28 &nbsp;·&nbsp;
+    Source: <code>&lt;MBN_DATA_DIR&gt;</code> &nbsp;·&nbsp;
+    Random seed <code>20260101</code> &nbsp;·&nbsp;
+    plotly 7.0.0, duckdb 1.5.5
+  </div>
+</header>
+
+<div class="abstract">
+  <p><b>Abstract.</b> The MetaboNet type&nbsp;1 diabetes corpus pools
+  14
+  clinical studies into a single 37-column schema covering
+  154,842,077 five-minute epochs from
+  1,492 subject records. Aggregate profiling establishes what the corpus
+  contains but cannot establish whether any individual record is coherent. This atlas renders the
+  <i>raw</i> record — no imputation, no unit conversion, no derived classification — for three
+  deterministically selected patients from every level of three stratifying dimensions, in the
+  training and evaluation splits separately. Every figure is interactive: each point reports its
+  own timestamp, source column, value and unit. A companion set of figures profiles what data each
+  insulin delivery device actually generates. Section&nbsp;5 documents what the corpus does
+  <i>not</i> contain for glucose, insulin and food, which bounds what any figure here, or any model
+  trained on this data, can represent.</p>
+</div>
+
+<h2>Contents</h2>
+<ol class="toc">
+  <li><a href="#data">Dataset</a></li>
+  <li><a href="#method">Method</a></li>
+  <li><a href="#thresholds">Glycemic reference lines</a></li>
+  <li><a href="#atlas">Figure catalogue — patient atlas</a></li>
+  <li><a href="#multiday">Figure catalogue — consecutive-day records</a></li>
+  <li><a href="#pumps">Figure catalogue — pump data profiles</a></li>
+  <li><a href="#limits">Limitations: what the data does not contain</a></li>
+  <li><a href="#repro">Reproducibility</a></li>
+</ol>
+
+<h2 id="data">1 &nbsp; Dataset</h2>
+<div class="grid">
+  <div class="stat"><div class="n">154,842,077</div><div class="l">rows</div></div>
+  <div class="stat"><div class="n">1,492</div><div class="l">subject records</div></div>
+  <div class="stat"><div class="n">37</div><div class="l">schema columns</div></div>
+  <div class="stat"><div class="n">130</div><div class="l">figures</div></div>
+  <div class="stat"><div class="n">236</div><div class="l">patient panels</div></div>
+</div>
+<table class=""><thead><tr><th>split</th><th>rows</th><th>subjects</th><th>studies</th><th>first row</th><th>last row</th></tr></thead><tbody><tr><td>test</td><td>22069548</td><td>309</td><td>13</td><td>2012-02-03 07:05:00</td><td>2024-06-29 05:45:00</td></tr><tr><td>train</td><td>132772529</td><td>1183</td><td>14</td><td>2011-11-17 21:00:00</td><td>2027-07-14 15:30:00</td></tr></tbody></table>
+<p>Channel availability across the whole corpus is summarised in a single interactive figure:
+<a href="00_channel_availability.html">00_channel_availability.html</a> &mdash; the share of
+subjects in each split carrying any value in each raw column.</p>
+
+<h2 id="method">2 &nbsp; Method</h2>
+<p><b>Stratification.</b> The largest contributing study accounts for the majority of all rows, so
+a random sample of patients is in practice a sample of that study. Selection is therefore stratified over
+three dimensions &mdash; contributing study (<code>source_file</code>), CGM sensor model
+(<code>cgm_device</code>) and insulin delivery device
+(<code>insulin_delivery_device</code>) &mdash; with 3 patients drawn
+from every level, in the training and evaluation splits separately.</p>
+<p><b>Selection rule.</b> Subjects with at least 864 CGM readings are
+ordered by <code>MD5(seed | source_file | id)</code> and the first 3
+taken. The ordering is independent of row order, file order and thread count, so the sample is
+reproducible. The day rendered is the subject's best-covered calendar day
+(at least 180 of a possible 288 readings), preferring days that also
+carry bolus and carbohydrate records.</p>
+<p><b>Subject key.</b> Subjects are keyed on <code>(split, source_file, id)</code> rather than
+<code>id</code> alone, because a subject may appear in both splits and identifier strings are not
+guaranteed unique across contributing studies.</p>
+<div class="note"><b>Raw values only.</b> Every plotted series is a column of the parquet file at
+the value stored there. No imputation, no unit conversion, no derived classification. Summary
+statistics appear only in tables, prefixed <code>computed_</code>, and are never drawn into a
+figure.</div>
+
+<h2 id="thresholds">3 &nbsp; Glycemic reference lines</h2>
+<p>The dashed horizontal lines on every atlas panel are the international consensus thresholds for
+CGM data interpretation (Battelino et al., <i>Diabetes Care</i> 2019; ADA
+<i>Standards of Care</i>). SG denotes sensor glucose in mg/dL.</p>
+<table class=""><thead><tr><th>line (mg/dL)</th><th>colour</th><th>clinical name</th><th>consensus goal</th></tr></thead><tbody><tr><td>250</td><td>red</td><td>Level 2 hyperglycaemia</td><td>< 5% of time above 250</td></tr><tr><td>180</td><td>black</td><td>upper limit of target range</td><td>time in range 70-180 > 70%</td></tr><tr><td>70</td><td>black</td><td>Level 1 hypoglycaemia (alert value)</td><td>< 4% of time below 70</td></tr><tr><td>55</td><td>red</td><td>Level 2 hypoglycaemia (clinically significant)</td><td>< 1% of time below 55</td></tr></tbody></table>
+<p class="muted"><b>Red</b> marks the two Level&nbsp;2 danger lines; <b>black</b> marks the bounds
+of the target range. Observed across this corpus:
+<b>test</b> TIR 73.57%, below 70 3.47%, below 55 0.71%, above 250 6.04% &nbsp;·&nbsp; <b>train</b> TIR 72.11%, below 70 3.22%, below 55 0.7%, above 250 6.8%.</p>
+
+<h2 id="atlas">4 &nbsp; Figure catalogue — patient atlas</h2>
+<p>Each figure stacks 3 patients from one stratum. Every panel carries
+its own legend, its own axis titles, and a header giving the patient identifier, the calendar date
+and the full device record. Hover any point for its timestamp, column and value; click a legend
+entry to hide that series in that panel; drag to zoom.</p>
+<h3>4.1 &nbsp; By study <span class='muted'>(25 figures)</span></h3><table class=""><thead><tr><th>level</th><th>split</th><th>patients</th><th>figure</th></tr></thead><tbody><tr><td>AZT1D</td><td>test</td><td>3</td><td><a href="atlas__study__test__AZT1D.html">open &rarr;</a></td></tr><tr><td>AZT1D</td><td>train</td><td>3</td><td><a href="atlas__study__train__AZT1D.html">open &rarr;</a></td></tr><tr><td>BrisT1D</td><td>test</td><td>1</td><td><a href="atlas__study__test__BrisT1D.html">open &rarr;</a></td></tr><tr><td>BrisT1D</td><td>train</td><td>3</td><td><a href="atlas__study__train__BrisT1D.html">open &rarr;</a></td></tr><tr><td>CTR3</td><td>test</td><td>3</td><td><a href="atlas__study__test__CTR3.html">open &rarr;</a></td></tr><tr><td>CTR3</td><td>train</td><td>3</td><td><a href="atlas__study__train__CTR3.html">open &rarr;</a></td></tr><tr><td>DCLP3</td><td>test</td><td>3</td><td><a href="atlas__study__test__DCLP3.html">open &rarr;</a></td></tr><tr><td>DCLP3</td><td>train</td><td>3</td><td><a href="atlas__study__train__DCLP3.html">open &rarr;</a></td></tr><tr><td>DCLP5</td><td>test</td><td>3</td><td><a href="atlas__study__test__DCLP5.html">open &rarr;</a></td></tr><tr><td>DCLP5</td><td>train</td><td>3</td><td><a href="atlas__study__train__DCLP5.html">open &rarr;</a></td></tr><tr><td>Flair</td><td>test</td><td>3</td><td><a href="atlas__study__test__Flair.html">open &rarr;</a></td></tr><tr><td>Flair</td><td>train</td><td>3</td><td><a href="atlas__study__train__Flair.html">open &rarr;</a></td></tr><tr><td>HUPA-UCM</td><td>test</td><td>3</td><td><a href="atlas__study__test__HUPA-UCM.html">open &rarr;</a></td></tr><tr><td>HUPA-UCM</td><td>train</td><td>3</td><td><a href="atlas__study__train__HUPA-UCM.html">open &rarr;</a></td></tr><tr><td>IOBP2</td><td>test</td><td>3</td><td><a href="atlas__study__test__IOBP2.html">open &rarr;</a></td></tr><tr><td>IOBP2</td><td>train</td><td>3</td><td><a href="atlas__study__train__IOBP2.html">open &rarr;</a></td></tr><tr><td>Loop</td><td>test</td><td>3</td><td><a href="atlas__study__test__Loop.html">open &rarr;</a></td></tr><tr><td>Loop</td><td>train</td><td>3</td><td><a href="atlas__study__train__Loop.html">open &rarr;</a></td></tr><tr><td>OhioT1DM</td><td>train</td><td>3</td><td><a href="atlas__study__train__OhioT1DM.html">open &rarr;</a></td></tr><tr><td>PEDAP</td><td>test</td><td>3</td><td><a href="atlas__study__test__PEDAP.html">open &rarr;</a></td></tr><tr><td>PEDAP</td><td>train</td><td>3</td><td><a href="atlas__study__train__PEDAP.html">open &rarr;</a></td></tr><tr><td>ReplaceBG</td><td>test</td><td>3</td><td><a href="atlas__study__test__ReplaceBG.html">open &rarr;</a></td></tr><tr><td>ReplaceBG</td><td>train</td><td>3</td><td><a href="atlas__study__train__ReplaceBG.html">open &rarr;</a></td></tr><tr><td>T1D-UOM</td><td>test</td><td>1</td><td><a href="atlas__study__test__T1D-UOM.html">open &rarr;</a></td></tr><tr><td>T1D-UOM</td><td>train</td><td>3</td><td><a href="atlas__study__train__T1D-UOM.html">open &rarr;</a></td></tr></tbody></table><h3>4.2 &nbsp; By cgm sensor model <span class='muted'>(16 figures)</span></h3><table class=""><thead><tr><th>level</th><th>split</th><th>patients</th><th>figure</th></tr></thead><tbody><tr><td>(not recorded)</td><td>test</td><td>3</td><td><a href="atlas__sensor__test__not_recorded.html">open &rarr;</a></td></tr><tr><td>(not recorded)</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__not_recorded.html">open &rarr;</a></td></tr><tr><td>Abbott Libre</td><td>train</td><td>1</td><td><a href="atlas__sensor__train__Abbott_Libre.html">open &rarr;</a></td></tr><tr><td>Dexcom G4</td><td>test</td><td>3</td><td><a href="atlas__sensor__test__Dexcom_G4.html">open &rarr;</a></td></tr><tr><td>Dexcom G4</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__Dexcom_G4.html">open &rarr;</a></td></tr><tr><td>Dexcom G5</td><td>test</td><td>3</td><td><a href="atlas__sensor__test__Dexcom_G5.html">open &rarr;</a></td></tr><tr><td>Dexcom G5</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__Dexcom_G5.html">open &rarr;</a></td></tr><tr><td>Dexcom G6</td><td>test</td><td>3</td><td><a href="atlas__sensor__test__Dexcom_G6.html">open &rarr;</a></td></tr><tr><td>Dexcom G6</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__Dexcom_G6.html">open &rarr;</a></td></tr><tr><td>Dexcom One</td><td>train</td><td>1</td><td><a href="atlas__sensor__train__Dexcom_One.html">open &rarr;</a></td></tr><tr><td>FreeStyle Libre 2</td><td>test</td><td>3</td><td><a href="atlas__sensor__test__FreeStyle_Libre_2.html">open &rarr;</a></td></tr><tr><td>FreeStyle Libre 2</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__FreeStyle_Libre_2.html">open &rarr;</a></td></tr><tr><td>Guardian 3</td><td>test</td><td>3</td><td><a href="atlas__sensor__test__Guardian_3.html">open &rarr;</a></td></tr><tr><td>Guardian 3</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__Guardian_3.html">open &rarr;</a></td></tr><tr><td>Medtronic Enlite</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__Medtronic_Enlite.html">open &rarr;</a></td></tr><tr><td>Medtronic Guardian 4</td><td>train</td><td>3</td><td><a href="atlas__sensor__train__Medtronic_Guardian_4.html">open &rarr;</a></td></tr></tbody></table><h3>4.3 &nbsp; By insulin delivery device <span class='muted'>(43 figures)</span></h3><table class=""><thead><tr><th>level</th><th>split</th><th>patients</th><th>figure</th></tr></thead><tbody><tr><td>(not recorded)</td><td>test</td><td>3</td><td><a href="atlas__pump__test__not_recorded.html">open &rarr;</a></td></tr><tr><td>(not recorded)</td><td>train</td><td>3</td><td><a href="atlas__pump__train__not_recorded.html">open &rarr;</a></td></tr><tr><td>Beta Bionics Gen 4 iLet</td><td>test</td><td>3</td><td><a href="atlas__pump__test__Beta_Bionics_Gen_4_iLet.html">open &rarr;</a></td></tr><tr><td>Beta Bionics Gen 4 iLet</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Beta_Bionics_Gen_4_iLet.html">open &rarr;</a></td></tr><tr><td>Medtronic Pump</td><td>test</td><td>1</td><td><a href="atlas__pump__test__Medtronic_Pump.html">open &rarr;</a></td></tr><tr><td>Medtronic Pump</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Medtronic_Pump.html">open &rarr;</a></td></tr><tr><td>MiniMed 515/715</td><td>test</td><td>3</td><td><a href="atlas__pump__test__MiniMed_515_715.html">open &rarr;</a></td></tr><tr><td>MiniMed 515/715</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_515_715.html">open &rarr;</a></td></tr><tr><td>MiniMed 522/722</td><td>test</td><td>3</td><td><a href="atlas__pump__test__MiniMed_522_722.html">open &rarr;</a></td></tr><tr><td>MiniMed 522/722</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_522_722.html">open &rarr;</a></td></tr><tr><td>MiniMed 523/723</td><td>test</td><td>3</td><td><a href="atlas__pump__test__MiniMed_523_723.html">open &rarr;</a></td></tr><tr><td>MiniMed 523/723</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_523_723.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_530G.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 551</td><td>test</td><td>3</td><td><a href="atlas__pump__test__MiniMed_530G_551.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 551</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_530G_551.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 751</td><td>test</td><td>3</td><td><a href="atlas__pump__test__MiniMed_530G_751.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 751</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_530G_751.html">open &rarr;</a></td></tr><tr><td>MiniMed 554/754</td><td>test</td><td>1</td><td><a href="atlas__pump__test__MiniMed_554_754.html">open &rarr;</a></td></tr><tr><td>MiniMed 554/754</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_554_754.html">open &rarr;</a></td></tr><tr><td>MiniMed 630G</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_630G.html">open &rarr;</a></td></tr><tr><td>MiniMed 640G</td><td>train</td><td>1</td><td><a href="atlas__pump__train__MiniMed_640G.html">open &rarr;</a></td></tr><tr><td>MiniMed 670G</td><td>test</td><td>3</td><td><a href="atlas__pump__test__MiniMed_670G.html">open &rarr;</a></td></tr><tr><td>MiniMed 670G</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_670G.html">open &rarr;</a></td></tr><tr><td>MiniMed 780G</td><td>train</td><td>3</td><td><a href="atlas__pump__train__MiniMed_780G.html">open &rarr;</a></td></tr><tr><td>Multiple Daily Injections</td><td>test</td><td>3</td><td><a href="atlas__pump__test__Multiple_Daily_Injections.html">open &rarr;</a></td></tr><tr><td>Multiple Daily Injections</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Multiple_Daily_Injections.html">open &rarr;</a></td></tr><tr><td>OmniPod</td><td>test</td><td>3</td><td><a href="atlas__pump__test__OmniPod.html">open &rarr;</a></td></tr><tr><td>OmniPod</td><td>train</td><td>3</td><td><a href="atlas__pump__train__OmniPod.html">open &rarr;</a></td></tr><tr><td>Omnipod 5</td><td>train</td><td>1</td><td><a href="atlas__pump__train__Omnipod_5.html">open &rarr;</a></td></tr><tr><td>Omnipod Dash</td><td>train</td><td>1</td><td><a href="atlas__pump__train__Omnipod_Dash.html">open &rarr;</a></td></tr><tr><td>Paradigm 522</td><td>train</td><td>2</td><td><a href="atlas__pump__train__Paradigm_522.html">open &rarr;</a></td></tr><tr><td>Paradigm 722</td><td>train</td><td>2</td><td><a href="atlas__pump__train__Paradigm_722.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 523</td><td>test</td><td>3</td><td><a href="atlas__pump__test__Paradigm_Revel_523.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 523</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Paradigm_Revel_523.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 723</td><td>test</td><td>3</td><td><a href="atlas__pump__test__Paradigm_Revel_723.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 723</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Paradigm_Revel_723.html">open &rarr;</a></td></tr><tr><td>Roche Accu-Check</td><td>test</td><td>3</td><td><a href="atlas__pump__test__Roche_Accu-Check.html">open &rarr;</a></td></tr><tr><td>Roche Accu-Check</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Roche_Accu-Check.html">open &rarr;</a></td></tr><tr><td>Roche Pump</td><td>train</td><td>3</td><td><a href="atlas__pump__train__Roche_Pump.html">open &rarr;</a></td></tr><tr><td>t:slim G4</td><td>test</td><td>3</td><td><a href="atlas__pump__test__t_slim_G4.html">open &rarr;</a></td></tr><tr><td>t:slim G4</td><td>train</td><td>3</td><td><a href="atlas__pump__train__t_slim_G4.html">open &rarr;</a></td></tr><tr><td>t:slim X2</td><td>test</td><td>3</td><td><a href="atlas__pump__test__t_slim_X2.html">open &rarr;</a></td></tr><tr><td>t:slim X2</td><td>train</td><td>3</td><td><a href="atlas__pump__train__t_slim_X2.html">open &rarr;</a></td></tr></tbody></table>
+
+<h2 id="multiday">5 &nbsp; Figure catalogue — consecutive-day records</h2>
+<p>One or two patients per split drawn across 2 consecutive calendar
+days in a single continuous panel, with the midnight boundary marked by a long dashed line. A day
+is the unit a CGM report is built from, but it is an arbitrary cut: the overnight period, when
+nothing is eaten and nothing is announced, is the cleanest readout of basal adequacy in the whole
+record and it sits exactly on that cut. These panels show it whole, and show whether a patient's
+pattern repeats from one day to the next.</p>
+<table class=""><thead><tr><th>span</th><th>split</th><th>patients</th><th>figure</th></tr></thead><tbody><tr><td>2 consecutive days</td><td>test</td><td>2</td><td><a href="multiday__test__2days.html">open &rarr;</a></td></tr><tr><td>2 consecutive days</td><td>train</td><td>2</td><td><a href="multiday__train__2days.html">open &rarr;</a></td></tr></tbody></table>
+
+<h2 id="pumps">6 &nbsp; Figure catalogue — pump data profiles</h2>
+<p>For each insulin delivery device: the non-null record volume per raw column for the sampled
+patients, the cadence of every channel across one day, and the share of that device's whole
+subject population carrying each channel.</p>
+<table class=""><thead><tr><th>pump</th><th>split</th><th>patients</th><th>subjects on pump</th><th>figure</th></tr></thead><tbody><tr><td>(not recorded)</td><td>test</td><td>3</td><td>16</td><td><a href="pump__test__not_recorded.html">open &rarr;</a></td></tr><tr><td>(not recorded)</td><td>train</td><td>3</td><td>71</td><td><a href="pump__train__not_recorded.html">open &rarr;</a></td></tr><tr><td>Beta Bionics Gen 4 iLet</td><td>test</td><td>3</td><td>62</td><td><a href="pump__test__Beta_Bionics_Gen_4_iLet.html">open &rarr;</a></td></tr><tr><td>Beta Bionics Gen 4 iLet</td><td>train</td><td>3</td><td>299</td><td><a href="pump__train__Beta_Bionics_Gen_4_iLet.html">open &rarr;</a></td></tr><tr><td>Medtronic Pump</td><td>test</td><td>1</td><td>1</td><td><a href="pump__test__Medtronic_Pump.html">open &rarr;</a></td></tr><tr><td>Medtronic Pump</td><td>train</td><td>3</td><td>8</td><td><a href="pump__train__Medtronic_Pump.html">open &rarr;</a></td></tr><tr><td>MiniMed 515/715</td><td>test</td><td>3</td><td>6</td><td><a href="pump__test__MiniMed_515_715.html">open &rarr;</a></td></tr><tr><td>MiniMed 515/715</td><td>train</td><td>3</td><td>14</td><td><a href="pump__train__MiniMed_515_715.html">open &rarr;</a></td></tr><tr><td>MiniMed 522/722</td><td>test</td><td>3</td><td>25</td><td><a href="pump__test__MiniMed_522_722.html">open &rarr;</a></td></tr><tr><td>MiniMed 522/722</td><td>train</td><td>3</td><td>132</td><td><a href="pump__train__MiniMed_522_722.html">open &rarr;</a></td></tr><tr><td>MiniMed 523/723</td><td>test</td><td>3</td><td>16</td><td><a href="pump__test__MiniMed_523_723.html">open &rarr;</a></td></tr><tr><td>MiniMed 523/723</td><td>train</td><td>3</td><td>72</td><td><a href="pump__train__MiniMed_523_723.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G</td><td>train</td><td>3</td><td>9</td><td><a href="pump__train__MiniMed_530G.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 551</td><td>test</td><td>3</td><td>5</td><td><a href="pump__test__MiniMed_530G_551.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 551</td><td>train</td><td>3</td><td>22</td><td><a href="pump__train__MiniMed_530G_551.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 751</td><td>test</td><td>3</td><td>7</td><td><a href="pump__test__MiniMed_530G_751.html">open &rarr;</a></td></tr><tr><td>MiniMed 530G 751</td><td>train</td><td>3</td><td>22</td><td><a href="pump__train__MiniMed_530G_751.html">open &rarr;</a></td></tr><tr><td>MiniMed 554/754</td><td>test</td><td>1</td><td>1</td><td><a href="pump__test__MiniMed_554_754.html">open &rarr;</a></td></tr><tr><td>MiniMed 554/754</td><td>train</td><td>3</td><td>4</td><td><a href="pump__train__MiniMed_554_754.html">open &rarr;</a></td></tr><tr><td>MiniMed 630G</td><td>train</td><td>3</td><td>3</td><td><a href="pump__train__MiniMed_630G.html">open &rarr;</a></td></tr><tr><td>MiniMed 640G</td><td>train</td><td>1</td><td>4</td><td><a href="pump__train__MiniMed_640G.html">open &rarr;</a></td></tr><tr><td>MiniMed 670G</td><td>test</td><td>3</td><td>21</td><td><a href="pump__test__MiniMed_670G.html">open &rarr;</a></td></tr><tr><td>MiniMed 670G</td><td>train</td><td>3</td><td>102</td><td><a href="pump__train__MiniMed_670G.html">open &rarr;</a></td></tr><tr><td>MiniMed 780G</td><td>train</td><td>3</td><td>7</td><td><a href="pump__train__MiniMed_780G.html">open &rarr;</a></td></tr><tr><td>Multiple Daily Injections</td><td>test</td><td>3</td><td>5</td><td><a href="pump__test__Multiple_Daily_Injections.html">open &rarr;</a></td></tr><tr><td>Multiple Daily Injections</td><td>train</td><td>3</td><td>15</td><td><a href="pump__train__Multiple_Daily_Injections.html">open &rarr;</a></td></tr><tr><td>OmniPod</td><td>test</td><td>3</td><td>104</td><td><a href="pump__test__OmniPod.html">open &rarr;</a></td></tr><tr><td>OmniPod</td><td>train</td><td>3</td><td>513</td><td><a href="pump__train__OmniPod.html">open &rarr;</a></td></tr><tr><td>Omnipod 5</td><td>train</td><td>1</td><td>1</td><td><a href="pump__train__Omnipod_5.html">open &rarr;</a></td></tr><tr><td>Omnipod Dash</td><td>train</td><td>1</td><td>2</td><td><a href="pump__train__Omnipod_Dash.html">open &rarr;</a></td></tr><tr><td>Paradigm 522</td><td>train</td><td>2</td><td>2</td><td><a href="pump__train__Paradigm_522.html">open &rarr;</a></td></tr><tr><td>Paradigm 722</td><td>train</td><td>2</td><td>2</td><td><a href="pump__train__Paradigm_722.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 523</td><td>test</td><td>3</td><td>6</td><td><a href="pump__test__Paradigm_Revel_523.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 523</td><td>train</td><td>3</td><td>44</td><td><a href="pump__train__Paradigm_Revel_523.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 723</td><td>test</td><td>3</td><td>11</td><td><a href="pump__test__Paradigm_Revel_723.html">open &rarr;</a></td></tr><tr><td>Paradigm Revel 723</td><td>train</td><td>3</td><td>44</td><td><a href="pump__train__Paradigm_Revel_723.html">open &rarr;</a></td></tr><tr><td>Roche Accu-Check</td><td>test</td><td>3</td><td>5</td><td><a href="pump__test__Roche_Accu-Check.html">open &rarr;</a></td></tr><tr><td>Roche Accu-Check</td><td>train</td><td>3</td><td>30</td><td><a href="pump__train__Roche_Accu-Check.html">open &rarr;</a></td></tr><tr><td>Roche Pump</td><td>train</td><td>3</td><td>4</td><td><a href="pump__train__Roche_Pump.html">open &rarr;</a></td></tr><tr><td>t:slim G4</td><td>test</td><td>3</td><td>3</td><td><a href="pump__test__t_slim_G4.html">open &rarr;</a></td></tr><tr><td>t:slim G4</td><td>train</td><td>3</td><td>18</td><td><a href="pump__train__t_slim_G4.html">open &rarr;</a></td></tr><tr><td>t:slim X2</td><td>test</td><td>3</td><td>56</td><td><a href="pump__test__t_slim_X2.html">open &rarr;</a></td></tr><tr><td>t:slim X2</td><td>train</td><td>3</td><td>281</td><td><a href="pump__train__t_slim_X2.html">open &rarr;</a></td></tr></tbody></table>
+
+<h2 id="limits">7 &nbsp; Limitations — what this corpus does not contain</h2>
+<p>Pooling fourteen studies into one schema necessarily keeps only what all of them share. The
+following are standard fields in diabetes device downloads that are <b>not columns</b> in this
+dataset, and therefore cannot appear in any figure here nor be used by any model trained on it.</p>
+<h3>Glucose</h3>
+<ul>
+<li>Sensor session boundaries, warm-up periods and calibration events</li>
+<li>Reference fingerstick blood glucose (SMBG)</li>
+<li>Sensor serial, wear site, firmware revision, or any per-reading quality flag</li>
+<li>The trend arrow presented to the patient at the time of a decision</li>
+</ul>
+<h3>Insulin</h3>
+<ul>
+<li><b>Bolus type</b> — normal, extended, dual-wave and automated correction boluses are stored
+identically as a single number</li>
+<li>Programmed basal rate profile, temporary basal, and pump suspend events</li>
+<li><b>Insulin on board</b>, carbohydrates on board, and every bolus-calculator setting
+(carb ratio, correction factor, active insulin time, target)</li>
+<li>Automated-mode entry and exit events; the algorithm field is constant per subject</li>
+<li>Infusion set and site changes; non-insulin glucose-lowering medication</li>
+</ul>
+<h3>Food</h3>
+<ul>
+<li>Anything beyond grams of carbohydrate — no fat, protein, fibre, glycemic index or portion</li>
+<li>Whether an entry was announced before the meal or logged retrospectively</li>
+<li>Any structured food coding; <code>meal_label</code> is sparse free text</li>
+</ul>
+<h3>Context</h3>
+<ul>
+<li>Timezone and daylight-saving information; timestamps are naive</li>
+<li>Sleep, illness, stress, menstrual cycle and alcohol</li>
+<li>Exercise in practice — the <code>workout_*</code> columns exist but are essentially empty</li>
+<li>A per-row units declaration; mg/dL is asserted rather than recorded</li>
+</ul>
+<p>Columns that exist in the schema but are empty or near-empty in the evaluation split are listed
+in <code>tables/61_column_coverage.csv</code> and plotted in
+<a href="00_channel_availability.html">00_channel_availability.html</a>.</p>
+
+<h2 id="repro">8 &nbsp; Reproducibility</h2>
+<table class=""><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>notebook</td><td>004.cgm_metabonet_patient_charts.ipynb</td></tr><tr><td>data source</td><td>&lt;MBN_DATA_DIR&gt;</td></tr><tr><td>random seed</td><td>20260101</td></tr><tr><td>patients per stratum</td><td>3</td></tr><tr><td>minimum CGM readings per subject</td><td>864</td></tr><tr><td>minimum CGM readings on the drawn day</td><td>180</td></tr><tr><td>reference lines (mg/dL)</td><td>55, 70, 180, 250</td></tr><tr><td>red reference lines</td><td>55, 250</td></tr><tr><td>consecutive-day panels</td><td>2 days x 2 patients per split</td></tr><tr><td>python</td><td>3.11.15</td></tr><tr><td>plotly</td><td>7.0.0</td></tr><tr><td>duckdb</td><td>1.5.5</td></tr><tr><td>pandas</td><td>3.0.5</td></tr><tr><td>generated</td><td>2026-09-17 12:28:38</td></tr></tbody></table>
+<p>Supporting tables are written to <code>reports/004_patient_atlas/tables</code>. Re-running the notebook with the same
+seed reproduces the same patients, the same days and the same figures.</p>
+
+<footer>
+  Rendered with Plotly 7.0.0. The figures reference a shared
+  <code>plotly.min.js</code> in this directory — keep it alongside them, or they will open blank.
+  All values shown are raw records from the MetaboNet corpus; no patient-identifying information
+  beyond the de-identified study subject identifier is present.
+</footer>
+</div></body></html>
