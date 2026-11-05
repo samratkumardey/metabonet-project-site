@@ -25,16 +25,24 @@ OUT = ROOT / "static" / "images"
 OUT.mkdir(parents=True, exist_ok=True)
 H = [30, 60, 90, 120]
 
-INK, MUTED, RULE = "#1f2937", "#6b7280", "#e5e7eb"
-C_LSTM, C_GBM, C_BLEND, C_PERS, C_CAUS = "#0e7490", "#b45309", "#6d28d9", "#9ca3af", "#be123c"
+INK, MUTED, RULE = "#0f1723", "#48617f", "#ead9df"
+# white-and-wine palette, matching static/css/style.css
+C_LSTM, C_GBM, C_BLEND, C_PERS, C_CAUS = "#8e1f45", "#b7791f", "#1f4f7d", "#9ca3af", "#0f766e"
 C_POS, C_NEG = "#15803d", "#b91c1c"
 
+from matplotlib import font_manager  # noqa: E402
+
+FONT = "DejaVu Sans"
+for _f in sorted((ROOT / "tools" / "fonts").glob("SpaceGrotesk-*.ttf")):
+    font_manager.fontManager.addfont(str(_f))
+    FONT = "Space Grotesk"
+
 plt.rcParams.update({
-    "font.family": "DejaVu Sans", "font.size": 10.5, "axes.edgecolor": RULE,
+    "font.family": FONT, "font.size": 10.5, "axes.edgecolor": RULE,
     "axes.labelcolor": INK, "xtick.color": MUTED, "ytick.color": MUTED,
     "axes.titlesize": 12, "axes.titleweight": "bold", "axes.titlecolor": INK,
     "axes.spines.top": False, "axes.spines.right": False, "axes.grid": True,
-    "grid.color": "#f1f5f9", "grid.linewidth": 1, "legend.frameon": False,
+    "grid.color": "#f6eef1", "grid.linewidth": 1, "legend.frameon": False,
     "savefig.dpi": 200, "axes.axisbelow": True, "savefig.bbox": "tight", "savefig.facecolor": "white",
 })
 
@@ -237,9 +245,9 @@ w = 0.38
 ax.bar(x - w / 2, BAND_ROWS, w, color="#cbd5e1", label="share of readings")
 ax.bar(x + w / 2, BAND_MARD, w, color=C_LSTM, label="share of total MARD")
 ax2 = ax.twinx()
-ax2.plot(x, BAND_DTSA, "o-", color=C_NEG, label="DTS zone A of persistence")
+ax2.plot(x, BAND_DTSA, "o-", color=C_BLEND, label="DTS zone A of persistence")
 ax2.set_ylim(0, 100)
-ax2.set_ylabel("zone A (%)", color=C_NEG)
+ax2.set_ylabel("zone A (%)", color=C_BLEND)
 ax2.spines["right"].set_visible(True)
 ax2.grid(False)
 ax.set_xticks(x)

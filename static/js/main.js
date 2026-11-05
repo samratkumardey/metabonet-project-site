@@ -84,29 +84,6 @@
     }
   }
 
-  /* ------------------------------------------------------------ theme ---- */
-  function initTheme() {
-    const saved = store.get("mbn-theme");
-    if (saved) document.documentElement.dataset.theme = saved;
-    const btn = $("#themeBtn");
-    if (!btn) return;
-    const label = () => {
-      const t = document.documentElement.dataset.theme ||
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      btn.textContent = t === "dark" ? "☀︎" : "☾";
-      btn.setAttribute("aria-label", t === "dark" ? "Switch to light theme" : "Switch to dark theme");
-    };
-    label();
-    btn.addEventListener("click", () => {
-      const cur = document.documentElement.dataset.theme ||
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      const next = cur === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = next;
-      store.set("mbn-theme", next);
-      label();
-    });
-  }
-
   /* --------------------------------------------------- nav + scrollspy --- */
   function initNav() {
     const nav = $("#nav");
@@ -169,7 +146,7 @@
       const p = pers[h].dtsa, m = best[h].dtsa;
       return `<div class="hbar"><div class="lab">${h} min</div><div class="track">
         <div class="b p" style="width:0" data-w="${p * k}"></div>
-        <div class="v" style="left:calc(${p * k}% + 6px);top:-2px;color:#cbd5e1">${p.toFixed(1)}</div>
+        <div class="v pv" style="left:calc(${p * k}% + 6px);top:-2px">${p.toFixed(1)}</div>
         <div class="b m" style="width:0" data-w="${m * k}"></div>
         <div class="v" style="left:calc(${m * k}% + 6px);top:13px;font-weight:700">${m.toFixed(1)}</div>
       </div></div>`;
@@ -383,7 +360,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     applyConfig();
-    initTheme();
     initNav();
     initCounters();
     initHeroBars();
